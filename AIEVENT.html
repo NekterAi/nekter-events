@@ -33,8 +33,8 @@ body::after{content:'';position:fixed;inset:0;background-image:radial-gradient(r
 .wrap{max-width:1120px;margin:0 auto;padding:0 28px;position:relative;z-index:1}
 
 /* SCROLL-DRIVEN REVEAL */
-.reveal{opacity:0;transform:translateY(32px);transition:opacity 0.7s var(--ease-out-expo),transform 0.7s var(--ease-out-expo)}
-.reveal.vis{opacity:1;transform:translateY(0)}
+.reveal{opacity:0;transform:translateY(32px) scale(0.98);transition:opacity 0.7s var(--ease-out-expo),transform 0.7s var(--ease-out-expo)}
+.reveal.vis{opacity:1;transform:translateY(0) scale(1)}
 .reveal-d1{transition-delay:0.08s}.reveal-d2{transition-delay:0.16s}.reveal-d3{transition-delay:0.24s}
 .reveal-d4{transition-delay:0.32s}.reveal-d5{transition-delay:0.40s}.reveal-d6{transition-delay:0.48s}
 
@@ -150,11 +150,14 @@ section{padding:100px 0;position:relative;z-index:1}
 .sc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);opacity:0.7;transition:opacity .3s}
 .sc:hover::before{opacity:1}
 .sc:hover{border-color:rgba(74,158,255,0.25);transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,0.3)}
-.sav{width:64px;height:64px;border-radius:16px;background:var(--grad-subtle);border:1px solid rgba(74,158,255,0.2);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:18px;font-weight:800;color:var(--blue);margin-bottom:20px;transition:transform .3s var(--ease-out-quart)}
+.sav{width:72px;height:72px;border-radius:50%;background:var(--grad-subtle);border:2px solid rgba(74,158,255,0.25);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:18px;font-weight:800;color:var(--blue);margin-bottom:20px;transition:transform .3s var(--ease-out-quart);overflow:hidden;flex-shrink:0}
+.sav img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%;z-index:1}
+.sav{position:relative}
 .sc:hover .sav{transform:scale(1.05)}
-.sname{font-family:var(--fd);font-size:22px;font-weight:700;margin-bottom:5px;letter-spacing:-.02em}
-.srole{font-size:12px;letter-spacing:.04em;background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:500;margin-bottom:18px}
-.sbio{font-size:14px;color:var(--muted);line-height:1.75;font-weight:300}
+.sname{font-family:var(--fd);font-size:20px;font-weight:700;margin-bottom:4px;letter-spacing:-.02em}
+.srole{font-size:12px;letter-spacing:.04em;background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:500;margin-bottom:14px}
+.sbio{font-size:14px;color:rgba(238,242,255,0.72);line-height:1.75;font-weight:300}
+@media(max-width:600px){.sgrid{grid-template-columns:1fr}}
 
 /* ═══════════════ AUDIT ═══════════════ */
 .ablock{background:var(--card);border:0.5px solid var(--border-str);border-radius:26px;padding:60px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:56px;position:relative;overflow:hidden}
@@ -248,9 +251,46 @@ footer a:hover{color:var(--blue)}
   .pills{gap:8px}
   .pill{font-size:12px;padding:8px 12px}
 }
+
+/* ═══════════════ AURORA ═══════════════ */
+.aurora{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.au1,.au2,.au3{position:absolute;border-radius:50%;filter:blur(100px)}
+.au1{width:700px;height:700px;top:-200px;right:-100px;background:radial-gradient(circle,rgba(74,158,255,0.14) 0%,transparent 70%);animation:au1 10s ease-in-out infinite}
+.au2{width:600px;height:600px;bottom:-150px;left:-150px;background:radial-gradient(circle,rgba(139,92,246,0.12) 0%,transparent 70%);animation:au2 13s ease-in-out infinite}
+.au3{width:400px;height:400px;top:30%;left:40%;background:radial-gradient(circle,rgba(99,214,255,0.08) 0%,transparent 70%);animation:au3 8s ease-in-out infinite}
+@keyframes au1{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(-60px,40px) scale(1.1)}66%{transform:translate(40px,-60px) scale(0.95)}}
+@keyframes au2{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(60px,-40px) scale(1.08)}66%{transform:translate(-40px,60px) scale(1.05)}}
+@keyframes au3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,30px) scale(1.2)}}
+
+/* ═══════════════ CURSOR GLOW ═══════════════ */
+.cursor-glow{position:fixed;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(74,158,255,0.05) 0%,transparent 70%);transform:translate(-50%,-50%);pointer-events:none;z-index:2;left:-999px;top:-999px;transition:left 0.12s ease,top 0.12s ease}
+
+/* ═══════════════ FLOATING SHAPES ═══════════════ */
+.shape-ring{position:absolute;border-radius:50%;border:1px solid rgba(74,158,255,0.12);pointer-events:none;z-index:0;animation:shapeFloat 20s linear infinite}
+.ring1{width:180px;height:180px;top:15%;right:8%;animation-duration:22s}
+.ring2{width:80px;height:80px;top:62%;right:20%;animation-duration:15s;border-color:rgba(139,92,246,0.15)}
+.ring3{width:120px;height:120px;top:38%;right:3%;animation-duration:18s;animation-delay:-6s}
+@keyframes shapeFloat{0%{transform:rotate(0deg) translateY(0)}50%{transform:rotate(180deg) translateY(-20px)}100%{transform:rotate(360deg) translateY(0)}}
+.shape-dot{position:absolute;width:4px;height:4px;border-radius:50%;background:rgba(74,158,255,0.5);pointer-events:none;z-index:0;animation:dotPulse 4s ease-in-out infinite}
+.dot1{top:22%;right:26%}
+.dot2{top:55%;right:13%;animation-delay:1.5s}
+.dot3{top:74%;right:36%;animation-delay:3s}
+@keyframes dotPulse{0%,100%{opacity:0.4;transform:scale(1)}50%{opacity:1;transform:scale(2.5)}}
+
+/* ═══════════════ BUTTON GLOW PULSE ═══════════════ */
+@keyframes btnGlow{0%,100%{box-shadow:0 0 20px rgba(74,158,255,0.3),0 0 50px rgba(139,92,246,0.12)}50%{box-shadow:0 0 40px rgba(74,158,255,0.55),0 0 80px rgba(139,92,246,0.25)}}
+.btn-p{animation:btnGlow 3s ease-in-out infinite}
+.btn-p:hover{animation:none;box-shadow:0 12px 40px rgba(74,158,255,0.4),0 0 80px rgba(139,92,246,0.2)}
+
+/* ═══════════════ 3D CARD STYLE ═══════════════ */
+.lc,.sc,.ablock{transform-style:preserve-3d;will-change:transform}
+
+/* ═══════════════ PROOF NUMBER GLOW ═══════════════ */
+.proof-num{filter:drop-shadow(0 0 20px rgba(74,158,255,0.4))}
 </style>
 </head>
 <body>
+<div class="cursor-glow"></div>
 
 <!-- ═══ NAV ═══ -->
 <nav id="nav">
@@ -268,6 +308,13 @@ footer a:hover{color:var(--blue)}
 
 <!-- ═══ HERO ═══ -->
 <section class="hero">
+  <div class="aurora"><div class="au1"></div><div class="au2"></div><div class="au3"></div></div>
+  <div class="shape-ring ring1"></div>
+  <div class="shape-ring ring2"></div>
+  <div class="shape-ring ring3"></div>
+  <div class="shape-dot dot1"></div>
+  <div class="shape-dot dot2"></div>
+  <div class="shape-dot dot3"></div>
   <div class="orb orb1"></div>
   <div class="orb orb2"></div>
   <div class="orb orb3"></div>
@@ -275,7 +322,7 @@ footer a:hover{color:var(--blue)}
   <div class="wrap">
     <div class="badge"><span class="bdot"></span>Free event · Las Vegas · April 23</div>
     <h1>Demystifying <span class="gt">AI</span><br>for Las Vegas<br>Business Owners</h1>
-    <p class="hero-sub">Stop watching competitors pull ahead. Join 100 business owners for a live workshop on how AI is quietly generating <em>$10k–$50k in hidden revenue</em> — and how to claim yours.</p>
+    <p class="hero-sub">Stop watching competitors pull ahead. Join 100 business owners for a live workshop on how AI is quietly generating <em>$10k–$50k in hidden revenue</em>. Claim yours.</p>
     <div class="pills">
       <div class="pill"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>April 23, 2026</div>
       <div class="pill"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>5:30 – 8:00 PM</div>
@@ -286,7 +333,7 @@ footer a:hover{color:var(--blue)}
       <a href="https://tally.so/r/A7D7Le" target="_blank" class="btn-p">Reserve my free seat <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
       <a href="#learn" class="btn-g">See what's covered</a>
     </div>
-    <p class="anote"><strong>20 free AI audits</strong> available on the night — first come, first served.</p>
+    <p class="anote"><strong>20 free AI audits</strong> available on the night, first come, first served.</p>
   </div>
 </section>
 
@@ -316,12 +363,12 @@ footer a:hover{color:var(--blue)}
     <h2 class="st reveal">This isn't a pitch.<br>It's a playbook.</h2>
     <p class="sb reveal">Every business owner leaves knowing exactly where they're leaking revenue and how AI fixes it. No jargon. No fluff.</p>
     <div class="lgrid">
-      <div class="lc reveal reveal-d1"><p class="lnum">01</p><h3>Where your business is leaking money right now</h3><p>The three places every Vegas business loses revenue before lunch — slow follow-up, missed after-hours calls, and manual data entry nobody talks about.</p></div>
-      <div class="lc reveal reveal-d2"><p class="lnum">02</p><h3>AI that runs your business, not just assists it</h3><p>Live demo of a multi-agent system handling lead gen, inbox triage, and CRM updates — simultaneously — for $87 a month.</p></div>
+      <div class="lc reveal reveal-d1"><p class="lnum">01</p><h3>Where your business is leaking money right now</h3><p>The three places every Vegas business loses revenue before lunch: slow follow-up, missed after-hours calls, and manual data entry nobody talks about.</p></div>
+      <div class="lc reveal reveal-d2"><p class="lnum">02</p><h3>AI that runs your business, not just assists it</h3><p>Live demo of a multi-agent system handling lead gen, inbox triage, and CRM updates simultaneously, for $87 a month.</p></div>
       <div class="lc reveal reveal-d3"><p class="lnum">03</p><h3>How to get a 40% revenue lift in 90 days</h3><p>Real numbers from real implementations. Automating lead follow-up and response time alone recovers tens of thousands in lost deals per year.</p></div>
-      <div class="lc reveal reveal-d4"><p class="lnum">04</p><h3>What an AI build costs — and what it returns</h3><p>A transparent breakdown of what a system installation looks like. One $60k/yr salesperson reclaims $28k in productive time annually.</p></div>
+      <div class="lc reveal reveal-d4"><p class="lnum">04</p><h3>What an AI build costs and what it returns</h3><p>A transparent breakdown of what a system installation looks like. One $60k/yr salesperson reclaims $28k in productive time annually.</p></div>
       <div class="lc reveal reveal-d5"><p class="lnum">05</p><h3>Getting your team to actually use it</h3><p>Mandating AI without a plan creates resistance. The adoption framework that makes employees see AI as a tool, not a threat.</p></div>
-      <div class="lc reveal reveal-d6"><p class="lnum">06</p><h3>Your free AI audit — find $10k–$50k in 45 min</h3><p>20 complimentary audits on the night. We score your lead follow-up, after-hours coverage, and manual workflows — with a dollar figure on every gap.</p></div>
+      <div class="lc reveal reveal-d6"><p class="lnum">06</p><h3>Your free AI audit: find $10k–$50k in 45 min</h3><p>20 complimentary audits on the night. We score your lead follow-up, after-hours coverage, and manual workflows, with a dollar figure on every gap.</p></div>
     </div>
   </div>
 </section>
@@ -333,16 +380,28 @@ footer a:hover{color:var(--blue)}
     <h2 class="st reveal">Built by operators.<br>Not consultants.</h2>
     <div class="sgrid">
       <div class="sc reveal reveal-d1">
-        <div class="sav">SS</div>
+        <div class="sav"><img src="/SpencerPicture.png" alt="Spencer Simonson" onerror="this.remove()"><span>SS</span></div>
         <p class="sname">Spencer Simonson</p>
-        <p class="srole">Co-Founder, Nekter AI</p>
-        <p class="sbio">Spencer builds multi-agent AI systems that replace manual workflows for businesses across hospitality, legal, healthcare, and home services. He believes any business owner can understand and use AI — and proves it live on stage.</p>
+        <p class="srole">Co-Founder &amp; CTO, Nekter AI</p>
+        <p class="sbio">Spencer builds multi-agent AI systems that replace manual workflows for businesses across hospitality, legal, healthcare, and home services. He believes any business owner can understand and use AI, and proves it live on stage.</p>
       </div>
       <div class="sc reveal reveal-d2">
-        <div class="sav">JS</div>
+        <div class="sav"><img src="/Jodie headshot.jpg" alt="Jodie Sacco" onerror="this.remove()"><span>JS</span></div>
         <p class="sname">Jodie Sacco</p>
         <p class="srole">Director, 10x Consultants · Grant Cardone</p>
         <p class="sbio">Jodie has built two large businesses in Las Vegas and advises owners on strategy, sales, and growth through the 10x Consultants network. Her philosophy: humanize AI for smarter revenue growth, and serve first.</p>
+      </div>
+      <div class="sc reveal reveal-d3">
+        <div class="sav"><img src="/Noah Headshot.jpg" alt="Noah Simonson" onerror="this.remove()"><span>NS</span></div>
+        <p class="sname">Noah Simonson</p>
+        <p class="srole">Co-Founder, Client Success &amp; Sales, Nekter AI</p>
+        <p class="sbio">Noah owns the client relationship from day one. He leads onboarding, builds the long-term relationships that keep clients growing, and drives the sales process that brings them in. If you've talked to Nekter AI, you've probably talked to Noah.</p>
+      </div>
+      <div class="sc reveal reveal-d4">
+        <div class="sav"><img src="/Sam Headshot.jpg" alt="Samuel Maciulewicz" onerror="this.remove()"><span>SM</span></div>
+        <p class="sname">Samuel Maciulewicz</p>
+        <p class="srole">Co-Founder, Operations, Nekter AI</p>
+        <p class="sbio">Sam runs the infrastructure that keeps Nekter AI scaling. From finance and hiring to day-to-day operations, he builds the systems that let the rest of the team focus on what they do best. The business works because Sam makes it work.</p>
       </div>
     </div>
   </div>
@@ -361,10 +420,10 @@ footer a:hover{color:var(--blue)}
         <h3 class="st" style="font-size:22px;margin-bottom:10px">What we audit</h3>
         <p style="font-size:13px;color:var(--muted);margin-bottom:10px;font-weight:300">Each audit scores four areas and puts a real dollar figure on every gap.</p>
         <ul class="alist">
-          <li>Lead follow-up speed — how fast your team responds vs. what's losing deals</li>
-          <li>After-hours coverage — revenue leaving because nobody answered</li>
-          <li>Manual data entry burden — hours per week AI can own completely</li>
-          <li>Current AI usage — most businesses are at zero; we show the cost of waiting</li>
+          <li>Lead follow-up speed: how fast your team responds vs. what's losing deals</li>
+          <li>After-hours coverage: revenue leaving because nobody answered</li>
+          <li>Manual data entry burden: hours per week AI can own completely</li>
+          <li>Current AI usage: most businesses are at zero, and we show the cost of waiting</li>
         </ul>
         <p style="font-size:12px;color:var(--muted);margin-top:16px">Only 20 slots. Register below and check the audit box.</p>
       </div>
@@ -394,7 +453,7 @@ footer a:hover{color:var(--blue)}
       <div class="reveal"><p class="sl" style="text-align:center">Registration</p>
       <div class="sr" style="margin:0 auto 28px"></div></div>
       <h2 class="st reveal" style="text-align:center">Claim your free seat</h2>
-      <p class="sb reveal" style="text-align:center;margin:12px auto 0;font-size:15px;max-width:440px">April 23 · 5:30 PM · Las Vegas, NV · Free to attend.<br>Limited to 100 seats — register in under 60 seconds.</p>
+      <p class="sb reveal" style="text-align:center;margin:12px auto 0;font-size:15px;max-width:440px">April 23 · 5:30 PM · Las Vegas, NV · Free to attend.<br>Limited to 100 seats. Register in under 60 seconds.</p>
       <div class="reveal" style="text-align:center;margin-top:40px">
         <a href="https://tally.so/r/A7D7Le" target="_blank" class="btn-p" style="font-size:17px;padding:20px 48px">Reserve my free seat <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
       </div>
@@ -482,4 +541,41 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     }
   });
 });
+
+// ── CURSOR GLOW ──
+const cg = document.querySelector('.cursor-glow');
+document.addEventListener('mousemove', e => {
+  cg.style.left = e.clientX + 'px';
+  cg.style.top = e.clientY + 'px';
+});
+
+// ── 3D CARD TILT ──
+document.querySelectorAll('.lc, .sc').forEach(el => {
+  el.addEventListener('mouseenter', () => { el.style.transition = 'transform 0.1s'; });
+  el.addEventListener('mousemove', e => {
+    const r = el.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
+    el.style.transform = `perspective(800px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg) translateZ(8px)`;
+  });
+  el.addEventListener('mouseleave', () => {
+    el.style.transition = 'transform 0.6s cubic-bezier(0.16,1,0.3,1)';
+    el.style.transform = '';
+  });
+});
+
+const ab = document.querySelector('.ablock');
+if (ab) {
+  ab.addEventListener('mouseenter', () => { ab.style.transition = 'transform 0.15s'; });
+  ab.addEventListener('mousemove', e => {
+    const r = ab.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
+    ab.style.transform = `perspective(1200px) rotateY(${x * 5}deg) rotateX(${-y * 5}deg) translateZ(4px)`;
+  });
+  ab.addEventListener('mouseleave', () => {
+    ab.style.transition = 'transform 0.6s cubic-bezier(0.16,1,0.3,1)';
+    ab.style.transform = '';
+  });
+}
 </script>
