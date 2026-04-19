@@ -6,7 +6,7 @@
 <title>Nekter AI Webinar Series - AI for Business Owners</title>
 <meta name="description" content="Free weekly webinars on how AI is generating $10k-$50k in hidden revenue for real estate, home service, and local businesses. Hosted by Nekter AI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -328,6 +328,91 @@ footer a:hover{color:var(--blue)}
 /* 3D CARD STYLE */
 .lc,.sc,.ablock,.ind-card,.sched-card,.price-card{transform-style:preserve-3d;will-change:transform}
 
+/* =========================
+   EDITORIAL REDESIGN
+   ========================= */
+
+/* Remove floating template decorations */
+.orb,.shape-ring,.shape-dot,.aurora,.hero-grid,.cursor-glow{display:none !important}
+
+/* Refined dot-grid for light sections */
+body::after{background-image:radial-gradient(rgba(15,23,42,0.07) 1px,transparent 1px);background-size:28px 28px;opacity:0.55}
+
+/* ---- HERO: dark navy, grain, editorial type ---- */
+.hero{background:#0a0a1a;color:#fff}
+.hero::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.4 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");opacity:0.16;pointer-events:none;z-index:0;mix-blend-mode:overlay}
+.hero::after{content:'';position:absolute;top:-18%;right:-8%;width:720px;height:720px;background:radial-gradient(circle,rgba(108,71,255,0.22) 0%,transparent 62%);pointer-events:none;z-index:0}
+.hero .badge{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.12);color:#cbc6ff}
+.hero .badge .bdot{background:#a78bff}
+.hero h1{color:#fff;font-size:clamp(52px,8vw,108px);line-height:0.98;letter-spacing:-.05em;max-width:960px;font-weight:900}
+.hero h1 .h-line1{display:block;font-size:0.42em;font-weight:700;color:rgba(255,255,255,0.78);letter-spacing:-.015em;padding-left:0.4em;line-height:1.1}
+.hero h1 .h-line2{display:block;font-size:1.28em;font-weight:900;background:linear-gradient(135deg,#c7b5ff 0%,#8a6aff 45%,#5b8bff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-top:-0.22em;letter-spacing:-.06em;line-height:0.92}
+.hero h1 .h-line3{display:block;font-size:0.42em;font-weight:700;color:rgba(255,255,255,0.85);letter-spacing:-.015em;margin-top:-0.08em;padding-left:1.3em;line-height:1.1}
+.hero-sub{color:rgba(255,255,255,0.7)}
+.hero-sub em{color:#fff}
+.hero .pill{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.82);box-shadow:none}
+.hero .pill svg{color:#a78bff}
+.hero .pill:hover{border-color:rgba(167,139,255,0.5);color:#fff;box-shadow:none}
+.hero .btn-g{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.16);color:#fff;box-shadow:none}
+.hero .btn-g:hover{border-color:rgba(167,139,255,0.55);color:#cbc6ff;box-shadow:none}
+.hero .anote{color:rgba(255,255,255,0.55)}
+.hero .anote strong{color:#a78bff}
+
+/* ---- COUNTDOWN: dark ticket ---- */
+.countdown-section{background:#0f0f2d;border-bottom:none;padding:84px 0;color:#fff}
+.countdown-section::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");opacity:0.1;pointer-events:none;z-index:0;mix-blend-mode:overlay}
+.countdown-section > .wrap{position:relative;z-index:1}
+.countdown-rule{display:flex;align-items:center;gap:20px;max-width:460px;margin:0 auto 30px}
+.countdown-rule::before,.countdown-rule::after{content:'';flex:1;height:1px;background:rgba(255,255,255,0.18)}
+.countdown-rule span{font-size:11px;letter-spacing:.36em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,0.72)}
+.countdown-head h2{color:#fff;font-weight:800}
+.countdown-meta{color:rgba(255,255,255,0.55)}
+.countdown-live-badge{background:rgba(108,71,255,0.18);border-color:rgba(167,139,255,0.35);color:#cbc6ff}
+.countdown-live-badge .ldot{background:#a78bff}
+@keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(167,139,255,0.55)}70%{box-shadow:0 0 0 14px rgba(167,139,255,0)}100%{box-shadow:0 0 0 0 rgba(167,139,255,0)}}
+.cd-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:34px 10px;box-shadow:none}
+.cd-card:hover{background:rgba(255,255,255,0.05);box-shadow:0 12px 32px rgba(0,0,0,0.35)}
+.cd-num{color:#fff;font-variant-numeric:tabular-nums;font-weight:800;font-size:clamp(44px,6vw,72px);-webkit-background-clip:border-box;-webkit-text-fill-color:#fff;background:none}
+.cd-label{color:rgba(255,255,255,0.5);font-size:11px;letter-spacing:.28em}
+.cd-live{color:#a78bff}
+
+/* ---- FEATURE CARDS: asymmetric + watermarks ---- */
+.lgrid{grid-template-columns:repeat(2,1fr);background:transparent;border:none;border-radius:0;box-shadow:none;gap:18px}
+.lc{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:44px 40px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden;transition:transform .35s var(--ease-out-quart),box-shadow .35s,border-color .35s}
+.lc::after{display:none}
+.lc:hover{background:var(--card);transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:rgba(108,71,255,0.2)}
+.lc::before{content:attr(data-wm);position:absolute;right:-10px;bottom:-56px;font-family:var(--ff);font-size:240px;font-weight:900;color:rgba(108,71,255,0.055);letter-spacing:-.07em;line-height:1;pointer-events:none;z-index:0}
+.lc > *{position:relative;z-index:1}
+.lc:nth-child(1),.lc:nth-child(4){grid-column:1 / -1}
+.lc:nth-child(1) h3,.lc:nth-child(4) h3{font-size:22px;max-width:620px}
+.lc:nth-child(1) p,.lc:nth-child(4) p{max-width:680px;font-size:16px}
+@media(max-width:720px){.lgrid{grid-template-columns:1fr}.lc:nth-child(n){grid-column:auto}.lc::before{font-size:160px;bottom:-36px}}
+
+/* ---- HOSTS: polaroid + Caveat ---- */
+.sav{width:170px;height:200px;border-radius:3px;border:none;background:#fff;padding:10px 10px 40px;box-shadow:0 14px 34px rgba(15,23,42,0.18),0 2px 6px rgba(15,23,42,0.08);transform:rotate(-2.2deg);transition:transform .4s var(--ease-out-quart),box-shadow .4s;margin-bottom:24px}
+.sav img{position:static;width:100%;height:100%;object-fit:cover;border-radius:0;display:block;filter:grayscale(0.08) contrast(1.02)}
+.sav > span{display:none}
+.sc:nth-child(even) .sav{transform:rotate(2.6deg)}
+.sc:nth-child(3n) .sav{transform:rotate(-1.4deg)}
+.sc:nth-child(4n) .sav{transform:rotate(1.8deg)}
+.sc:hover .sav{transform:rotate(0) scale(1.02);box-shadow:0 22px 50px rgba(15,23,42,0.22)}
+.sname{font-family:'Caveat',cursive;font-size:40px;font-weight:700;line-height:1;letter-spacing:0;margin-bottom:2px;color:var(--text)}
+
+/* ---- REAL ESTATE CARD: featured dark ---- */
+.ind-card:first-child{background:#0a0a1a;border-color:rgba(167,139,255,0.22);color:#fff;position:relative;overflow:hidden}
+.ind-card:first-child::before{background:linear-gradient(135deg,#6c47ff 0%,#3b82f6 100%);opacity:1;height:4px}
+.ind-card:first-child::after{content:'';position:absolute;top:-120px;right:-120px;width:420px;height:420px;background:radial-gradient(circle,rgba(108,71,255,0.22) 0%,transparent 65%);pointer-events:none;z-index:0}
+.ind-card:first-child > *{position:relative;z-index:1}
+.ind-card:first-child h3{color:#fff;font-size:28px}
+.ind-card:first-child p{color:rgba(255,255,255,0.72)}
+.ind-card:first-child .ind-label{background:rgba(108,71,255,0.22) !important;color:#cbc6ff !important;border:1px solid rgba(167,139,255,0.3)}
+.ind-card:first-child .ind-icon{background:rgba(167,139,255,0.15) !important}
+.ind-card:first-child .ind-icon svg{stroke:#a78bff !important}
+.ind-card:first-child .ind-topics li{color:rgba(255,255,255,0.82);border-bottom:1px solid rgba(255,255,255,0.07);padding:10px 0}
+.ind-card:first-child .ind-topics li:last-child{border-bottom:none}
+.ind-card:first-child .ind-topics li::before{background:linear-gradient(135deg,#a78bff,#5b8bff)}
+.ind-card:first-child:hover{border-color:rgba(167,139,255,0.45);transform:translateY(-3px);box-shadow:0 20px 60px rgba(108,71,255,0.28)}
+
 /* COUNTDOWN */
 .countdown-section{background:#fff;padding:64px 0;border-bottom:1px solid var(--border);position:relative;z-index:1}
 .countdown-live-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(108,71,255,0.08);border:1px solid rgba(108,71,255,0.18);color:#6c47ff;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:10px 20px;border-radius:100px;margin-bottom:24px}
@@ -382,7 +467,7 @@ footer a:hover{color:var(--blue)}
   <div class="hero-grid"></div>
   <div class="wrap">
     <div class="badge"><span class="bdot"></span>Real Estate Webinar &middot; April 25 &middot; 11AM PST &middot; Live</div>
-    <h1>AI That Actually<br><span class="gt">Grows Revenue</span><br>for Your Business</h1>
+    <h1><span class="h-line1">AI That Actually</span><span class="h-line2 gt">Grows Revenue</span><span class="h-line3">for Your Business.</span></h1>
     <p class="hero-sub">Join our free webinar series where we show business owners exactly how AI is quietly generating <em>$10k&ndash;$50k in hidden revenue</em>. Real demos. Real numbers. No fluff.</p>
     <div class="pills">
       <div class="pill"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>Live on Google Meet</div>
@@ -414,6 +499,7 @@ footer a:hover{color:var(--blue)}
 <section class="countdown-section">
   <div class="wrap">
     <div class="countdown-head">
+      <div class="countdown-rule"><span>Next session in</span></div>
       <div class="countdown-live-badge"><span class="ldot"></span>Real Estate &middot; April 25 &middot; 11AM PST</div>
       <h2>Webinar starts in</h2>
       <p class="countdown-meta">Saturday, April 25, 2026 &middot; 11:00 AM PST &middot; 45 min + Q&amp;A &middot; Live on Google Meet</p>
@@ -559,12 +645,12 @@ footer a:hover{color:var(--blue)}
     <h2 class="st reveal">Not a pitch.<br>A playbook you can use today.</h2>
     <p class="sb reveal">Every session follows a proven structure. You'll leave knowing exactly where you're leaking revenue and how AI fixes it.</p>
     <div class="lgrid">
-      <div class="lc reveal reveal-d1"><p class="lnum">01</p><h3>Where your business is leaking money right now</h3><p>The three places every business loses revenue before lunch: slow follow-up, missed after-hours calls, and manual data entry nobody talks about.</p></div>
-      <div class="lc reveal reveal-d2"><p class="lnum">02</p><h3>Live demo: AI that runs your business</h3><p>Watch a multi-agent system handle lead gen, inbox triage, and CRM updates simultaneously. Live. On screen. In real time.</p></div>
-      <div class="lc reveal reveal-d3"><p class="lnum">03</p><h3>Industry-specific revenue strategies</h3><p>Real numbers from real implementations in your industry. We'll show automations built specifically for how your business operates.</p></div>
-      <div class="lc reveal reveal-d4"><p class="lnum">04</p><h3>What an AI build costs and returns</h3><p>Transparent breakdown of what a system costs to deploy. Spoiler: one $60k/yr employee reclaims $28k in productive time annually.</p></div>
-      <div class="lc reveal reveal-d5"><p class="lnum">05</p><h3>Getting your team to actually use it</h3><p>Mandating AI without a plan creates resistance. The adoption framework that makes employees see AI as a tool, not a threat.</p></div>
-      <div class="lc reveal reveal-d6"><p class="lnum">06</p><h3>Live Q&amp;A with the Nekter AI team</h3><p>Every session ends with open Q&amp;A. Bring your questions, your objections, your specific business challenges. We answer everything live.</p></div>
+      <div class="lc reveal reveal-d1" data-wm="01"><p class="lnum">01</p><h3>Where your business is leaking money right now</h3><p>The three places every business loses revenue before lunch: slow follow-up, missed after-hours calls, and manual data entry nobody talks about.</p></div>
+      <div class="lc reveal reveal-d2" data-wm="02"><p class="lnum">02</p><h3>Live demo: AI that runs your business</h3><p>Watch a multi-agent system handle lead gen, inbox triage, and CRM updates simultaneously. Live. On screen. In real time.</p></div>
+      <div class="lc reveal reveal-d3" data-wm="03"><p class="lnum">03</p><h3>Industry-specific revenue strategies</h3><p>Real numbers from real implementations in your industry. We'll show automations built specifically for how your business operates.</p></div>
+      <div class="lc reveal reveal-d4" data-wm="04"><p class="lnum">04</p><h3>What an AI build costs and returns</h3><p>Transparent breakdown of what a system costs to deploy. Spoiler: one $60k/yr employee reclaims $28k in productive time annually.</p></div>
+      <div class="lc reveal reveal-d5" data-wm="05"><p class="lnum">05</p><h3>Getting your team to actually use it</h3><p>Mandating AI without a plan creates resistance. The adoption framework that makes employees see AI as a tool, not a threat.</p></div>
+      <div class="lc reveal reveal-d6" data-wm="06"><p class="lnum">06</p><h3>Live Q&amp;A with the Nekter AI team</h3><p>Every session ends with open Q&amp;A. Bring your questions, your objections, your specific business challenges. We answer everything live.</p></div>
     </div>
   </div>
 </section>
