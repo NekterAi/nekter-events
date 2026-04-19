@@ -327,6 +327,27 @@ footer a:hover{color:var(--blue)}
 
 /* 3D CARD STYLE */
 .lc,.sc,.ablock,.ind-card,.sched-card,.price-card{transform-style:preserve-3d;will-change:transform}
+
+/* COUNTDOWN */
+.countdown-section{background:#fff;padding:64px 0;border-bottom:1px solid var(--border);position:relative;z-index:1}
+.countdown-live-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(108,71,255,0.08);border:1px solid rgba(108,71,255,0.18);color:#6c47ff;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:10px 20px;border-radius:100px;margin-bottom:24px}
+.countdown-live-badge .ldot{width:8px;height:8px;border-radius:50%;background:#6c47ff;box-shadow:0 0 0 0 rgba(108,71,255,0.6);animation:livePulse 1.6s ease-out infinite}
+@keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(108,71,255,0.55)}70%{box-shadow:0 0 0 14px rgba(108,71,255,0)}100%{box-shadow:0 0 0 0 rgba(108,71,255,0)}}
+.countdown-head{text-align:center;margin-bottom:36px}
+.countdown-head h2{font-family:var(--ff);font-size:clamp(26px,3.2vw,36px);font-weight:900;letter-spacing:-.03em;color:var(--text);margin-bottom:12px}
+.countdown-meta{color:var(--muted);font-size:15px;font-weight:500}
+.countdown-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:720px;margin:0 auto}
+.cd-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:28px 12px;text-align:center;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease-out-quart),box-shadow .25s var(--ease-out-quart)}
+.cd-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.cd-num{font-family:var(--ff);font-size:clamp(40px,5.5vw,60px);font-weight:900;letter-spacing:-.04em;color:#6c47ff;line-height:1;font-variant-numeric:tabular-nums}
+.cd-label{font-size:12px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-top:10px}
+.cd-live{grid-column:1/-1;text-align:center;font-size:22px;font-weight:800;color:#6c47ff;padding:32px}
+@media(max-width:640px){.countdown-grid{grid-template-columns:repeat(4,1fr);gap:8px}.cd-card{padding:18px 6px;border-radius:14px}.cd-label{font-size:10px;letter-spacing:.08em}}
+
+/* SCHEDULE NEXT-SESSION ACCENT */
+.sched-badge.next{background:#6c47ff;color:#fff;box-shadow:0 6px 18px rgba(108,71,255,0.3)}
+.sched-card.featured{border:1px solid rgba(108,71,255,0.35);box-shadow:0 10px 40px rgba(108,71,255,0.12)}
+.sched-card.featured .sched-day,.sched-card.featured .sched-month{color:#6c47ff}
 </style>
 </head>
 <body>
@@ -360,7 +381,7 @@ footer a:hover{color:var(--blue)}
   <div class="orb orb3"></div>
   <div class="hero-grid"></div>
   <div class="wrap">
-    <div class="badge"><span class="bdot"></span>Free webinar series &middot; Online &middot; Starting soon</div>
+    <div class="badge"><span class="bdot"></span>Real Estate Webinar &middot; April 25 &middot; 11AM PST &middot; Live</div>
     <h1>AI That Actually<br><span class="gt">Grows Revenue</span><br>for Your Business</h1>
     <p class="hero-sub">Join our free webinar series where we show business owners exactly how AI is quietly generating <em>$10k&ndash;$50k in hidden revenue</em>. Real demos. Real numbers. No fluff.</p>
     <div class="pills">
@@ -388,6 +409,48 @@ footer a:hover{color:var(--blue)}
     </div>
   </div>
 </div>
+
+<!-- COUNTDOWN -->
+<section class="countdown-section">
+  <div class="wrap">
+    <div class="countdown-head">
+      <div class="countdown-live-badge"><span class="ldot"></span>Real Estate &middot; April 25 &middot; 11AM PST</div>
+      <h2>Webinar starts in</h2>
+      <p class="countdown-meta">Saturday, April 25, 2026 &middot; 11:00 AM PST &middot; 45 min + Q&amp;A &middot; Live on Google Meet</p>
+    </div>
+    <div class="countdown-grid" id="countdown">
+      <div class="cd-card"><div class="cd-num" id="cd-days">--</div><div class="cd-label">Days</div></div>
+      <div class="cd-card"><div class="cd-num" id="cd-hours">--</div><div class="cd-label">Hours</div></div>
+      <div class="cd-card"><div class="cd-num" id="cd-mins">--</div><div class="cd-label">Minutes</div></div>
+      <div class="cd-card"><div class="cd-num" id="cd-secs">--</div><div class="cd-label">Seconds</div></div>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var target = new Date('2026-04-25T11:00:00-07:00').getTime();
+  var grid = document.getElementById('countdown');
+  var d = document.getElementById('cd-days'), h = document.getElementById('cd-hours'),
+      m = document.getElementById('cd-mins'), s = document.getElementById('cd-secs');
+  function pad(n){return n<10?'0'+n:''+n}
+  function tick(){
+    var now = Date.now(), diff = target - now;
+    if(diff <= 0){
+      grid.innerHTML = '<div class="cd-live">\uD83C\uDF89 The webinar is live right now!</div>';
+      clearInterval(iv);
+      return;
+    }
+    var days = Math.floor(diff/86400000);
+    var hours = Math.floor(diff%86400000/3600000);
+    var mins = Math.floor(diff%3600000/60000);
+    var secs = Math.floor(diff%60000/1000);
+    d.textContent = pad(days); h.textContent = pad(hours);
+    m.textContent = pad(mins); s.textContent = pad(secs);
+  }
+  tick();
+  var iv = setInterval(tick, 1000);
+})();
+</script>
 
 <!-- TICKER -->
 <div class="ticker">
@@ -447,17 +510,17 @@ footer a:hover{color:var(--blue)}
     <p class="sb reveal">Each session is 45 minutes of actionable content plus live Q&amp;A. Register once and you'll get a link for every upcoming session.</p>
 
     <div class="sched-grid">
-      <div class="sched-card reveal reveal-d1">
+      <div class="sched-card featured reveal reveal-d1">
         <div class="sched-date">
-          <div class="sched-day">TBD</div>
-          <div class="sched-month">Coming soon</div>
+          <div class="sched-day">25</div>
+          <div class="sched-month">Apr 2026</div>
         </div>
         <div class="sched-divider"></div>
         <div class="sched-info">
           <div class="sched-title">AI for Real Estate: Where You're Leaving Money on the Table</div>
-          <div class="sched-meta">Live on Google Meet &middot; 45 min + Q&amp;A &middot; Free</div>
+          <div class="sched-meta">Saturday, April 25, 2026 &middot; 11:00 AM PST &middot; 45 min + Q&amp;A &middot; Live on Google Meet</div>
         </div>
-        <span class="sched-badge soon">Date coming</span>
+        <span class="sched-badge next">Next Session</span>
       </div>
 
       <div class="sched-card reveal reveal-d2">
