@@ -457,8 +457,7 @@ nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px
 .hero-dash-row strong{color:#fff;font-weight:600;display:block;font-size:13px;margin-bottom:2px}
 .hero-dash-row em{color:rgba(255,255,255,0.5);font-style:normal;font-size:12px}
 @keyframes dashFloat{0%,100%{transform:translateY(-50%)}50%{transform:translateY(calc(-50% - 8px))}}
-@media(max-width:1024px){.hero-dash{display:none}}
-@media(min-width:1025px){.hero .wrap > :not(.hero-dash){max-width:640px}}
+/* grid layout handles hero-dash visibility — see fixes block */
 
 /* COUNTDOWN */
 .countdown-section{background:#fff;padding:64px 0;border-bottom:1px solid var(--border);position:relative;z-index:1}
@@ -475,6 +474,60 @@ nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px
 .cd-label{font-size:12px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-top:10px}
 .cd-live{grid-column:1/-1;text-align:center;font-size:22px;font-weight:800;color:#6c47ff;padding:32px}
 @media(max-width:640px){.countdown-grid{grid-template-columns:repeat(4,1fr);gap:8px}.cd-card{padding:18px 6px;border-radius:14px}.cd-label{font-size:10px;letter-spacing:.08em}}
+
+/* =========================
+   LAYOUT + CTA FIXES (final overrides)
+   ========================= */
+
+/* HERO 2-col grid */
+.hero .wrap{position:relative}
+.hero-left{min-width:0}
+@media(min-width:1025px){
+  .hero .wrap{display:grid;grid-template-columns:minmax(0,60%) minmax(0,40%);gap:56px;align-items:center}
+  .hero-left{grid-column:1;max-width:none}
+  .hero .wrap > :not(.hero-dash):not(.hero-left){grid-column:1;max-width:none}
+  .hero-dash{position:static !important;grid-column:2;grid-row:1;transform:none !important;animation:dashFloatGrid 6s ease-in-out infinite;width:100%;max-width:380px;margin-left:auto;align-self:center}
+}
+@keyframes dashFloatGrid{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media(max-width:1024px){
+  .hero-dash{position:static !important;transform:none !important;animation:none;width:100%;max-width:420px;margin:40px auto 0;display:block}
+}
+
+/* HERO PILLS one row on desktop */
+.hero .pills{flex-wrap:wrap;gap:10px}
+.hero .pill{padding:9px 16px;font-size:13.5px}
+@media(min-width:1025px){.hero .pills{flex-wrap:nowrap}.hero .pill{white-space:nowrap;padding:8px 14px;font-size:13px}}
+
+/* COUNTDOWN — fully dark, overrides any earlier rules */
+.countdown-section{background:#0a0a1a !important;border-bottom:none !important;position:relative;overflow:hidden;padding:96px 0}
+.countdown-section::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");opacity:0.12;pointer-events:none;z-index:0;mix-blend-mode:overlay}
+.countdown-section > .wrap{position:relative;z-index:1}
+.countdown-head h2{color:#fff !important}
+.countdown-meta{color:rgba(255,255,255,0.55) !important}
+.countdown-rule{display:flex;align-items:center;gap:20px;max-width:460px;margin:0 auto 30px}
+.countdown-rule::before,.countdown-rule::after{content:'';flex:1;height:1px;background:rgba(255,255,255,0.18)}
+.countdown-rule span{font-size:11px;letter-spacing:.36em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,0.72)}
+.countdown-live-badge{background:rgba(108,71,255,0.18) !important;border:1px solid rgba(167,139,250,0.35) !important;color:#cbc6ff !important}
+.countdown-live-badge .ldot{background:#a78bfa !important}
+.cd-card{background:rgba(255,255,255,0.03) !important;border:1px solid #ffffff15 !important;box-shadow:none !important;padding:34px 10px}
+.cd-card:hover{background:rgba(255,255,255,0.06) !important;box-shadow:0 12px 32px rgba(0,0,0,0.4) !important}
+.cd-num{color:#fff !important;font-variant-numeric:tabular-nums;font-weight:800;font-size:clamp(44px,6vw,72px) !important;background:none !important;-webkit-text-fill-color:#fff !important;letter-spacing:-.03em}
+.cd-label{color:rgba(255,255,255,0.5) !important;letter-spacing:.28em;font-size:11px}
+.cd-live{color:#a78bfa !important}
+
+/* INLINE CTA blocks */
+.inline-cta{margin-top:56px;display:flex;justify-content:center}
+.inline-cta .btn-p{font-size:16px;padding:18px 38px}
+
+/* STICKY CTA (desktop bottom-right, mobile full width) */
+.sticky-cta{position:fixed;right:24px;bottom:24px;z-index:98;opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .3s ease,transform .3s ease}
+.sticky-cta.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+.sticky-cta .btn-p{font-size:15px;padding:16px 30px;box-shadow:0 10px 40px rgba(108,71,255,0.45),0 0 0 1px rgba(167,139,250,0.3)}
+@media(max-width:720px){
+  .sticky-cta{left:16px;right:16px;bottom:16px}
+  .sticky-cta .btn-p{width:100%;justify-content:center;padding:18px 24px}
+  .float-cta{display:none !important}
+}
 
 /* SCHEDULE NEXT-SESSION ACCENT */
 .sched-badge.next{background:#6c47ff;color:#fff;box-shadow:0 6px 18px rgba(108,71,255,0.3)}
@@ -513,6 +566,7 @@ nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px
   <div class="orb orb3"></div>
   <div class="hero-grid"></div>
   <div class="wrap">
+    <div class="hero-left">
     <div class="badge"><span class="bdot"></span>Real Estate Webinar &middot; April 25 &middot; 11AM PST &middot; Live</div>
     <h1><span class="h-line1">AI That Actually</span><span class="h-line2 gt">Grows Revenue</span><span class="h-line3">for Your Business.</span></h1>
     <p class="hero-sub">Join our free webinar series where we show business owners exactly how AI is quietly generating <em>$10k&ndash;$50k in hidden revenue</em>. Real demos. Real numbers. No fluff.</p>
@@ -527,6 +581,7 @@ nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px
       <a href="#industries" class="btn-g">See upcoming topics</a>
     </div>
     <p class="anote"><strong>New webinars added regularly.</strong> Register once, get access to all upcoming sessions.</p>
+    </div><!-- /hero-left -->
     <aside class="hero-dash" aria-label="NekterOS activity">
       <div class="hero-dash-head">
         <span class="hero-dash-title">NekterOS &middot; Live</span>
@@ -568,32 +623,6 @@ nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px
     </div>
   </div>
 </section>
-<script>
-(function(){
-  var target = new Date('2026-04-25T11:00:00-07:00').getTime();
-  var grid = document.getElementById('countdown');
-  var d = document.getElementById('cd-days'), h = document.getElementById('cd-hours'),
-      m = document.getElementById('cd-mins'), s = document.getElementById('cd-secs');
-  function pad(n){return n<10?'0'+n:''+n}
-  function tick(){
-    var now = Date.now(), diff = target - now;
-    if(diff <= 0){
-      grid.innerHTML = '<div class="cd-live">\uD83C\uDF89 The webinar is live right now!</div>';
-      clearInterval(iv);
-      return;
-    }
-    var days = Math.floor(diff/86400000);
-    var hours = Math.floor(diff%86400000/3600000);
-    var mins = Math.floor(diff%3600000/60000);
-    var secs = Math.floor(diff%60000/1000);
-    d.textContent = pad(days); h.textContent = pad(hours);
-    m.textContent = pad(mins); s.textContent = pad(secs);
-  }
-  tick();
-  var iv = setInterval(tick, 1000);
-})();
-</script>
-
 <!-- TICKER -->
 <div class="ticker">
   <div class="ttrack">
@@ -641,6 +670,7 @@ nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px
         </ul>
       </div>
     </div>
+    <div class="inline-cta reveal"><a href="#register" class="btn-p">Reserve your free spot <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div>
   </div>
 </section>
 
@@ -708,6 +738,7 @@ nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px
       <div class="lc reveal reveal-d5" data-wm="05"><p class="lnum">05</p><h3>Getting your team to actually use it</h3><p>Mandating AI without a plan creates resistance. The adoption framework that makes employees see AI as a tool, not a threat.</p></div>
       <div class="lc reveal reveal-d6" data-wm="06"><p class="lnum">06</p><h3>Live Q&amp;A with the Nekter AI team</h3><p>Every session ends with open Q&amp;A. Bring your questions, your objections, your specific business challenges. We answer everything live.</p></div>
     </div>
+    <div class="inline-cta reveal"><a href="#register" class="btn-p">Reserve your free spot <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div>
   </div>
 </section>
 
@@ -830,6 +861,7 @@ nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px
         <p class="sbio">Sam runs the infrastructure that keeps Nekter AI scaling. From finance and hiring to day-to-day operations, he builds the systems that let the rest of the team focus on what they do best. The business works because Sam makes it work.</p>
       </div>
     </div>
+    <div class="inline-cta reveal"><a href="#register" class="btn-p">Reserve your free spot <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div>
   </div>
 </section>
 
@@ -935,6 +967,11 @@ nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px
   </div>
 </footer>
 
+<!-- STICKY CTA (desktop + mobile) -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="#register" class="btn-p">Register for free <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+</div>
+
 <!-- FLOATING MOBILE CTA -->
 <div class="float-cta" id="floatCta">
   <a href="#register">Register for free &rarr;</a>
@@ -1035,6 +1072,52 @@ modalSkip.addEventListener('click', function() { closeModal(); window.open(tally
 modalVip.addEventListener('click', closeModal);
 modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
 document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+
+// COUNTDOWN TIMER
+document.addEventListener('DOMContentLoaded', function(){
+  var target = new Date('2026-04-25T11:00:00-07:00').getTime();
+  var grid = document.getElementById('countdown');
+  var d = document.getElementById('cd-days'),
+      h = document.getElementById('cd-hours'),
+      m = document.getElementById('cd-mins'),
+      s = document.getElementById('cd-secs');
+  if(!grid || !d || !h || !m || !s) return;
+  function pad(n){return n<10?'0'+n:''+n}
+  var iv;
+  function tick(){
+    var diff = target - Date.now();
+    if(diff <= 0){
+      grid.innerHTML = '<div class="cd-live">\uD83C\uDF89 The webinar is live right now!</div>';
+      if(iv) clearInterval(iv);
+      return;
+    }
+    d.textContent = pad(Math.floor(diff/86400000));
+    h.textContent = pad(Math.floor(diff%86400000/3600000));
+    m.textContent = pad(Math.floor(diff%3600000/60000));
+    s.textContent = pad(Math.floor(diff%60000/1000));
+  }
+  tick();
+  iv = setInterval(tick, 1000);
+});
+
+// STICKY CTA
+(function(){
+  var stickyCta = document.getElementById('stickyCta');
+  if(!stickyCta) return;
+  var registerSec = document.getElementById('register');
+  function update(){
+    var past = window.scrollY > 600;
+    var nearRegister = false;
+    if(registerSec){
+      var r = registerSec.getBoundingClientRect();
+      nearRegister = r.top < window.innerHeight && r.bottom > 0;
+    }
+    stickyCta.classList.toggle('show', past && !nearRegister);
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
 </script>
 </body>
 </html>
