@@ -86,7 +86,9 @@ export default async function handler(req, res) {
           source: crmSource,
           referral_source: fields.referralSource,
           requested_audit: requestedAudit,
-          webinar_session_iso: sessionIso,
+          // Only include when we actually have an ISO date — CRM's Zod
+          // schema is `.string().optional()` which rejects null.
+          ...(sessionIso ? { webinar_session_iso: sessionIso } : {}),
         }),
       });
       const crmJson = await crmRes.json().catch(() => ({}));
