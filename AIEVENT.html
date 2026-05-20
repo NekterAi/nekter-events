@@ -583,6 +583,67 @@ nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px
 .sched-badge.next{background:#6c47ff;color:#fff;box-shadow:0 6px 18px rgba(108,71,255,0.3)}
 .sched-card.featured{border:1px solid rgba(108,71,255,0.35);box-shadow:0 10px 40px rgba(108,71,255,0.12)}
 .sched-card.featured .sched-day,.sched-card.featured .sched-month{color:#6c47ff}
+
+/* =========================
+   REGISTRATION FORM MODAL (dark)
+   ========================= */
+.form-modal-overlay{position:fixed;inset:0;background:rgba(5,5,15,0.78);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);z-index:200;display:flex;align-items:flex-start;justify-content:center;padding:40px 16px;opacity:0;pointer-events:none;transition:opacity .3s var(--ease-out-quart);overflow-y:auto}
+.form-modal-overlay.active{opacity:1;pointer-events:all}
+.form-modal-box{background:#0a0a1a;color:#fff;border:1px solid rgba(167,139,250,0.18);border-radius:22px;width:100%;max-width:680px;position:relative;box-shadow:0 32px 80px rgba(0,0,0,0.6),0 0 60px rgba(108,71,255,0.18);transform:translateY(24px) scale(0.97);transition:transform .35s var(--ease-out-expo);overflow:hidden;margin:auto 0}
+.form-modal-overlay.active .form-modal-box{transform:translateY(0) scale(1)}
+.form-modal-box::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");opacity:0.08;pointer-events:none;z-index:0;mix-blend-mode:overlay;border-radius:22px}
+.form-modal-box::after{content:'';position:absolute;top:-160px;right:-100px;width:520px;height:520px;background:radial-gradient(circle,rgba(108,71,255,0.22) 0%,transparent 60%);pointer-events:none;z-index:0;border-radius:50%}
+.form-modal-inner{position:relative;z-index:1;padding:48px 44px 44px}
+.form-modal-close{position:absolute;top:18px;right:18px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;color:rgba(255,255,255,0.7);z-index:2}
+.form-modal-close:hover{background:rgba(255,255,255,0.08);color:#fff;border-color:rgba(255,255,255,0.3)}
+.form-section{color:#fff;position:relative}
+.form-section .form-modal-eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#a78bfa;margin-bottom:10px}
+.form-section h2{font-family:var(--ff);font-size:clamp(26px,3.8vw,36px);font-weight:900;line-height:1.1;letter-spacing:-.03em;color:#fff;margin-bottom:12px}
+.form-section .form-intro{color:rgba(255,255,255,0.65);font-size:15px;line-height:1.65;margin-bottom:32px;max-width:520px}
+.form-group{margin-bottom:36px}
+.form-group-title{font-family:var(--ff);font-size:18px;font-weight:800;letter-spacing:-.01em;color:#fff;margin-bottom:18px;display:flex;align-items:center;gap:6px}
+.form-group-title .req{color:#a78bfa;font-weight:700}
+.form-row{display:grid;grid-template-columns:1fr;gap:12px}
+.form-field{position:relative}
+.form-input,.form-textarea,.form-select{width:100%;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:14px 18px;color:#fff;font-family:var(--ff);font-size:15px;font-weight:400;line-height:1.5;transition:border-color .25s,background .25s,box-shadow .25s;outline:none;-webkit-appearance:none;appearance:none}
+.form-input::placeholder,.form-textarea::placeholder{color:rgba(255,255,255,0.4);font-weight:400}
+.form-input:hover,.form-textarea:hover,.form-select:hover{border-color:rgba(255,255,255,0.22);background:rgba(255,255,255,0.05)}
+.form-input:focus,.form-textarea:focus,.form-select:focus{border-color:rgba(167,139,250,0.55);background:rgba(255,255,255,0.05);box-shadow:0 0 0 4px rgba(167,139,250,0.1)}
+.form-input.error,.form-textarea.error,.form-select.error{border-color:rgba(239,68,68,0.65)}
+.form-textarea{resize:vertical;min-height:84px}
+.form-select{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'><path d='M1 1.5L6 6.5L11 1.5' stroke='%23a78bfa' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/></svg>");background-repeat:no-repeat;background-position:right 18px center;padding-right:42px;cursor:pointer}
+.form-select option{background:#0a0a1a;color:#fff}
+.form-checkbox-row{display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:18px 20px;cursor:pointer;transition:border-color .25s,background .25s}
+.form-checkbox-row:hover{border-color:rgba(167,139,250,0.4);background:rgba(255,255,255,0.05)}
+.form-checkbox-row input[type="checkbox"]{flex-shrink:0;appearance:none;-webkit-appearance:none;width:22px;height:22px;border:1.5px solid rgba(255,255,255,0.3);border-radius:6px;background:rgba(255,255,255,0.02);cursor:pointer;position:relative;margin-top:2px;transition:all .25s}
+.form-checkbox-row input[type="checkbox"]:checked{background:linear-gradient(135deg,#6C47FF 0%,#A78BFA 100%);border-color:transparent;box-shadow:0 0 14px rgba(167,139,250,0.45)}
+.form-checkbox-row input[type="checkbox"]:checked::after{content:'';position:absolute;top:3px;left:7px;width:5px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.form-checkbox-row .cb-body{font-size:14.5px;line-height:1.6;color:rgba(255,255,255,0.85)}
+.form-checkbox-row .cb-body strong{color:#fff;display:block;margin-bottom:4px;font-weight:600;font-size:15px}
+.form-checkbox-row .cb-body em{color:#a78bfa;font-style:normal;font-weight:500}
+.form-submit{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;background:linear-gradient(135deg,#6C47FF 0%,#A78BFA 100%);color:#fff;font-family:var(--ff);font-weight:700;font-size:17px;padding:20px 36px;border-radius:100px;text-decoration:none;border:none;cursor:pointer;letter-spacing:-.01em;margin-top:8px;transition:transform .25s,box-shadow .25s,opacity .25s;box-shadow:0 8px 28px rgba(108,71,255,0.35)}
+.form-submit:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 14px 40px rgba(108,71,255,0.5)}
+.form-submit:disabled{opacity:0.6;cursor:not-allowed}
+.form-fineprint{font-size:13px;color:rgba(255,255,255,0.45);margin-top:18px;text-align:center;line-height:1.6}
+.form-error{display:none;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);color:#fecaca;font-size:14px;padding:14px 18px;border-radius:12px;margin-bottom:24px;line-height:1.5}
+.form-error.show{display:block}
+.form-tier-banner{display:none;background:linear-gradient(135deg,rgba(108,71,255,0.18) 0%,rgba(167,139,250,0.12) 100%);border:1px solid rgba(167,139,250,0.4);border-radius:14px;padding:18px 22px;margin-bottom:28px;box-shadow:0 0 28px rgba(108,71,255,0.18)}
+.form-tier-banner.show{display:block}
+.form-tier-banner .tier-banner-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.form-tier-banner strong{color:#fff;font-weight:700;display:block;margin-bottom:4px;font-size:15px}
+.form-tier-banner span{color:rgba(255,255,255,0.7);font-size:14px;line-height:1.5}
+.form-tier-banner span strong{display:inline;color:#a78bfa;font-weight:700;margin-bottom:0}
+.tier-banner-switch{background:transparent;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.8);font-family:var(--ff);font-size:13px;font-weight:500;padding:8px 16px;border-radius:100px;cursor:pointer;transition:all .25s;flex-shrink:0}
+.tier-banner-switch:hover{border-color:rgba(167,139,250,0.55);color:#fff;background:rgba(167,139,250,0.08)}
+.form-success{display:none;text-align:center;padding:32px 24px}
+.form-success.show{display:block}
+.form-success-icon{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#6C47FF 0%,#A78BFA 100%);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;box-shadow:0 0 32px rgba(167,139,250,0.4)}
+.form-success h3{font-family:var(--ff);font-size:clamp(26px,3.4vw,36px);font-weight:900;letter-spacing:-.02em;color:#fff;margin-bottom:14px}
+.form-success p{font-size:16px;line-height:1.7;color:rgba(255,255,255,0.7);max-width:440px;margin:0 auto 24px}
+.form-success .btn-success-vip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.05);border:1px solid rgba(167,139,250,0.4);color:#a78bfa;font-weight:600;font-size:14px;padding:12px 24px;border-radius:100px;text-decoration:none;transition:all .25s}
+.form-success .btn-success-vip:hover{background:rgba(167,139,250,0.1);border-color:rgba(167,139,250,0.7)}
+@media(min-width:560px){.form-row.two-col{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.form-modal-overlay{padding:0}.form-modal-box{border-radius:0;min-height:100vh;max-width:none;margin:0}.form-modal-inner{padding:60px 22px 36px}}
 </style>
 </head>
 <body>
@@ -884,13 +945,158 @@ nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px
           <li><svg fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><strong>Priority scheduling for your free AI revenue audit</strong></li>
           <li><svg fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Ask anything about AI for your specific business</li>
         </ul>
-        <a href="https://buy.stripe.com/5kQ7sEb1SgH25of7nC5c400" target="_blank" class="btn-vip">Get VIP access &mdash; $25 <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+        <button type="button" class="btn-vip" id="vipPricingBtn">Get VIP access &mdash; $25 <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></button>
       </div>
     </div>
 
     <p style="text-align:center;font-size:13px;color:var(--muted-lt);margin-top:28px;line-height:1.6">No spam. No sales pressure. Just the tools to grow your business.</p>
   </div>
 </section>
+
+<!-- REGISTRATION FORM (popup modal) -->
+<div class="form-modal-overlay" id="formModal" role="dialog" aria-modal="true" aria-labelledby="formModalTitle">
+  <div class="form-modal-box">
+    <button type="button" class="form-modal-close" id="formModalClose" aria-label="Close registration form">
+      <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <div class="form-modal-inner form-section" id="form">
+    <p class="form-modal-eyebrow" id="formModalEyebrow">Reserve your seat</p>
+    <h2 id="formModalTitle">Reserve Your Free Seat</h2>
+    <p class="form-intro" id="formModalIntro">Takes 60 seconds. You'll get an instant confirmation email with everything you need before we go live.</p>
+
+    <!-- Tier banner — appears when user picks VIP from a CTA -->
+    <div class="form-tier-banner" id="tierBanner">
+      <div class="tier-banner-inner">
+        <div>
+          <strong>VIP access selected</strong>
+          <span>You'll be charged <strong>$25</strong> by Stripe right after registration.</span>
+        </div>
+        <button type="button" class="tier-banner-switch" id="tierSwitch">Switch to free &rarr;</button>
+      </div>
+    </div>
+
+    <div class="form-error" id="formError"></div>
+
+    <form id="regForm" novalidate>
+      <input type="hidden" name="tier" id="formTier" value="free">
+      <!-- Personal details -->
+      <div class="form-group">
+        <p class="form-group-title">Let's start with your personal details <span class="req">*</span></p>
+        <div class="form-row two-col">
+          <div class="form-field"><input class="form-input" type="text" name="firstName" placeholder="First Name" autocomplete="given-name" required></div>
+          <div class="form-field"><input class="form-input" type="text" name="lastName" placeholder="Last Name" autocomplete="family-name" required></div>
+        </div>
+        <div class="form-row" style="margin-top:12px">
+          <div class="form-field"><input class="form-input" type="email" name="email" placeholder="Email address" autocomplete="email" required></div>
+        </div>
+        <div class="form-row" style="margin-top:12px">
+          <div class="form-field"><input class="form-input" type="tel" name="phone" placeholder="Phone number" autocomplete="tel" required></div>
+        </div>
+      </div>
+
+      <!-- Business info -->
+      <div class="form-group">
+        <p class="form-group-title">Business Info <span class="req">*</span></p>
+        <div class="form-row">
+          <div class="form-field"><input class="form-input" type="text" name="company" placeholder="Company" autocomplete="organization" required></div>
+        </div>
+        <div class="form-row" style="margin-top:12px">
+          <div class="form-field"><input class="form-input" type="text" name="jobTitle" placeholder="Job Title" autocomplete="organization-title" required></div>
+        </div>
+      </div>
+
+      <!-- Team size -->
+      <div class="form-group">
+        <p class="form-group-title">Team Size <span class="req">*</span></p>
+        <div class="form-field">
+          <select class="form-select" name="teamSize" required>
+            <option value="" disabled selected>Select team size</option>
+            <option value="Solo founder">Solo founder</option>
+            <option value="2-5">2 to 5</option>
+            <option value="6-15">6 to 15</option>
+            <option value="16-50">16 to 50</option>
+            <option value="50+">50+</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Industry -->
+      <div class="form-group">
+        <p class="form-group-title">Industry <span class="req">*</span></p>
+        <div class="form-field">
+          <select class="form-select" name="industry" required>
+            <option value="" disabled selected>Select industry</option>
+            <option value="HVAC">HVAC</option>
+            <option value="Plumbing">Plumbing</option>
+            <option value="Home services">Home services</option>
+            <option value="Legal">Legal</option>
+            <option value="Medical">Medical</option>
+            <option value="Med spa">Med spa</option>
+            <option value="Health care">Health care</option>
+            <option value="Hospitality">Hospitality</option>
+            <option value="Restaurant">Restaurant</option>
+            <option value="Hotel">Hotel</option>
+            <option value="Real estate">Real estate</option>
+            <option value="Insurance / Financial services">Insurance / Financial services</option>
+            <option value="Retailer">Retailer</option>
+            <option value="E-commerce">E-commerce</option>
+            <option value="Marketing / Agency">Marketing / Agency</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Operational headache -->
+      <div class="form-group">
+        <p class="form-group-title">What's your biggest operational headache right now? <span class="req">*</span></p>
+        <div class="form-field">
+          <textarea class="form-textarea" name="painPoint" placeholder="A sentence or two is plenty — e.g. 'leads sit in our inbox too long', 'I'm doing all the proposals myself', etc." required></textarea>
+        </div>
+      </div>
+
+      <!-- AI audit checkbox -->
+      <div class="form-group">
+        <p class="form-group-title">I'm interested in a free AI audit <span class="req">*</span></p>
+        <label class="form-checkbox-row">
+          <input type="checkbox" name="requestedAudit" value="true">
+          <span class="cb-body"><strong>Yes, score my business.</strong>We'll show where <em>$10k&ndash;$50k</em> is hiding in your operation. Mention the webinar for priority scheduling.</span>
+        </label>
+      </div>
+
+      <!-- How did you hear -->
+      <div class="form-group">
+        <p class="form-group-title">How did you hear about this event? <span class="req">*</span></p>
+        <div class="form-field">
+          <select class="form-select" name="referralSource" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="Instagram">Instagram</option>
+            <option value="LinkedIn">LinkedIn</option>
+            <option value="Friend or referral">Friend or referral</option>
+            <option value="Google">Google</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="form-submit" id="regSubmit">
+        <span class="submit-label">Reserve my free seat</span>
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </button>
+      <p class="form-fineprint">No spam. We use your info only to send the webinar link and follow up about the session you registered for.</p>
+    </form>
+
+    <!-- Success state -->
+    <div class="form-success" id="formSuccess">
+      <div class="form-success-icon">
+        <svg width="32" height="32" fill="none" stroke="#fff" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+      </div>
+      <h3>You're in.</h3>
+      <p>Check your inbox &mdash; we just sent your confirmation with everything you need before the session. While you're here, want to upgrade to VIP and have Spencer review your homework live?</p>
+      <a href="https://buy.stripe.com/5kQ7sEb1SgH25of7nC5c400" target="_blank" class="btn-success-vip">Upgrade to VIP &mdash; $25 &rarr;</a>
+    </div>
+    </div>
+  </div>
+</div>
 
 <!-- UPSELL MODAL -->
 <div class="modal-overlay" id="upsellModal">
@@ -905,7 +1111,7 @@ nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px
       <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Priority scheduling for your free AI audit</li>
     </ul>
     <div class="modal-btns">
-      <a href="https://buy.stripe.com/5kQ7sEb1SgH25of7nC5c400" target="_blank" class="btn-vip" id="modalVip">Get VIP access &mdash; $25 <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+      <button type="button" class="btn-vip" id="modalVip">Get VIP access &mdash; $25 <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></button>
       <button class="btn-skip" id="modalSkip">No thanks, continue with free registration &rarr;</button>
     </div>
   </div>
@@ -1084,8 +1290,11 @@ window.addEventListener('scroll', () => {
   if (window.scrollY <= 500) floatCta.classList.remove('show');
 }, { passive: true });
 
-// SMOOTH ANCHOR SCROLLING
+// SMOOTH ANCHOR SCROLLING — #register and #form are handled by the form-modal
+// opener below; skip them here so we don't double-fire (scroll + modal).
 document.querySelectorAll('a[href^="#"]').forEach(a => {
+  const href = a.getAttribute('href');
+  if (href === '#register' || href === '#form' || href === '#') return;
   a.addEventListener('click', function(e) {
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
@@ -1132,23 +1341,194 @@ if (ab) {
   });
 }
 
-// UPSELL MODAL
+// STRIPE VIP CHECKOUT URL — keep in one place
+const VIP_STRIPE_URL = 'https://buy.stripe.com/5kQ7sEb1SgH25of7nC5c400';
+
+// TIER STATE (free vs vip) — controls form behavior
+const tierInput = document.getElementById('formTier');
+const tierBanner = document.getElementById('tierBanner');
+const tierSwitch = document.getElementById('tierSwitch');
+const submitLabelEl = document.querySelector('#regSubmit .submit-label');
+const formModalTitle = document.getElementById('formModalTitle');
+const formModalEyebrow = document.getElementById('formModalEyebrow');
+const formModalIntro = document.getElementById('formModalIntro');
+
+function setTier(tier) {
+  if (!tierInput) return;
+  tierInput.value = tier;
+  if (tier === 'vip') {
+    tierBanner.classList.add('show');
+    if (submitLabelEl) submitLabelEl.textContent = 'Reserve seat & continue to payment';
+    if (formModalEyebrow) formModalEyebrow.textContent = 'VIP access — $25';
+    if (formModalTitle) formModalTitle.textContent = 'Reserve Your VIP Seat';
+    if (formModalIntro) formModalIntro.textContent = "Takes 60 seconds. After registration you'll be redirected to Stripe to complete your $25 VIP upgrade.";
+  } else {
+    tierBanner.classList.remove('show');
+    if (submitLabelEl) submitLabelEl.textContent = 'Reserve my free seat';
+    if (formModalEyebrow) formModalEyebrow.textContent = 'Reserve your seat';
+    if (formModalTitle) formModalTitle.textContent = 'Reserve Your Free Seat';
+    if (formModalIntro) formModalIntro.textContent = "Takes 60 seconds. You'll get an instant confirmation email with everything you need before we go live.";
+  }
+}
+if (tierSwitch) tierSwitch.addEventListener('click', function() { setTier('free'); });
+
+// REGISTRATION FORM MODAL
+const formModal = document.getElementById('formModal');
+const formModalClose = document.getElementById('formModalClose');
+
+function openFormModal(tier) {
+  setTier(tier === 'vip' ? 'vip' : 'free');
+  formModal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  // Focus the first input for keyboard users
+  setTimeout(function() {
+    const firstInput = formModal.querySelector('input[name="firstName"]');
+    if (firstInput) firstInput.focus();
+  }, 320);
+}
+function closeFormModal() {
+  formModal.classList.remove('active');
+  document.body.style.overflow = '';
+}
+if (formModalClose) formModalClose.addEventListener('click', closeFormModal);
+if (formModal) {
+  formModal.addEventListener('click', function(e) { if (e.target === formModal) closeFormModal(); });
+}
+
+// VIP CTA on the pricing card — opens the form modal directly in VIP mode
+const vipPricingBtn = document.getElementById('vipPricingBtn');
+if (vipPricingBtn) {
+  vipPricingBtn.addEventListener('click', function() { openFormModal('vip'); });
+}
+
+// UPSELL MODAL — the gatekeeper between "Register for free" and the form
 const modal = document.getElementById('upsellModal');
 const freeBtn = document.getElementById('freeRegBtn');
 const modalClose = document.getElementById('modalClose');
 const modalSkip = document.getElementById('modalSkip');
 const modalVip = document.getElementById('modalVip');
-const tallyUrl = 'https://tally.so/r/A7D7Le';
 
 function openModal() { modal.classList.add('active'); document.body.style.overflow = 'hidden'; }
 function closeModal() { modal.classList.remove('active'); document.body.style.overflow = ''; }
 
 freeBtn.addEventListener('click', openModal);
 modalClose.addEventListener('click', closeModal);
-modalSkip.addEventListener('click', function() { closeModal(); window.open(tallyUrl, '_blank'); });
-modalVip.addEventListener('click', closeModal);
+modalSkip.addEventListener('click', function() {
+  closeModal();
+  setTimeout(function() { openFormModal('free'); }, 220);
+});
+modalVip.addEventListener('click', function() {
+  closeModal();
+  setTimeout(function() { openFormModal('vip'); }, 220);
+});
 modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
-document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    if (formModal && formModal.classList.contains('active')) closeFormModal();
+    else closeModal();
+  }
+});
+
+// Any <a href="#form"> or "#register" CTAs become free-flow triggers: nav,
+// sticky, float, inline buttons. We intercept these to open the upsell modal
+// instead of doing a smooth scroll to a section that no longer exists in flow.
+document.querySelectorAll('a[href="#register"], a[href="#form"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    openModal();
+  });
+});
+
+// REGISTRATION FORM SUBMIT
+(function(){
+  const form = document.getElementById('regForm');
+  const errorBox = document.getElementById('formError');
+  const successBox = document.getElementById('formSuccess');
+  const submitBtn = document.getElementById('regSubmit');
+  if (!form || !submitBtn) return;
+  const labelEl = submitBtn.querySelector('.submit-label');
+
+  function showError(msg) {
+    errorBox.textContent = msg;
+    errorBox.classList.add('show');
+    errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+  function clearError() {
+    errorBox.classList.remove('show');
+    errorBox.textContent = '';
+  }
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    clearError();
+
+    // Native validation first
+    if (!form.checkValidity()) {
+      const firstInvalid = form.querySelector(':invalid');
+      if (firstInvalid) firstInvalid.focus();
+      showError('Please fill in all required fields before submitting.');
+      return;
+    }
+
+    const fd = new FormData(form);
+    const tier = fd.get('tier') === 'vip' ? 'vip' : 'free';
+    const payload = {
+      firstName: fd.get('firstName'),
+      lastName: fd.get('lastName'),
+      email: fd.get('email'),
+      phone: fd.get('phone'),
+      company: fd.get('company'),
+      jobTitle: fd.get('jobTitle'),
+      teamSize: fd.get('teamSize'),
+      industry: fd.get('industry'),
+      painPoint: fd.get('painPoint'),
+      referralSource: fd.get('referralSource'),
+      requestedAudit: fd.get('requestedAudit') === 'true',
+      tier: tier,
+      sessionIso: (typeof NEXT_SESSION === 'object' && NEXT_SESSION) ? NEXT_SESSION.iso : null,
+      sessionLabel: (typeof NEXT_SESSION === 'object' && NEXT_SESSION && NEXT_SESSION.longDate) ? NEXT_SESSION.longDate : 'the next live session',
+      sessionTime: (typeof NEXT_SESSION === 'object' && NEXT_SESSION) ? NEXT_SESSION.time : null,
+    };
+
+    submitBtn.disabled = true;
+    const originalLabel = labelEl ? labelEl.textContent : 'Reserve my free seat';
+    if (labelEl) labelEl.textContent = tier === 'vip' ? 'Saving your details…' : 'Reserving your seat…';
+
+    try {
+      const res = await fetch('/api/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.ok) {
+        const msg = (data && data.error) || 'Something went wrong. Please try again or email hello@nekter.ai.';
+        showError(msg);
+        submitBtn.disabled = false;
+        if (labelEl) labelEl.textContent = originalLabel;
+        return;
+      }
+      // VIP path: redirect to Stripe with prefilled email so they pay $25 immediately
+      if (tier === 'vip') {
+        if (labelEl) labelEl.textContent = 'Redirecting to payment…';
+        const stripeUrl = `${VIP_STRIPE_URL}?prefilled_email=${encodeURIComponent(payload.email)}`;
+        window.location.href = stripeUrl;
+        return;
+      }
+      // Free path — swap form for success state
+      form.style.display = 'none';
+      tierBanner.classList.remove('show');
+      successBox.classList.add('show');
+      successBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } catch (err) {
+      console.error(err);
+      showError('Network error. Please try again or email hello@nekter.ai.');
+      submitBtn.disabled = false;
+      if (labelEl) labelEl.textContent = originalLabel;
+    }
+  });
+})();
 
 // COUNTDOWN TIMER (reads NEXT_SESSION.iso above)
 document.addEventListener('DOMContentLoaded', function(){
