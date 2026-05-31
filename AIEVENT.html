@@ -1174,15 +1174,17 @@ nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px
 // empty state) reads from here.
 // ═══════════════════════════════════════════════════════════
 const NEXT_SESSION = {
-  // ISO string with timezone offset. Set to null to show "Date TBA" and disable countdown.
-  // Example: '2026-05-28T15:00:00-07:00'
+  // ISO string with timezone offset. Set ONLY when both date AND time are
+  // confirmed — it drives the countdown timer. Leave null while time is TBA
+  // (the date can still be shown via the fields below).
+  // Example: '2026-06-25T15:00:00-07:00'
   iso: null,
-  // Human-readable strings for display. Update both when you update `iso`.
-  dayNum: 'TBA',             // "28"
-  monthShort: 'Date coming', // "May 2026"
-  dayOfWeek: '',             // "Thursday"
-  longDate: 'Date TBA',      // "Thursday, May 28, 2026"
-  time: '3:00 PM PST',       // display time
+  // Human-readable strings. Set dayNum === 'TBA' when no date is confirmed.
+  dayNum: '25',                          // "25"
+  monthShort: 'June 2026',               // "June 2026"
+  dayOfWeek: 'Thursday',                 // "Thursday"
+  longDate: 'Thursday, June 25, 2026',   // full display date
+  time: 'Time TBA',                      // display-only time string
 };
 
 (function injectSessionDate(){
@@ -1194,20 +1196,40 @@ const NEXT_SESSION = {
   var smeta = document.getElementById('schedMeta');
   var rd = document.getElementById('replaysFirstDate');
 
-  var hasDate = !!NEXT_SESSION.iso;
-  var badgeText = hasDate
-    ? 'Monthly Webinar \u00B7 ' + NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' \u00B7 ' + NEXT_SESSION.time + ' \u00B7 Live'
-    : 'Monthly Webinar \u00B7 Live on Google Meet';
+  // hasIso = date AND time both confirmed (drives countdown timer)
+  // hasDate = date string is confirmed (drives display copy across the page)
+  // The two are independent so we can announce a date before locking a time.
+  var hasIso = !!NEXT_SESSION.iso;
+  var hasDate = !!(NEXT_SESSION.dayNum && NEXT_SESSION.dayNum !== 'TBA');
+
+  var badgeText;
+  if(hasDate && hasIso){
+    badgeText = 'Monthly Webinar \u00B7 ' + NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' \u00B7 ' + NEXT_SESSION.time + ' \u00B7 Live';
+  } else if(hasDate){
+    badgeText = 'Monthly Webinar \u00B7 ' + NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' \u00B7 Time TBA \u00B7 Live';
+  } else {
+    badgeText = 'Monthly Webinar \u00B7 Live on Google Meet';
+  }
   if(badge){ badge.innerHTML = '<span class="bdot"></span>' + badgeText; }
 
-  var countdownBadge = hasDate
-    ? '5 AI Tools \u00B7 ' + NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' \u00B7 ' + NEXT_SESSION.time
-    : 'Next date coming soon';
+  var countdownBadge;
+  if(hasDate && hasIso){
+    countdownBadge = '5 AI Tools \u00B7 ' + NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' \u00B7 ' + NEXT_SESSION.time;
+  } else if(hasDate){
+    countdownBadge = '5 AI Tools \u00B7 ' + NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' \u00B7 Time TBA';
+  } else {
+    countdownBadge = 'Next date coming soon';
+  }
   if(cbt){ cbt.textContent = countdownBadge; }
 
-  var meta = hasDate
-    ? NEXT_SESSION.longDate + ' \u00B7 ' + NEXT_SESSION.time + ' \u00B7 60 min + Q&A \u00B7 Live on Google Meet'
-    : 'Date TBA \u00B7 60 min + Q&A \u00B7 Live on Google Meet';
+  var meta;
+  if(hasDate && hasIso){
+    meta = NEXT_SESSION.longDate + ' \u00B7 ' + NEXT_SESSION.time + ' \u00B7 60 min + Q&A \u00B7 Live on Google Meet';
+  } else if(hasDate){
+    meta = NEXT_SESSION.longDate + ' \u00B7 Time TBA \u00B7 60 min + Q&A \u00B7 Live on Google Meet';
+  } else {
+    meta = 'Date TBA \u00B7 60 min + Q&A \u00B7 Live on Google Meet';
+  }
   if(cm){ cm.textContent = meta; }
   if(smeta){ smeta.textContent = meta; }
 
