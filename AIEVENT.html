@@ -6,32 +6,36 @@
 <title>The 5 AI Tools Every Business Owner Should Actually Use | Nekter AI</title>
 <meta name="description" content="Free monthly live webinar teaching business owners how to actually use Claude, ChatGPT, Higgsfield, Gemini Deep Research, and NotebookLM. Real prompts, live homework, real results.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600;1,9..144,700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#F8FAFF;--bg-alt:#FFFFFF;--bg-dark:#0F172A;
-  --card:#FFFFFF;--card-hover:#F1F5FF;
-  --border:rgba(15,23,42,0.08);--border-str:rgba(15,23,42,0.12);
-  --blue:#2563EB;--blue-bright:#3B82F6;--blue-dim:rgba(37,99,235,0.08);
-  --purple:#7C3AED;--purple-dim:rgba(124,58,237,0.06);
-  --grad:linear-gradient(135deg,#2563EB 0%,#7C3AED 100%);
-  --grad-text:linear-gradient(135deg,#1D4ED8 0%,#6D28D9 100%);
-  --grad-subtle:linear-gradient(135deg,rgba(37,99,235,0.06) 0%,rgba(124,58,237,0.04) 100%);
-  --text:#0F172A;--text-sub:#334155;--muted:#64748B;--muted-lt:#94A3B8;
-  --ff:'Inter',sans-serif;
-  --ease-out-expo:cubic-bezier(0.16,1,0.3,1);
-  --ease-out-quart:cubic-bezier(0.25,1,0.5,1);
-  --shadow-sm:0 1px 2px rgba(0,0,0,0.04),0 4px 12px rgba(0,0,0,0.03);
-  --shadow-md:0 2px 4px rgba(0,0,0,0.04),0 8px 24px rgba(0,0,0,0.06);
-  --shadow-lg:0 4px 8px rgba(0,0,0,0.04),0 16px 48px rgba(0,0,0,0.08);
-  --green:#059669;--green-dim:rgba(5,150,105,0.08);
+ /* v2 warm-dark + amber palette (anti-AI-slop). See DESIGN.md. */
+ --bg:#1A1714;--bg-alt:#211D18;--bg-dark:#141110;
+ --card:#252118;--card-hover:#2E2920;
+ --border:rgba(245,240,232,0.10);--border-str:rgba(245,240,232,0.16);
+ --blue:#4D6FEF;--blue-bright:#6E89FF;--blue-dim:rgba(77,111,239,0.10);
+ --purple:#3A57D6;--purple-dim:rgba(58,87,214,0.08);
+ --grad:linear-gradient(135deg,#4D6FEF 0%,#3A57D6 100%);
+ --grad-text:linear-gradient(135deg,#6E89FF 0%,#4D6FEF 100%);
+ --grad-subtle:linear-gradient(135deg,rgba(77,111,239,0.08) 0%,rgba(58,87,214,0.05) 100%);
+ --text:#FAF6F0;--text-sub:#C9C0B5;--muted:#B4ABA0;--muted-lt:#8A8278;
+ --highlight:#6E89FF;
+ --ff:'Inter',sans-serif;
+ --serif:'Fraunces','Georgia',serif;
+ --ease-out-expo:cubic-bezier(0.16,1,0.3,1);
+ --ease-out-quart:cubic-bezier(0.25,1,0.5,1);
+ --shadow-sm:0 1px 2px rgba(0,0,0,0.20),0 4px 12px rgba(0,0,0,0.18);
+ --shadow-md:0 2px 4px rgba(0,0,0,0.22),0 8px 24px rgba(0,0,0,0.30);
+ --shadow-lg:0 4px 8px rgba(0,0,0,0.25),0 16px 48px rgba(0,0,0,0.40);
+ --green:#7FB069;--green-dim:rgba(127,176,105,0.12);
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--ff);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
 
 /* SUBTLE DOT GRID */
-body::after{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(37,99,235,0.04) 1px,transparent 1px);background-size:32px 32px;pointer-events:none;z-index:0}
+body::after{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(77,111,239,0.05) 1px,transparent 1px);background-size:32px 32px;pointer-events:none;z-index:0}
 
 .wrap{max-width:1120px;margin:0 auto;padding:0 28px;position:relative;z-index:1}
 
@@ -54,7 +58,7 @@ nav .ni{max-width:1120px;margin:0 auto;padding:16px 28px;display:flex;align-item
 .nav-tag strong{color:var(--blue);font-weight:600}
 .btn-nav{background:var(--grad);color:#fff;font-family:var(--ff);font-weight:600;font-size:14px;padding:12px 28px;border-radius:100px;text-decoration:none;transition:all .25s var(--ease-out-quart);position:relative;overflow:hidden}
 .btn-nav::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.2) 0%,transparent 50%);opacity:0;transition:opacity .25s}
-.btn-nav:hover{transform:translateY(-1px);box-shadow:0 8px 28px rgba(37,99,235,0.35)}
+.btn-nav:hover{transform:translateY(-1px);box-shadow:0 8px 28px rgba(77,111,239,0.35)}
 .btn-nav:hover::before{opacity:1}
 
 /* HERO */
@@ -62,17 +66,17 @@ nav .ni{max-width:1120px;margin:0 auto;padding:16px 28px;display:flex;align-item
 
 /* AMBIENT ORB EFFECTS */
 .orb{position:absolute;border-radius:50%;pointer-events:none;z-index:0}
-.orb1{width:600px;height:600px;top:-180px;right:-120px;background:radial-gradient(circle,rgba(37,99,235,0.07) 0%,transparent 70%);animation:orbFloat 12s ease-in-out infinite}
-.orb2{width:500px;height:500px;bottom:-60px;left:-140px;background:radial-gradient(circle,rgba(124,58,237,0.06) 0%,transparent 70%);animation:orbFloat 15s ease-in-out infinite reverse}
-.orb3{width:300px;height:300px;top:40%;left:55%;background:radial-gradient(circle,rgba(37,99,235,0.04) 0%,transparent 70%);animation:orbFloat 10s ease-in-out infinite 3s}
+.orb1{width:600px;height:600px;top:-180px;right:-120px;background:radial-gradient(circle,rgba(77,111,239,0.07) 0%,transparent 70%);animation:orbFloat 12s ease-in-out infinite}
+.orb2{width:500px;height:500px;bottom:-60px;left:-140px;background:radial-gradient(circle,rgba(58,87,214,0.06) 0%,transparent 70%);animation:orbFloat 15s ease-in-out infinite reverse}
+.orb3{width:300px;height:300px;top:40%;left:55%;background:radial-gradient(circle,rgba(77,111,239,0.04) 0%,transparent 70%);animation:orbFloat 10s ease-in-out infinite 3s}
 @keyframes orbFloat{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(20px,-20px) scale(1.05)}}
 
 /* HERO GRID LINE ACCENT */
 .hero-grid{position:absolute;top:0;right:0;width:45%;height:100%;pointer-events:none;z-index:0;opacity:0.5}
-.hero-grid::before{content:'';position:absolute;top:15%;right:10%;width:280px;height:280px;border:1px solid rgba(37,99,235,0.08);border-radius:24px;transform:rotate(12deg)}
-.hero-grid::after{content:'';position:absolute;top:25%;right:5%;width:200px;height:200px;border:1px solid rgba(124,58,237,0.06);border-radius:20px;transform:rotate(-6deg)}
+.hero-grid::before{content:'';position:absolute;top:15%;right:10%;width:280px;height:280px;border:1px solid rgba(77,111,239,0.08);border-radius:24px;transform:rotate(12deg)}
+.hero-grid::after{content:'';position:absolute;top:25%;right:5%;width:200px;height:200px;border:1px solid rgba(58,87,214,0.06);border-radius:20px;transform:rotate(-6deg)}
 
-.badge{display:inline-flex;align-items:center;gap:8px;background:var(--blue-dim);border:1px solid rgba(37,99,235,0.15);color:var(--blue);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:10px 20px;border-radius:100px;margin-bottom:32px;width:fit-content;position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--blue-dim);border:1px solid rgba(77,111,239,0.15);color:var(--blue);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:10px 20px;border-radius:100px;margin-bottom:32px;width:fit-content;position:relative;z-index:1}
 .bdot{width:6px;height:6px;border-radius:50%;background:var(--blue);animation:blink 2s ease-in-out infinite;flex-shrink:0}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
 
@@ -84,20 +88,20 @@ nav .ni{max-width:1120px;margin:0 auto;padding:16px 28px;display:flex;align-item
 
 .pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px;position:relative;z-index:1}
 .pill{display:flex;align-items:center;gap:7px;background:var(--bg-alt);border:1px solid var(--border-str);padding:10px 18px;border-radius:100px;font-size:14px;font-weight:500;color:var(--text-sub);box-shadow:var(--shadow-sm);transition:border-color 0.3s,color 0.3s,box-shadow 0.3s}
-.pill:hover{border-color:rgba(37,99,235,0.3);color:var(--blue);box-shadow:var(--shadow-md)}
+.pill:hover{border-color:rgba(77,111,239,0.3);color:var(--blue);box-shadow:var(--shadow-md)}
 .pill svg{width:14px;height:14px;flex-shrink:0;color:var(--blue)}
 
 .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;position:relative;z-index:1}
 .btn-p{display:inline-flex;align-items:center;gap:10px;background:var(--grad);color:#fff;font-family:var(--ff);font-weight:700;font-size:17px;padding:20px 44px;border-radius:100px;text-decoration:none;border:none;cursor:pointer;transition:all .3s var(--ease-out-quart);letter-spacing:-.01em;position:relative;overflow:hidden}
 .btn-p::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.2) 0%,transparent 60%);opacity:0;transition:opacity .3s}
-.btn-p:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(37,99,235,0.35),0 0 0 1px rgba(37,99,235,0.15)}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(77,111,239,0.35),0 0 0 1px rgba(77,111,239,0.15)}
 .btn-p:hover::before{opacity:1}
 .btn-p:active{transform:translateY(0)}
 .btn-p svg{transition:transform 0.3s var(--ease-out-quart)}
 .btn-p:hover svg{transform:translateX(3px)}
 
 .btn-g{display:inline-flex;align-items:center;gap:8px;background:var(--bg-alt);color:var(--text);font-family:var(--ff);font-weight:500;font-size:16px;padding:20px 32px;border-radius:100px;text-decoration:none;border:1px solid var(--border-str);transition:all .3s var(--ease-out-quart);cursor:pointer;box-shadow:var(--shadow-sm)}
-.btn-g:hover{border-color:rgba(37,99,235,0.3);color:var(--blue);box-shadow:var(--shadow-md)}
+.btn-g:hover{border-color:rgba(77,111,239,0.3);color:var(--blue);box-shadow:var(--shadow-md)}
 
 .anote{margin-top:20px;font-size:14px;color:var(--muted);position:relative;z-index:1;font-weight:400}
 .anote strong{color:var(--blue);font-weight:600}
@@ -140,7 +144,7 @@ section{padding:100px 0;position:relative;z-index:1}
 .ind-card{background:var(--card);border:1px solid var(--border-str);border-radius:22px;padding:40px 34px;position:relative;overflow:hidden;transition:all .35s var(--ease-out-quart);box-shadow:var(--shadow-sm)}
 .ind-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);opacity:0.5;transition:opacity .3s}
 .ind-card:hover::before{opacity:1}
-.ind-card:hover{border-color:rgba(37,99,235,0.2);transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.ind-card:hover{border-color:rgba(77,111,239,0.2);transform:translateY(-3px);box-shadow:var(--shadow-lg)}
 .ind-icon{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
 .ind-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:12px;display:inline-block;padding:4px 12px;border-radius:100px}
 .ind-card h3{font-family:var(--ff);font-size:21px;font-weight:800;margin-bottom:10px;letter-spacing:-.02em;color:var(--text)}
@@ -153,7 +157,7 @@ section{padding:100px 0;position:relative;z-index:1}
 .replays-section{padding:100px 0 120px;position:relative;z-index:1;border-top:1px solid var(--border);background:var(--bg-alt)}
 .replays-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:48px}
 .replay-card{background:var(--card);border:1px solid var(--border-str);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .35s var(--ease-out-quart)}
-.replay-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:rgba(37,99,235,0.2)}
+.replay-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:rgba(77,111,239,0.2)}
 .replay-thumb{aspect-ratio:16/9;background:var(--grad-subtle);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .replay-thumb iframe{width:100%;height:100%;border:0}
 .replay-thumb .empty{display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--muted);font-size:13px;font-weight:500;padding:24px;text-align:center}
@@ -172,7 +176,7 @@ section{padding:100px 0;position:relative;z-index:1}
 .tool-card{background:var(--card);border:1px solid var(--border-str);border-radius:22px;padding:36px 30px;position:relative;overflow:hidden;transition:all .35s var(--ease-out-quart);box-shadow:var(--shadow-sm)}
 .tool-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);opacity:0.5;transition:opacity .3s}
 .tool-card:hover::before{opacity:1}
-.tool-card:hover{border-color:rgba(37,99,235,0.2);transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.tool-card:hover{border-color:rgba(77,111,239,0.2);transform:translateY(-3px);box-shadow:var(--shadow-lg)}
 .tool-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
 .tool-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:12px;display:inline-block;padding:4px 12px;border-radius:100px}
 .tool-card h3{font-family:var(--ff);font-size:22px;font-weight:800;margin-bottom:10px;letter-spacing:-.02em;color:var(--text)}
@@ -183,7 +187,7 @@ section{padding:100px 0;position:relative;z-index:1}
 /* UPCOMING SCHEDULE */
 .sched-grid{display:grid;gap:16px;margin-top:48px}
 .sched-card{background:var(--card);border:1px solid var(--border-str);border-radius:18px;padding:28px 32px;display:flex;align-items:center;gap:28px;transition:all .35s var(--ease-out-quart);box-shadow:var(--shadow-sm)}
-.sched-card:hover{border-color:rgba(37,99,235,0.2);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.sched-card:hover{border-color:rgba(77,111,239,0.2);transform:translateY(-2px);box-shadow:var(--shadow-md)}
 .sched-date{min-width:80px;text-align:center;flex-shrink:0}
 .sched-day{font-family:var(--ff);font-size:28px;font-weight:900;background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
 .sched-month{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:4px}
@@ -203,7 +207,7 @@ section{padding:100px 0;position:relative;z-index:1}
 .lc:hover{background:var(--card-hover)}
 .lc:hover::after{opacity:0.6}
 .lnum{font-family:var(--ff);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:8px}
-.lnum::after{content:'';flex:1;height:1px;background:rgba(37,99,235,0.12)}
+.lnum::after{content:'';flex:1;height:1px;background:rgba(77,111,239,0.12)}
 .lc h3{font-family:var(--ff);font-size:17px;font-weight:700;margin-bottom:12px;letter-spacing:-.01em;line-height:1.3;transition:color .3s;color:var(--text)}
 .lc:hover h3{color:var(--blue)}
 .lc p{font-size:15px;color:var(--muted);line-height:1.7;font-weight:400}
@@ -213,8 +217,8 @@ section{padding:100px 0;position:relative;z-index:1}
 .sc{background:var(--card);border:1px solid var(--border-str);border-radius:22px;padding:40px 34px;position:relative;overflow:hidden;transition:all .35s var(--ease-out-quart);box-shadow:var(--shadow-sm)}
 .sc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);opacity:0.5;transition:opacity .3s}
 .sc:hover::before{opacity:1}
-.sc:hover{border-color:rgba(37,99,235,0.2);transform:translateY(-3px);box-shadow:var(--shadow-lg)}
-.sav{width:80px;height:80px;border-radius:50%;background:var(--grad-subtle);border:2px solid rgba(37,99,235,0.15);display:flex;align-items:center;justify-content:center;font-family:var(--ff);font-size:18px;font-weight:800;color:var(--blue);margin-bottom:20px;transition:transform .3s var(--ease-out-quart);overflow:hidden;flex-shrink:0;position:relative}
+.sc:hover{border-color:rgba(77,111,239,0.2);transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.sav{width:80px;height:80px;border-radius:50%;background:var(--grad-subtle);border:2px solid rgba(77,111,239,0.15);display:flex;align-items:center;justify-content:center;font-family:var(--ff);font-size:18px;font-weight:800;color:var(--blue);margin-bottom:20px;transition:transform .3s var(--ease-out-quart);overflow:hidden;flex-shrink:0;position:relative}
 .sav img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%;z-index:1}
 .sc:hover .sav{transform:scale(1.05)}
 .sname{font-family:var(--ff);font-size:21px;font-weight:800;margin-bottom:4px;letter-spacing:-.02em;color:var(--text)}
@@ -225,7 +229,7 @@ section{padding:100px 0;position:relative;z-index:1}
 /* AUDIT */
 .ablock{background:var(--card);border:1px solid var(--border-str);border-radius:26px;padding:60px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:56px;position:relative;overflow:hidden;box-shadow:var(--shadow-md)}
 .ablock::before{content:'';position:absolute;inset:0;background:var(--grad-subtle);opacity:0.5;pointer-events:none}
-.ablock::after{content:'';position:absolute;top:-200px;right:-200px;width:500px;height:500px;background:radial-gradient(circle,rgba(37,99,235,0.04) 0%,transparent 60%);pointer-events:none}
+.ablock::after{content:'';position:absolute;top:-200px;right:-200px;width:500px;height:500px;background:radial-gradient(circle,rgba(77,111,239,0.04) 0%,transparent 60%);pointer-events:none}
 .bignum{font-family:var(--ff);font-size:clamp(56px,8vw,88px);font-weight:900;line-height:0.95;letter-spacing:-.05em;background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;z-index:1}
 .bigsub{font-size:16px;color:var(--text-sub);margin-top:14px;font-weight:400;max-width:280px;line-height:1.6;position:relative;z-index:1}
 .audit-right{position:relative;z-index:1}
@@ -237,7 +241,7 @@ section{padding:100px 0;position:relative;z-index:1}
 
 /* REGISTER */
 #register{background:var(--bg-alt);border-top:1px solid var(--border);position:relative}
-#register::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(ellipse,rgba(37,99,235,0.03) 0%,transparent 70%);pointer-events:none}
+#register::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(ellipse,rgba(77,111,239,0.03) 0%,transparent 70%);pointer-events:none}
 .fwrap{max-width:560px;margin:0 auto}
 
 /* FOOTER */
@@ -254,62 +258,62 @@ footer a:hover{color:var(--blue)}
 
 /* RESPONSIVE */
 @media(max-width:900px){
-  .lgrid{grid-template-columns:repeat(2,1fr)}
-  .aos-grid{grid-template-columns:1fr 1fr !important}
-  .ind-grid{grid-template-columns:1fr}
+ .lgrid{grid-template-columns:repeat(2,1fr)}
+ .aos-grid{grid-template-columns:1fr 1fr !important}
+ .ind-grid{grid-template-columns:1fr}
 }
 @media(max-width:600px){
-  .aos-grid{grid-template-columns:1fr !important}
+ .aos-grid{grid-template-columns:1fr !important}
 }
 @media(max-width:720px){
-  .ablock{grid-template-columns:1fr;padding:36px 28px;gap:32px}
-  .lgrid{grid-template-columns:1fr}
-  .sgrid{grid-template-columns:1fr}
-  .btn-nav{display:none}
-  .nav-tag{display:none}
-  .hero h1{font-size:36px}
-  .hero{padding:120px 0 70px}
-  .hero-grid{display:none}
-  .proof-inner{gap:28px}
-  .proof-stat{min-width:auto}
-  .float-cta{display:block}
-  .sched-card{flex-direction:column;align-items:flex-start;gap:16px}
-  .sched-divider{width:100%;height:1px}
+ .ablock{grid-template-columns:1fr;padding:36px 28px;gap:32px}
+ .lgrid{grid-template-columns:1fr}
+ .sgrid{grid-template-columns:1fr}
+ .btn-nav{display:none}
+ .nav-tag{display:none}
+ .hero h1{font-size:36px}
+ .hero{padding:120px 0 70px}
+ .hero-grid{display:none}
+ .proof-inner{gap:28px}
+ .proof-stat{min-width:auto}
+ .float-cta{display:block}
+ .sched-card{flex-direction:column;align-items:flex-start;gap:16px}
+ .sched-divider{width:100%;height:1px}
 }
 @media(max-width:400px){
-  .wrap{padding:0 18px}
-  .hero h1{font-size:32px}
-  .pills{gap:8px}
-  .pill{font-size:13px;padding:8px 14px}
+ .wrap{padding:0 18px}
+ .hero h1{font-size:32px}
+ .pills{gap:8px}
+ .pill{font-size:13px;padding:8px 14px}
 }
 
 /* AURORA */
 .aurora{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
 .au1,.au2,.au3{position:absolute;border-radius:50%;filter:blur(120px)}
-.au1{width:700px;height:700px;top:-200px;right:-100px;background:radial-gradient(circle,rgba(37,99,235,0.08) 0%,transparent 70%);animation:au1 10s ease-in-out infinite}
-.au2{width:600px;height:600px;bottom:-150px;left:-150px;background:radial-gradient(circle,rgba(124,58,237,0.06) 0%,transparent 70%);animation:au2 13s ease-in-out infinite}
-.au3{width:400px;height:400px;top:30%;left:40%;background:radial-gradient(circle,rgba(59,130,246,0.05) 0%,transparent 70%);animation:au3 8s ease-in-out infinite}
+.au1{width:700px;height:700px;top:-200px;right:-100px;background:radial-gradient(circle,rgba(77,111,239,0.08) 0%,transparent 70%);animation:au1 10s ease-in-out infinite}
+.au2{width:600px;height:600px;bottom:-150px;left:-150px;background:radial-gradient(circle,rgba(58,87,214,0.06) 0%,transparent 70%);animation:au2 13s ease-in-out infinite}
+.au3{width:400px;height:400px;top:30%;left:40%;background:radial-gradient(circle,rgba(110,137,255,0.05) 0%,transparent 70%);animation:au3 8s ease-in-out infinite}
 @keyframes au1{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(-60px,40px) scale(1.1)}66%{transform:translate(40px,-60px) scale(0.95)}}
 @keyframes au2{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(60px,-40px) scale(1.08)}66%{transform:translate(-40px,60px) scale(1.05)}}
 @keyframes au3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,30px) scale(1.2)}}
 
 /* CURSOR GLOW */
-.cursor-glow{position:fixed;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,0.04) 0%,transparent 70%);transform:translate(-50%,-50%);pointer-events:none;z-index:2;left:-999px;top:-999px;transition:left 0.12s ease,top 0.12s ease}
+.cursor-glow{position:fixed;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(77,111,239,0.04) 0%,transparent 70%);transform:translate(-50%,-50%);pointer-events:none;z-index:2;left:-999px;top:-999px;transition:left 0.12s ease,top 0.12s ease}
 
 /* FLOATING SHAPES */
-.shape-ring{position:absolute;border-radius:50%;border:1px solid rgba(37,99,235,0.08);pointer-events:none;z-index:0;animation:shapeFloat 20s linear infinite}
+.shape-ring{position:absolute;border-radius:50%;border:1px solid rgba(77,111,239,0.08);pointer-events:none;z-index:0;animation:shapeFloat 20s linear infinite}
 .ring1{width:180px;height:180px;top:15%;right:8%;animation-duration:22s}
-.ring2{width:80px;height:80px;top:62%;right:20%;animation-duration:15s;border-color:rgba(124,58,237,0.08)}
+.ring2{width:80px;height:80px;top:62%;right:20%;animation-duration:15s;border-color:rgba(58,87,214,0.08)}
 .ring3{width:120px;height:120px;top:38%;right:3%;animation-duration:18s;animation-delay:-6s}
 @keyframes shapeFloat{0%{transform:rotate(0deg) translateY(0)}50%{transform:rotate(180deg) translateY(-20px)}100%{transform:rotate(360deg) translateY(0)}}
-.shape-dot{position:absolute;width:4px;height:4px;border-radius:50%;background:rgba(37,99,235,0.3);pointer-events:none;z-index:0;animation:dotPulse 4s ease-in-out infinite}
+.shape-dot{position:absolute;width:4px;height:4px;border-radius:50%;background:rgba(77,111,239,0.3);pointer-events:none;z-index:0;animation:dotPulse 4s ease-in-out infinite}
 .dot1{top:22%;right:26%}
 .dot2{top:55%;right:13%;animation-delay:1.5s}
 .dot3{top:74%;right:36%;animation-delay:3s}
 @keyframes dotPulse{0%,100%{opacity:0.3;transform:scale(1)}50%{opacity:0.8;transform:scale(2.5)}}
 
 /* BUTTON GLOW PULSE */
-@keyframes btnGlow{0%,100%{box-shadow:0 4px 20px rgba(37,99,235,0.25),0 0 40px rgba(124,58,237,0.08)}50%{box-shadow:0 8px 36px rgba(37,99,235,0.4),0 0 60px rgba(124,58,237,0.15)}}
+@keyframes btnGlow{0%,100%{box-shadow:0 4px 20px rgba(77,111,239,0.25),0 0 40px rgba(58,87,214,0.08)}50%{box-shadow:0 8px 36px rgba(77,111,239,0.4),0 0 60px rgba(58,87,214,0.15)}}
 .btn-p{animation:btnGlow 3s ease-in-out infinite}
 .btn-p:hover{animation:none}
 
@@ -317,7 +321,7 @@ footer a:hover{color:var(--blue)}
 .pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:56px;max-width:820px;margin-left:auto;margin-right:auto}
 .price-card{background:var(--card);border:1px solid var(--border-str);border-radius:22px;padding:44px 36px;position:relative;overflow:hidden;transition:all .35s var(--ease-out-quart);box-shadow:var(--shadow-sm)}
 .price-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
-.price-card.featured{border-color:rgba(37,99,235,0.3);box-shadow:var(--shadow-md)}
+.price-card.featured{border-color:rgba(77,111,239,0.3);box-shadow:var(--shadow-md)}
 .price-card.featured::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
 .price-tag{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;display:inline-block;padding:5px 14px;border-radius:100px;margin-bottom:20px}
 .price-amount{font-family:var(--ff);font-size:48px;font-weight:900;letter-spacing:-.04em;line-height:1;margin-bottom:6px}
@@ -330,10 +334,10 @@ footer a:hover{color:var(--blue)}
 .price-features li.disabled svg{color:var(--muted-lt)}
 .btn-vip{display:inline-flex;align-items:center;gap:10px;width:100%;justify-content:center;background:var(--grad);color:#fff;font-family:var(--ff);font-weight:700;font-size:16px;padding:18px 32px;border-radius:100px;text-decoration:none;border:none;cursor:pointer;transition:all .3s var(--ease-out-quart);position:relative;overflow:hidden}
 .btn-vip::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.2) 0%,transparent 60%);opacity:0;transition:opacity .3s}
-.btn-vip:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(37,99,235,0.35)}
+.btn-vip:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(77,111,239,0.35)}
 .btn-vip:hover::before{opacity:1}
 .btn-free{display:inline-flex;align-items:center;gap:10px;width:100%;justify-content:center;background:var(--bg-alt);color:var(--text);font-family:var(--ff);font-weight:600;font-size:16px;padding:18px 32px;border-radius:100px;text-decoration:none;border:1px solid var(--border-str);transition:all .3s var(--ease-out-quart);cursor:pointer;box-shadow:var(--shadow-sm)}
-.btn-free:hover{border-color:rgba(37,99,235,0.3);color:var(--blue);box-shadow:var(--shadow-md)}
+.btn-free:hover{border-color:rgba(77,111,239,0.3);color:var(--blue);box-shadow:var(--shadow-md)}
 @media(max-width:600px){.pricing-grid{grid-template-columns:1fr}}
 
 /* UPSELL MODAL */
@@ -360,8 +364,8 @@ footer a:hover{color:var(--blue)}
 .lc,.sc,.ablock,.ind-card,.sched-card,.price-card{transform-style:preserve-3d;will-change:transform}
 
 /* =========================
-   EDITORIAL REDESIGN
-   ========================= */
+  EDITORIAL REDESIGN
+  ========================= */
 
 /* Remove floating template decorations */
 .orb,.shape-ring,.shape-dot,.aurora,.hero-grid,.cursor-glow{display:none !important}
@@ -370,11 +374,11 @@ footer a:hover{color:var(--blue)}
 body::after{background-image:radial-gradient(rgba(15,23,42,0.07) 1px,transparent 1px);background-size:28px 28px;opacity:0.55}
 
 /* ---- HERO: dark navy, grain, editorial type ---- */
-.hero{background:#0a0a1a;color:#fff}
+.hero{background:#1A1714;color:#fff}
 .hero::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.4 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");opacity:0.16;pointer-events:none;z-index:0;mix-blend-mode:overlay}
-.hero::after{content:'';position:absolute;top:-18%;right:-8%;width:720px;height:720px;background:radial-gradient(circle,rgba(108,71,255,0.22) 0%,transparent 62%);pointer-events:none;z-index:0}
-.hero .badge{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.12);color:#cbc6ff}
-.hero .badge .bdot{background:#a78bff}
+.hero::after{content:'';position:absolute;top:-18%;right:-8%;width:720px;height:720px;background:radial-gradient(circle,rgba(77,111,239,0.22) 0%,transparent 62%);pointer-events:none;z-index:0}
+.hero .badge{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.12);color:#CDD8FF}
+.hero .badge .bdot{background:#A9BCFF}
 .hero h1{color:#fff;font-size:clamp(52px,8vw,108px);line-height:0.98;letter-spacing:-.05em;max-width:960px;font-weight:900}
 .hero h1 .h-line1{display:block;font-size:0.42em;font-weight:700;color:rgba(255,255,255,0.78);letter-spacing:-.015em;padding-left:0.4em;line-height:1.1}
 .hero h1 .h-line2{display:block;font-size:1.28em;font-weight:900;background:linear-gradient(135deg,#c7b5ff 0%,#8a6aff 45%,#5b8bff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-top:-0.22em;letter-spacing:-.06em;line-height:0.92}
@@ -382,15 +386,15 @@ body::after{background-image:radial-gradient(rgba(15,23,42,0.07) 1px,transparent
 .hero-sub{color:rgba(255,255,255,0.7)}
 .hero-sub em{color:#fff}
 .hero .pill{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.82);box-shadow:none}
-.hero .pill svg{color:#a78bff}
-.hero .pill:hover{border-color:rgba(167,139,255,0.5);color:#fff;box-shadow:none}
+.hero .pill svg{color:#A9BCFF}
+.hero .pill:hover{border-color:rgba(169,188,255,0.5);color:#fff;box-shadow:none}
 .hero .btn-g{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.16);color:#fff;box-shadow:none}
-.hero .btn-g:hover{border-color:rgba(167,139,255,0.55);color:#cbc6ff;box-shadow:none}
+.hero .btn-g:hover{border-color:rgba(169,188,255,0.55);color:#CDD8FF;box-shadow:none}
 .hero .anote{color:rgba(255,255,255,0.55)}
-.hero .anote strong{color:#a78bff}
+.hero .anote strong{color:#A9BCFF}
 
 /* ---- COUNTDOWN: dark ticket ---- */
-.countdown-section{background:#0f0f2d;border-bottom:none;padding:84px 0;color:#fff}
+.countdown-section{background:#1A1714;border-bottom:none;padding:84px 0;color:#fff}
 .countdown-section::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");opacity:0.1;pointer-events:none;z-index:0;mix-blend-mode:overlay}
 .countdown-section > .wrap{position:relative;z-index:1}
 .countdown-rule{display:flex;align-items:center;gap:20px;max-width:460px;margin:0 auto 30px}
@@ -398,21 +402,21 @@ body::after{background-image:radial-gradient(rgba(15,23,42,0.07) 1px,transparent
 .countdown-rule span{font-size:11px;letter-spacing:.36em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,0.72)}
 .countdown-head h2{color:#fff;font-weight:800}
 .countdown-meta{color:rgba(255,255,255,0.55)}
-.countdown-live-badge{background:rgba(108,71,255,0.18);border-color:rgba(167,139,255,0.35);color:#cbc6ff}
-.countdown-live-badge .ldot{background:#a78bff}
-@keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(167,139,255,0.55)}70%{box-shadow:0 0 0 14px rgba(167,139,255,0)}100%{box-shadow:0 0 0 0 rgba(167,139,255,0)}}
+.countdown-live-badge{background:rgba(77,111,239,0.18);border-color:rgba(169,188,255,0.35);color:#CDD8FF}
+.countdown-live-badge .ldot{background:#A9BCFF}
+@keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(169,188,255,0.55)}70%{box-shadow:0 0 0 14px rgba(169,188,255,0)}100%{box-shadow:0 0 0 0 rgba(169,188,255,0)}}
 .cd-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:34px 10px;box-shadow:none}
 .cd-card:hover{background:rgba(255,255,255,0.05);box-shadow:0 12px 32px rgba(0,0,0,0.35)}
 .cd-num{color:#fff;font-variant-numeric:tabular-nums;font-weight:800;font-size:clamp(44px,6vw,72px);-webkit-background-clip:border-box;-webkit-text-fill-color:#fff;background:none}
 .cd-label{color:rgba(255,255,255,0.5);font-size:11px;letter-spacing:.28em}
-.cd-live{color:#a78bff}
+.cd-live{color:#A9BCFF}
 
 /* ---- FEATURE CARDS: asymmetric + watermarks ---- */
 .lgrid{grid-template-columns:repeat(2,1fr);background:transparent;border:none;border-radius:0;box-shadow:none;gap:18px}
 .lc{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:44px 40px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden;transition:transform .35s var(--ease-out-quart),box-shadow .35s,border-color .35s}
 .lc::after{display:none}
-.lc:hover{background:var(--card);transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:rgba(108,71,255,0.2)}
-.lc::before{content:attr(data-wm);position:absolute;right:-10px;bottom:-56px;font-family:var(--ff);font-size:240px;font-weight:900;color:rgba(108,71,255,0.055);letter-spacing:-.07em;line-height:1;pointer-events:none;z-index:0}
+.lc:hover{background:var(--card);transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:rgba(77,111,239,0.2)}
+.lc::before{content:attr(data-wm);position:absolute;right:-10px;bottom:-56px;font-family:var(--ff);font-size:240px;font-weight:900;color:rgba(77,111,239,0.055);letter-spacing:-.07em;line-height:1;pointer-events:none;z-index:0}
 .lc > *{position:relative;z-index:1}
 .lc:nth-child(1),.lc:nth-child(4){grid-column:1 / -1}
 .lc:nth-child(1) h3,.lc:nth-child(4) h3{font-size:22px;max-width:620px}
@@ -430,53 +434,53 @@ body::after{background-image:radial-gradient(rgba(15,23,42,0.07) 1px,transparent
 .sname{font-family:'Caveat',cursive;font-size:40px;font-weight:700;line-height:1;letter-spacing:0;margin-bottom:2px;color:var(--text)}
 
 /* ---- REAL ESTATE CARD: featured dark ---- */
-.ind-card:first-child{background:#0a0a1a;border-color:rgba(167,139,255,0.22);color:#fff;position:relative;overflow:hidden}
-.ind-card:first-child::before{background:linear-gradient(135deg,#6c47ff 0%,#3b82f6 100%);opacity:1;height:4px}
-.ind-card:first-child::after{content:'';position:absolute;top:-120px;right:-120px;width:420px;height:420px;background:radial-gradient(circle,rgba(108,71,255,0.22) 0%,transparent 65%);pointer-events:none;z-index:0}
+.ind-card:first-child{background:#1A1714;border-color:rgba(169,188,255,0.22);color:#fff;position:relative;overflow:hidden}
+.ind-card:first-child::before{background:linear-gradient(135deg,#4D6FEF 0%,#3b82f6 100%);opacity:1;height:4px}
+.ind-card:first-child::after{content:'';position:absolute;top:-120px;right:-120px;width:420px;height:420px;background:radial-gradient(circle,rgba(77,111,239,0.22) 0%,transparent 65%);pointer-events:none;z-index:0}
 .ind-card:first-child > *{position:relative;z-index:1}
 .ind-card:first-child h3{color:#fff;font-size:28px}
 .ind-card:first-child p{color:rgba(255,255,255,0.72)}
-.ind-card:first-child .ind-label{background:rgba(108,71,255,0.22) !important;color:#cbc6ff !important;border:1px solid rgba(167,139,255,0.3)}
-.ind-card:first-child .ind-icon{background:rgba(167,139,255,0.15) !important}
-.ind-card:first-child .ind-icon svg{stroke:#a78bff !important}
+.ind-card:first-child .ind-label{background:rgba(77,111,239,0.22) !important;color:#CDD8FF !important;border:1px solid rgba(169,188,255,0.3)}
+.ind-card:first-child .ind-icon{background:rgba(169,188,255,0.15) !important}
+.ind-card:first-child .ind-icon svg{stroke:#A9BCFF !important}
 .ind-card:first-child .ind-topics li{color:rgba(255,255,255,0.82);border-bottom:1px solid rgba(255,255,255,0.07);padding:10px 0}
 .ind-card:first-child .ind-topics li:last-child{border-bottom:none}
-.ind-card:first-child .ind-topics li::before{background:linear-gradient(135deg,#a78bff,#5b8bff)}
-.ind-card:first-child:hover{border-color:rgba(167,139,255,0.45);transform:translateY(-3px);box-shadow:0 20px 60px rgba(108,71,255,0.28)}
+.ind-card:first-child .ind-topics li::before{background:linear-gradient(135deg,#A9BCFF,#5b8bff)}
+.ind-card:first-child:hover{border-color:rgba(169,188,255,0.45);transform:translateY(-3px);box-shadow:0 20px 60px rgba(77,111,239,0.28)}
 
 /* =========================
-   HERO/NAV REFINEMENTS
-   ========================= */
+  HERO/NAV REFINEMENTS
+  ========================= */
 
 /* NAV: transparent at top, dark on scroll */
 nav{background:transparent !important;border-bottom:1px solid transparent !important;backdrop-filter:none;-webkit-backdrop-filter:none;transition:background .3s ease,border-color .3s ease,box-shadow .3s ease,backdrop-filter .3s ease}
 nav .logo-text{color:#fff}
-nav .logo-text span{background:linear-gradient(135deg,#c4b5fd 0%,#a78bfa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+nav .logo-text span{background:linear-gradient(135deg,#CDD8FF 0%,#A9BCFF 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 nav .nav-tag{color:rgba(255,255,255,0.65)}
-nav .nav-tag strong{color:#a78bfa}
+nav .nav-tag strong{color:#A9BCFF}
 nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border-bottom-color:rgba(255,255,255,0.08) !important;box-shadow:0 4px 24px rgba(0,0,0,0.25)}
 
-/* HERO typography tuned — ratio ≤ 2:1, more breath */
+/* HERO typography tuned, ratio ≤ 2:1, more breath */
 .hero{padding:160px 0 120px}
 .hero h1{font-size:clamp(52px,7vw,100px);line-height:1.05;letter-spacing:-.035em;max-width:900px}
 .hero h1 .h-line1{display:block;font-size:clamp(34px,3.8vw,52px);font-weight:700;color:rgba(255,255,255,0.82);letter-spacing:-.01em;line-height:1.15;padding-left:0;margin-top:0;margin-bottom:6px}
-.hero h1 .h-line2{display:block;font-size:clamp(60px,8vw,100px);font-weight:900;background:linear-gradient(135deg,#c4b5fd 0%,#a78bfa 48%,#8b5cf6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-top:0;letter-spacing:-.035em;line-height:1.02;padding-left:0}
+.hero h1 .h-line2{display:block;font-size:clamp(60px,8vw,100px);font-weight:900;background:linear-gradient(135deg,#CDD8FF 0%,#A9BCFF 48%,#3A57D6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-top:0;letter-spacing:-.035em;line-height:1.02;padding-left:0}
 .hero h1 .h-line3{display:block;font-size:clamp(34px,3.8vw,52px);font-weight:700;color:rgba(255,255,255,0.86);letter-spacing:-.01em;margin-top:8px;padding-left:0;line-height:1.15}
 
-/* HERO vertical spacing — +16px breathing room */
+/* HERO vertical spacing, +16px breathing room */
 .hero .badge{margin-bottom:48px}
 .hero-sub{margin:44px 0 56px;max-width:560px;font-size:clamp(17px,1.5vw,19px);line-height:1.75}
 .pills{margin-bottom:56px;gap:12px}
 .anote{margin-top:36px}
 
-/* HERO pills — readable on dark */
+/* HERO pills, readable on dark */
 .hero .pill{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.2);color:#fff;font-weight:500;box-shadow:none}
-.hero .pill svg{color:#a78bfa}
-.hero .pill:hover{background:rgba(255,255,255,0.09);border-color:rgba(167,139,250,0.55);color:#fff;box-shadow:none}
+.hero .pill svg{color:#A9BCFF}
+.hero .pill:hover{background:rgba(255,255,255,0.09);border-color:rgba(169,188,255,0.55);color:#fff;box-shadow:none}
 
 /* HERO right-side NekterOS dashboard (desktop only) */
 .hero .wrap{position:relative}
-.hero-dash{position:absolute;right:0;top:50%;width:340px;background:#1a1a2e;border:1px solid rgba(167,139,250,0.2);border-radius:18px;padding:22px;box-shadow:0 24px 60px rgba(0,0,0,0.5),0 0 0 1px rgba(167,139,250,0.06),0 0 64px rgba(108,71,255,0.18);z-index:2;font-family:var(--ff);animation:dashFloat 6s ease-in-out infinite}
+.hero-dash{position:absolute;right:0;top:50%;width:340px;background:#252118;border:1px solid rgba(169,188,255,0.2);border-radius:18px;padding:22px;box-shadow:0 24px 60px rgba(0,0,0,0.5),0 0 0 1px rgba(169,188,255,0.06),0 0 64px rgba(77,111,239,0.18);z-index:2;font-family:var(--ff);animation:dashFloat 6s ease-in-out infinite}
 .hero-dash-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,0.08)}
 .hero-dash-title{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.82)}
 .hero-dash-live{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#4ade80}
@@ -491,56 +495,56 @@ nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px
 /* CURRICULUM PROGRESS CARD */
 .curr-progress{margin-bottom:14px}
 .curr-progress-bar{height:4px;border-radius:100px;background:rgba(255,255,255,0.08);overflow:hidden;margin-bottom:8px}
-.curr-progress-fill{height:100%;width:0%;background:linear-gradient(90deg,#6C47FF 0%,#A78BFA 100%);border-radius:100px;transition:width .6s cubic-bezier(0.16,1,0.3,1);box-shadow:0 0 12px rgba(167,139,250,0.5)}
+.curr-progress-fill{height:100%;width:0%;background:linear-gradient(90deg,#4D6FEF 0%,#A9BCFF 100%);border-radius:100px;transition:width .6s cubic-bezier(0.16,1,0.3,1);box-shadow:0 0 12px rgba(169,188,255,0.5)}
 .curr-progress-meta{display:flex;justify-content:space-between;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.45)}
-#currProgressPct{color:#A78BFA;transition:color .3s}
+#currProgressPct{color:#A9BCFF;transition:color .3s}
 .curr-row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:opacity .4s}
 .curr-row:last-child{border-bottom:none;padding-bottom:0}
 .curr-row strong{color:#fff;font-weight:600;display:block;font-size:13px;margin-bottom:1px;transition:color .3s}
 .curr-row em{color:rgba(255,255,255,0.45);font-style:normal;font-size:11.5px;transition:color .3s}
 .curr-check{flex-shrink:0;width:22px;height:22px;border-radius:6px;border:1.5px solid rgba(255,255,255,0.18);background:rgba(255,255,255,0.02);display:flex;align-items:center;justify-content:center;color:transparent;transition:all .45s cubic-bezier(0.16,1,0.3,1);position:relative}
 .curr-check svg{width:14px;height:14px;opacity:0;transform:scale(0.4);transition:opacity .35s,transform .35s cubic-bezier(0.34,1.56,0.64,1)}
-.curr-row.done .curr-check{background:linear-gradient(135deg,#6C47FF 0%,#A78BFA 100%);border-color:transparent;color:#fff;box-shadow:0 0 14px rgba(167,139,250,0.45)}
+.curr-row.done .curr-check{background:linear-gradient(135deg,#4D6FEF 0%,#A9BCFF 100%);border-color:transparent;color:#fff;box-shadow:0 0 14px rgba(169,188,255,0.45)}
 .curr-row.done .curr-check svg{opacity:1;transform:scale(1)}
 .curr-row.done strong{color:#fff}
-.curr-row.done em{color:rgba(167,139,250,0.8)}
-.curr-row.active strong{color:#A78BFA}
-.curr-row.active .curr-check{border-color:rgba(167,139,250,0.6);box-shadow:0 0 0 3px rgba(167,139,250,0.12)}
+.curr-row.done em{color:rgba(169,188,255,0.8)}
+.curr-row.active strong{color:#A9BCFF}
+.curr-row.active .curr-check{border-color:rgba(169,188,255,0.6);box-shadow:0 0 0 3px rgba(169,188,255,0.12)}
 @keyframes dashFloat{0%,100%{transform:translateY(-50%)}50%{transform:translateY(calc(-50% - 8px))}}
-/* grid layout handles hero-dash visibility — see fixes block */
+/* grid layout handles hero-dash visibility, see fixes block */
 
 /* COUNTDOWN */
 .countdown-section{background:#fff;padding:64px 0;border-bottom:1px solid var(--border);position:relative;z-index:1}
-.countdown-live-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(108,71,255,0.08);border:1px solid rgba(108,71,255,0.18);color:#6c47ff;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:10px 20px;border-radius:100px;margin-bottom:24px}
-.countdown-live-badge .ldot{width:8px;height:8px;border-radius:50%;background:#6c47ff;box-shadow:0 0 0 0 rgba(108,71,255,0.6);animation:livePulse 1.6s ease-out infinite}
-@keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(108,71,255,0.55)}70%{box-shadow:0 0 0 14px rgba(108,71,255,0)}100%{box-shadow:0 0 0 0 rgba(108,71,255,0)}}
+.countdown-live-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(77,111,239,0.08);border:1px solid rgba(77,111,239,0.18);color:#4D6FEF;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:10px 20px;border-radius:100px;margin-bottom:24px}
+.countdown-live-badge .ldot{width:8px;height:8px;border-radius:50%;background:#4D6FEF;box-shadow:0 0 0 0 rgba(77,111,239,0.6);animation:livePulse 1.6s ease-out infinite}
+@keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(77,111,239,0.55)}70%{box-shadow:0 0 0 14px rgba(77,111,239,0)}100%{box-shadow:0 0 0 0 rgba(77,111,239,0)}}
 .countdown-head{text-align:center;margin-bottom:36px}
 .countdown-head h2{font-family:var(--ff);font-size:clamp(26px,3.2vw,36px);font-weight:900;letter-spacing:-.03em;color:var(--text);margin-bottom:12px}
 .countdown-meta{color:var(--muted);font-size:15px;font-weight:500}
 .countdown-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:720px;margin:0 auto}
 .cd-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:28px 12px;text-align:center;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease-out-quart),box-shadow .25s var(--ease-out-quart)}
 .cd-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
-.cd-num{font-family:var(--ff);font-size:clamp(40px,5.5vw,60px);font-weight:900;letter-spacing:-.04em;color:#6c47ff;line-height:1;font-variant-numeric:tabular-nums}
+.cd-num{font-family:var(--ff);font-size:clamp(40px,5.5vw,60px);font-weight:900;letter-spacing:-.04em;color:#4D6FEF;line-height:1;font-variant-numeric:tabular-nums}
 .cd-label{font-size:12px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-top:10px}
-.cd-live{grid-column:1/-1;text-align:center;font-size:22px;font-weight:800;color:#6c47ff;padding:32px}
+.cd-live{grid-column:1/-1;text-align:center;font-size:22px;font-weight:800;color:#4D6FEF;padding:32px}
 @media(max-width:640px){.countdown-grid{grid-template-columns:repeat(4,1fr);gap:8px}.cd-card{padding:18px 6px;border-radius:14px}.cd-label{font-size:10px;letter-spacing:.08em}}
 
 /* =========================
-   LAYOUT + CTA FIXES (final overrides)
-   ========================= */
+  LAYOUT + CTA FIXES (final overrides)
+  ========================= */
 
 /* HERO 2-col grid */
 .hero .wrap{position:relative}
 .hero-left{min-width:0}
 @media(min-width:1025px){
-  .hero .wrap{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:80px;align-items:center}
-  .hero-left{grid-column:1;max-width:none}
-  .hero .wrap > :not(.hero-dash):not(.hero-left){grid-column:1;max-width:none}
-  .hero-dash{position:static !important;grid-column:2;grid-row:1;transform:none !important;animation:dashFloatGrid 6s ease-in-out infinite;width:100%;max-width:340px;margin-left:auto;align-self:center}
+ .hero .wrap{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:80px;align-items:center}
+ .hero-left{grid-column:1;max-width:none}
+ .hero .wrap > :not(.hero-dash):not(.hero-left){grid-column:1;max-width:none}
+ .hero-dash{position:static !important;grid-column:2;grid-row:1;transform:none !important;animation:dashFloatGrid 6s ease-in-out infinite;width:100%;max-width:340px;margin-left:auto;align-self:center}
 }
 @keyframes dashFloatGrid{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 @media(max-width:1024px){
-  .hero-dash{position:static !important;transform:none !important;animation:none;width:100%;max-width:420px;margin:40px auto 0;display:block}
+ .hero-dash{position:static !important;transform:none !important;animation:none;width:100%;max-width:420px;margin:40px auto 0;display:block}
 }
 
 /* HERO PILLS one row on desktop */
@@ -548,8 +552,8 @@ nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px
 .hero .pill{padding:9px 16px;font-size:13.5px}
 @media(min-width:1025px){.hero .pills{flex-wrap:nowrap}.hero .pill{white-space:nowrap;padding:8px 14px;font-size:13px}}
 
-/* COUNTDOWN — fully dark, overrides any earlier rules */
-.countdown-section{background:#0a0a1a !important;border-bottom:none !important;position:relative;overflow:hidden;padding:96px 0}
+/* COUNTDOWN, fully dark, overrides any earlier rules */
+.countdown-section{background:#1A1714 !important;border-bottom:none !important;position:relative;overflow:hidden;padding:96px 0}
 .countdown-section::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");opacity:0.12;pointer-events:none;z-index:0;mix-blend-mode:overlay}
 .countdown-section > .wrap{position:relative;z-index:1}
 .countdown-head h2{color:#fff !important}
@@ -557,13 +561,13 @@ nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px
 .countdown-rule{display:flex;align-items:center;gap:20px;max-width:460px;margin:0 auto 30px}
 .countdown-rule::before,.countdown-rule::after{content:'';flex:1;height:1px;background:rgba(255,255,255,0.18)}
 .countdown-rule span{font-size:11px;letter-spacing:.36em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,0.72)}
-.countdown-live-badge{background:rgba(108,71,255,0.18) !important;border:1px solid rgba(167,139,250,0.35) !important;color:#cbc6ff !important}
-.countdown-live-badge .ldot{background:#a78bfa !important}
+.countdown-live-badge{background:rgba(77,111,239,0.18) !important;border:1px solid rgba(169,188,255,0.35) !important;color:#CDD8FF !important}
+.countdown-live-badge .ldot{background:#A9BCFF !important}
 .cd-card{background:rgba(255,255,255,0.03) !important;border:1px solid #ffffff15 !important;box-shadow:none !important;padding:34px 10px}
 .cd-card:hover{background:rgba(255,255,255,0.06) !important;box-shadow:0 12px 32px rgba(0,0,0,0.4) !important}
 .cd-num{color:#fff !important;font-variant-numeric:tabular-nums;font-weight:800;font-size:clamp(44px,6vw,72px) !important;background:none !important;-webkit-text-fill-color:#fff !important;letter-spacing:-.03em}
 .cd-label{color:rgba(255,255,255,0.5) !important;letter-spacing:.28em;font-size:11px}
-.cd-live{color:#a78bfa !important}
+.cd-live{color:#A9BCFF !important}
 
 /* INLINE CTA blocks */
 .inline-cta{margin-top:56px;display:flex;justify-content:center}
@@ -572,732 +576,1050 @@ nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px
 /* STICKY CTA (desktop bottom-right, mobile full width) */
 .sticky-cta{position:fixed;right:24px;bottom:24px;z-index:98;opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .3s ease,transform .3s ease}
 .sticky-cta.show{opacity:1;pointer-events:auto;transform:translateY(0)}
-.sticky-cta .btn-p{font-size:15px;padding:16px 30px;box-shadow:0 10px 40px rgba(108,71,255,0.45),0 0 0 1px rgba(167,139,250,0.3)}
+.sticky-cta .btn-p{font-size:15px;padding:16px 30px;box-shadow:0 10px 40px rgba(77,111,239,0.45),0 0 0 1px rgba(169,188,255,0.3)}
 @media(max-width:720px){
-  .sticky-cta{left:16px;right:16px;bottom:16px}
-  .sticky-cta .btn-p{width:100%;justify-content:center;padding:18px 24px}
-  .float-cta{display:none !important}
+ .sticky-cta{left:16px;right:16px;bottom:16px}
+ .sticky-cta .btn-p{width:100%;justify-content:center;padding:18px 24px}
+ .float-cta{display:none !important}
 }
 
 /* SCHEDULE NEXT-SESSION ACCENT */
-.sched-badge.next{background:#6c47ff;color:#fff;box-shadow:0 6px 18px rgba(108,71,255,0.3)}
-.sched-card.featured{border:1px solid rgba(108,71,255,0.35);box-shadow:0 10px 40px rgba(108,71,255,0.12)}
-.sched-card.featured .sched-day,.sched-card.featured .sched-month{color:#6c47ff}
+.sched-badge.next{background:#4D6FEF;color:#1A1714;box-shadow:0 6px 18px rgba(77,111,239,0.3)}
+.sched-card.featured{border:1px solid rgba(77,111,239,0.35);box-shadow:0 10px 40px rgba(77,111,239,0.12)}
+.sched-card.featured .sched-day,.sched-card.featured .sched-month{color:#4D6FEF}
+
+/* =====================================================================
+  V2, warm-dark editorial redesign (cook.ai-inspired). Highest priority
+  via source order. Overrides the v1 hero/nav where it conflicts.
+  ===================================================================== */
+
+/* Kill v1 decorative noise that survived the remap */
+.cursor-glow,.aurora,.orb,.shape-ring,.shape-dot,.hero-grid{display:none !important}
+
+body{background:#1A1714;color:#FAF6F0}
+body::after{opacity:0.4}
+
+/* STICKY COUNTDOWN BANNER */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(20,17,16,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(77,111,239,0.22)}
+.topbar-inner{max-width:1120px;margin:0 auto;padding:11px 28px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;font-size:13.5px;font-weight:600;letter-spacing:.01em}
+.topbar-date{color:#A9BCFF}
+.topbar-sep{color:rgba(245,240,232,0.25)}
+.topbar-count{color:var(--text-sub);font-variant-numeric:tabular-nums}
+.topbar-cta{margin-left:8px;color:#4D6FEF;text-decoration:none;font-weight:700;border-bottom:1px solid rgba(77,111,239,0.4);padding-bottom:1px;transition:color .2s,border-color .2s}
+.topbar-cta:hover{color:#6E89FF;border-color:#6E89FF}
+@media(max-width:560px){
+ .topbar-inner{gap:8px;font-size:12px;padding:9px 16px}
+ .topbar-sep{display:none}
+}
+
+/* MINIMAL HEADER */
+.mhead{position:relative;z-index:10;display:flex;justify-content:center;padding:62px 0 8px}
+.mhead-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.mhead-logo img{height:30px;width:auto}
+.mhead-name{font-family:var(--ff);font-weight:800;font-size:18px;letter-spacing:-.02em;color:#FAF6F0}
+.mhead-name span{color:#4D6FEF}
+
+/* HERO, VSL led, single column, centered */
+.hero{min-height:auto;display:block;padding:36px 0 60px;background:#1A1714;text-align:center;position:relative;overflow:hidden}
+.hero::before,.hero::after{display:none !important}
+.hero-glow{position:absolute;top:-160px;left:50%;transform:translateX(-50%);width:900px;height:560px;background:radial-gradient(ellipse,rgba(77,111,239,0.14) 0%,transparent 65%);pointer-events:none;z-index:0}
+.hero .wrap.hero-wrap{display:block;max-width:880px;position:relative;z-index:1}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:9px;background:rgba(77,111,239,0.10);border:1px solid rgba(77,111,239,0.28);color:#A9BCFF;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:9px 18px;border-radius:100px;margin-bottom:28px}
+.hero-eyebrow .bdot{width:6px;height:6px;border-radius:50%;background:#4D6FEF;animation:blink 2s ease-in-out infinite}
+.hero-h1{font-family:var(--serif);font-weight:600;font-size:clamp(38px,6.2vw,72px);line-height:1.04;letter-spacing:-.02em;color:#FAF6F0;max-width:14ch;margin:0 auto 24px}
+.hero-h1 .hl{font-style:italic;font-weight:600;color:#FAF6F0;background:#4D6FEF;padding:0 .18em;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero-sub{font-size:clamp(16px,1.7vw,19px);color:var(--text-sub);max-width:60ch;margin:0 auto 38px;line-height:1.6}
+
+/* VSL */
+.vsl{max-width:820px;margin:0 auto 34px}
+.vsl-frame{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#0F0D0B;border:1px solid rgba(245,240,232,0.10);box-shadow:0 30px 80px rgba(0,0,0,0.55),0 0 0 1px rgba(77,111,239,0.10),0 0 90px rgba(77,111,239,0.12)}
+.vsl-frame iframe,.vsl-frame video{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vsl-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:radial-gradient(ellipse at 50% 40%,rgba(77,111,239,0.10) 0%,transparent 60%),#1C1814}
+.vsl-play{width:84px;height:84px;border-radius:50%;border:none;background:#4D6FEF;color:#1A1714;display:flex;align-items:center;justify-content:center;cursor:pointer;padding-left:4px;box-shadow:0 12px 40px rgba(77,111,239,0.45);transition:transform .25s var(--ease-out-quart),box-shadow .25s}
+.vsl-play:hover{transform:scale(1.06);box-shadow:0 16px 54px rgba(77,111,239,0.6)}
+.vsl-caption{font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+.vsl-unmute{position:absolute;top:14px;right:14px;z-index:3;background:rgba(15,13,11,0.85);color:#FAF6F0;border:1px solid rgba(245,240,232,0.18);font-size:12px;font-weight:600;padding:8px 14px;border-radius:100px;cursor:pointer;backdrop-filter:blur(8px)}
+
+.hero-cta-row{display:flex;justify-content:center;margin-bottom:14px}
+.hero .btn-p{animation:none}
+.hero .anote{color:var(--muted);font-size:13.5px;max-width:none;text-align:center}
+.hero .anote strong{color:#A9BCFF}
+
+/* CHAPTERS, long-form manifesto copy */
+.chapters{background:#1A1714;position:relative;z-index:1}
+.chapter{max-width:720px;margin:0 auto;padding:78px 28px;border-top:1px solid rgba(245,240,232,0.08)}
+.chapter:first-child{border-top:none}
+.chapter-eyebrow{font-family:var(--ff);font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#4D6FEF;margin-bottom:22px}
+.chapter-title{font-family:var(--serif);font-weight:600;font-size:clamp(26px,3.4vw,38px);line-height:1.12;letter-spacing:-.015em;color:#FAF6F0;margin-bottom:22px;max-width:20ch}
+.chapter-title em{font-style:italic;color:#A9BCFF}
+.chapter-body{font-size:17px;line-height:1.72;color:var(--text-sub);max-width:65ch}
+.chapter-body p{margin-bottom:18px}
+.chapter-body p:last-child{margin-bottom:0}
+.chapter-body strong{color:#FAF6F0;font-weight:700}
+.chapter-note{margin-top:14px;font-size:13px;color:var(--muted-lt);font-style:italic}
+
+/* Pull-quote (authority anchor) */
+.pullquote{margin:30px 0;padding:26px 30px;background:rgba(77,111,239,0.06);border:1px solid rgba(77,111,239,0.18);border-radius:14px}
+.pullquote-text{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.4vw,24px);line-height:1.4;color:#FAF6F0;margin-bottom:14px}
+.pullquote-cite{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#4D6FEF}
+
+/* Fit check (for you / not for you) */
+.fitcheck{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:14px}
+.fitcheck-col{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:26px 24px}
+.fitcheck-col h4{font-family:var(--ff);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.fitcheck-col.yes h4{color:#7FB069}
+.fitcheck-col.no h4{color:#C97A6A}
+.fitcheck-col ul{list-style:none}
+.fitcheck-col li{font-size:14.5px;line-height:1.55;color:var(--text-sub);padding:8px 0 8px 24px;position:relative}
+.fitcheck-col li::before{position:absolute;left:0;top:8px;font-weight:700}
+.fitcheck-col.yes li::before{content:'+';color:#7FB069}
+.fitcheck-col.no li::before{content:'\2212';color:#C97A6A}
+@media(max-width:600px){.fitcheck{grid-template-columns:1fr}}
+
+/* Numbered "what you leave with" shifts */
+.shifts{margin-top:8px}
+.shift{display:flex;gap:20px;padding:20px 0;border-top:1px solid rgba(245,240,232,0.08)}
+.shift:first-child{border-top:none}
+.shift-num{font-family:var(--serif);font-style:italic;font-size:34px;font-weight:600;color:#4D6FEF;line-height:1;flex-shrink:0;width:52px}
+.shift-body h4{font-family:var(--ff);font-size:18px;font-weight:700;color:#FAF6F0;margin-bottom:6px}
+.shift-body p{font-size:15px;line-height:1.6;color:var(--text-sub);margin:0}
+
+/* Inline CTA between chapters */
+.chapter-cta{max-width:720px;margin:0 auto;padding:8px 28px 44px;text-align:center}
+.chapter-cta .btn-p{animation:none}
+
+/* =====================================================================
+  V2 LIGHT, warm bone editorial + deep cobalt. Appended last = wins.
+  Toggle this whole block off to fall back to the warm-dark version.
+  ===================================================================== */
+:root{
+ --bg:#F2ECE1;--bg-alt:#FBF7EF;--bg-dark:#E8E0D2;
+ --card:#FCF8F1;--card-hover:#F5EEE1;
+ --border:rgba(26,21,16,0.10);--border-str:rgba(26,21,16,0.16);
+ --blue:#2C4BD4;--blue-bright:#3A5BE8;--blue-dim:rgba(44,75,212,0.07);
+ --purple:#2C4BD4;--purple-dim:rgba(44,75,212,0.06);
+ --grad:linear-gradient(135deg,#2C4BD4 0%,#3A5BE8 100%);
+ --grad-text:linear-gradient(135deg,#2C4BD4 0%,#3A5BE8 100%);
+ --grad-subtle:linear-gradient(135deg,rgba(44,75,212,0.06) 0%,rgba(58,91,232,0.04) 100%);
+ --text:#1A1510;--text-sub:#52483C;--muted:#7A7064;--muted-lt:#9C9286;
+ --highlight:#2C4BD4;
+ --green:#3E7A4A;--green-dim:rgba(62,122,74,0.10);
+}
+body{background:#F2ECE1;color:#1A1510}
+body::after{background-image:radial-gradient(rgba(26,21,16,0.05) 1px,transparent 1px);opacity:0.5}
+
+/* topbar, cobalt-tinted bar (cook.ai-style) */
+.topbar{background:rgba(231,235,252,0.92);border-bottom:1px solid rgba(44,75,212,0.28);box-shadow:inset 0 1px 0 rgba(44,75,212,0.10)}
+.topbar-inner{align-items:center}
+.topbar-date{display:inline-flex;align-items:center;gap:7px;color:#2C4BD4;font-weight:700}
+.topbar-cal{color:#2C4BD4;flex-shrink:0}
+.topbar-sep{color:rgba(44,75,212,0.30)}
+.topbar-count{display:inline-flex;align-items:center;gap:6px}
+.topbar-cta{color:#2C4BD4;border-bottom-color:rgba(44,75,212,0.4)}
+.topbar-cta:hover{color:#3A5BE8;border-color:#3A5BE8}
+
+/* countdown pills (translucent cobalt fill + border) */
+.cd-pills{display:inline-flex;align-items:center;gap:5px}
+.cd-pill{display:inline-flex;align-items:baseline;gap:2px;background:rgba(44,75,212,0.10);border:1px solid rgba(44,75,212,0.32);border-radius:7px;padding:3px 8px;color:#2C4BD4;font-weight:800;font-variant-numeric:tabular-nums;line-height:1}
+.cd-pill b{font-size:13.5px}
+.cd-pill i{font-size:10px;font-weight:700;font-style:normal;opacity:.72;margin-left:1px}
+.cd-pill-tba{font-size:12px;font-weight:700;letter-spacing:.04em}
+.topbar-label{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(44,75,212,0.75)}
+@media(max-width:560px){
+ .topbar-label{display:none}
+ .cd-pill{padding:2px 6px}
+ .cd-pill b{font-size:12px}
+}
+
+/* header */
+.mhead-name{color:#1A1510}
+.mhead-name span{color:#2C4BD4}
+
+/* hero */
+.hero{background:#F2ECE1}
+.hero-glow{background:radial-gradient(ellipse,rgba(44,75,212,0.10) 0%,transparent 65%)}
+.hero-eyebrow{background:rgba(44,75,212,0.07);border-color:rgba(44,75,212,0.25);color:#2C4BD4}
+.hero-eyebrow .bdot{background:#2C4BD4}
+.hero h1.hero-h1{color:#1A1510}
+.hero h1.hero-h1 .hl{color:#FFFFFF;background:#2C4BD4}
+.hero-sub{color:#52483C}
+.hero .anote{color:#7A7064}
+.hero .anote strong{color:#2C4BD4}
+.vsl-frame{background:#14110D;border-color:rgba(26,21,16,0.12);box-shadow:0 30px 80px rgba(26,21,16,0.22),0 0 0 1px rgba(44,75,212,0.10),0 0 90px rgba(44,75,212,0.10)}
+.vsl-placeholder{background:radial-gradient(ellipse at 50% 40%,rgba(44,75,212,0.16) 0%,transparent 60%),#191510}
+.vsl-play{background:#2C4BD4;color:#fff;box-shadow:0 12px 40px rgba(44,75,212,0.4)}
+.vsl-caption{color:rgba(245,240,232,0.7)}
+
+/* chapters */
+.chapters{background:#F2ECE1}
+.chapter{border-top:1px solid rgba(26,21,16,0.10)}
+.chapter-eyebrow{color:#2C4BD4}
+.chapter-title{color:#1A1510}
+.chapter-title em{color:#2C4BD4}
+.chapter-body{color:#52483C}
+.chapter-body strong{color:#1A1510}
+.pullquote{background:rgba(44,75,212,0.05);border-color:rgba(44,75,212,0.18)}
+.pullquote-text{color:#1A1510}
+.pullquote-cite{color:#2C4BD4}
+.fitcheck-col{background:#FCF8F1;border-color:rgba(26,21,16,0.10)}
+.fitcheck-col.yes h4{color:#3E7A4A}
+.fitcheck-col.no h4{color:#B0503F}
+.fitcheck-col li{color:#52483C}
+.fitcheck-col.yes li::before{color:#3E7A4A}
+.fitcheck-col.no li::before{color:#B0503F}
+.shift{border-top:1px solid rgba(26,21,16,0.10)}
+.shift-num{color:#2C4BD4}
+.shift-body h4{color:#1A1510}
+.shift-body p{color:#52483C}
+
+/* primary button on light */
+.btn-p{color:#fff}
+
+/* shift the big editorial-dark section backgrounds (countdown etc.) to light card tone */
+.proof-bar,.ticker{background:#FBF7EF;border-color:rgba(26,21,16,0.08)}
+.ti{color:#9C9286}.ti .d{color:#2C4BD4}
+.proof-num{color:#2C4BD4;-webkit-text-fill-color:#2C4BD4}
+.proof-label{color:#7A7064}
 
 /* =========================
-   REGISTRATION FORM MODAL (dark)
-   ========================= */
+  REGISTRATION FORM MODAL (dark)
+  ========================= */
 .form-modal-overlay{position:fixed;inset:0;background:rgba(5,5,15,0.78);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);z-index:200;display:flex;align-items:flex-start;justify-content:center;padding:40px 16px;opacity:0;pointer-events:none;transition:opacity .3s var(--ease-out-quart);overflow-y:auto}
 .form-modal-overlay.active{opacity:1;pointer-events:all}
-.form-modal-box{background:#0a0a1a;color:#fff;border:1px solid rgba(167,139,250,0.18);border-radius:22px;width:100%;max-width:680px;position:relative;box-shadow:0 32px 80px rgba(0,0,0,0.6),0 0 60px rgba(108,71,255,0.18);transform:translateY(24px) scale(0.97);transition:transform .35s var(--ease-out-expo);overflow:hidden;margin:auto 0}
+.form-modal-box{background:#1A1714;color:#fff;border:1px solid rgba(169,188,255,0.18);border-radius:22px;width:100%;max-width:680px;position:relative;box-shadow:0 32px 80px rgba(0,0,0,0.6),0 0 60px rgba(77,111,239,0.18);transform:translateY(24px) scale(0.97);transition:transform .35s var(--ease-out-expo);overflow:hidden;margin:auto 0}
 .form-modal-overlay.active .form-modal-box{transform:translateY(0) scale(1)}
 .form-modal-box::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");opacity:0.08;pointer-events:none;z-index:0;mix-blend-mode:overlay;border-radius:22px}
-.form-modal-box::after{content:'';position:absolute;top:-160px;right:-100px;width:520px;height:520px;background:radial-gradient(circle,rgba(108,71,255,0.22) 0%,transparent 60%);pointer-events:none;z-index:0;border-radius:50%}
+.form-modal-box::after{content:'';position:absolute;top:-160px;right:-100px;width:520px;height:520px;background:radial-gradient(circle,rgba(77,111,239,0.22) 0%,transparent 60%);pointer-events:none;z-index:0;border-radius:50%}
 .form-modal-inner{position:relative;z-index:1;padding:48px 44px 44px}
 .form-modal-close{position:absolute;top:18px;right:18px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;color:rgba(255,255,255,0.7);z-index:2}
 .form-modal-close:hover{background:rgba(255,255,255,0.08);color:#fff;border-color:rgba(255,255,255,0.3)}
 .form-section{color:#fff;position:relative}
-.form-section .form-modal-eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#a78bfa;margin-bottom:10px}
+.form-section .form-modal-eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#A9BCFF;margin-bottom:10px}
 .form-section h2{font-family:var(--ff);font-size:clamp(26px,3.8vw,36px);font-weight:900;line-height:1.1;letter-spacing:-.03em;color:#fff;margin-bottom:12px}
 .form-section .form-intro{color:rgba(255,255,255,0.65);font-size:15px;line-height:1.65;margin-bottom:32px;max-width:520px}
 .form-group{margin-bottom:36px}
 .form-group-title{font-family:var(--ff);font-size:18px;font-weight:800;letter-spacing:-.01em;color:#fff;margin-bottom:18px;display:flex;align-items:center;gap:6px}
-.form-group-title .req{color:#a78bfa;font-weight:700}
+.form-group-title .req{color:#A9BCFF;font-weight:700}
 .form-row{display:grid;grid-template-columns:1fr;gap:12px}
 .form-field{position:relative}
 .form-input,.form-textarea,.form-select{width:100%;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:14px 18px;color:#fff;font-family:var(--ff);font-size:15px;font-weight:400;line-height:1.5;transition:border-color .25s,background .25s,box-shadow .25s;outline:none;-webkit-appearance:none;appearance:none}
 .form-input::placeholder,.form-textarea::placeholder{color:rgba(255,255,255,0.4);font-weight:400}
 .form-input:hover,.form-textarea:hover,.form-select:hover{border-color:rgba(255,255,255,0.22);background:rgba(255,255,255,0.05)}
-.form-input:focus,.form-textarea:focus,.form-select:focus{border-color:rgba(167,139,250,0.55);background:rgba(255,255,255,0.05);box-shadow:0 0 0 4px rgba(167,139,250,0.1)}
+.form-input:focus,.form-textarea:focus,.form-select:focus{border-color:rgba(169,188,255,0.55);background:rgba(255,255,255,0.05);box-shadow:0 0 0 4px rgba(169,188,255,0.1)}
 .form-input.error,.form-textarea.error,.form-select.error{border-color:rgba(239,68,68,0.65)}
 .form-textarea{resize:vertical;min-height:84px}
 .form-select{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'><path d='M1 1.5L6 6.5L11 1.5' stroke='%23a78bfa' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/></svg>");background-repeat:no-repeat;background-position:right 18px center;padding-right:42px;cursor:pointer}
-.form-select option{background:#0a0a1a;color:#fff}
+.form-select option{background:#1A1714;color:#fff}
 .form-checkbox-row{display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:18px 20px;cursor:pointer;transition:border-color .25s,background .25s}
-.form-checkbox-row:hover{border-color:rgba(167,139,250,0.4);background:rgba(255,255,255,0.05)}
+.form-checkbox-row:hover{border-color:rgba(169,188,255,0.4);background:rgba(255,255,255,0.05)}
 .form-checkbox-row input[type="checkbox"]{flex-shrink:0;appearance:none;-webkit-appearance:none;width:22px;height:22px;border:1.5px solid rgba(255,255,255,0.3);border-radius:6px;background:rgba(255,255,255,0.02);cursor:pointer;position:relative;margin-top:2px;transition:all .25s}
-.form-checkbox-row input[type="checkbox"]:checked{background:linear-gradient(135deg,#6C47FF 0%,#A78BFA 100%);border-color:transparent;box-shadow:0 0 14px rgba(167,139,250,0.45)}
+.form-checkbox-row input[type="checkbox"]:checked{background:linear-gradient(135deg,#4D6FEF 0%,#A9BCFF 100%);border-color:transparent;box-shadow:0 0 14px rgba(169,188,255,0.45)}
 .form-checkbox-row input[type="checkbox"]:checked::after{content:'';position:absolute;top:3px;left:7px;width:5px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
 .form-checkbox-row .cb-body{font-size:14.5px;line-height:1.6;color:rgba(255,255,255,0.85)}
 .form-checkbox-row .cb-body strong{color:#fff;display:block;margin-bottom:4px;font-weight:600;font-size:15px}
-.form-checkbox-row .cb-body em{color:#a78bfa;font-style:normal;font-weight:500}
-.form-submit{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;background:linear-gradient(135deg,#6C47FF 0%,#A78BFA 100%);color:#fff;font-family:var(--ff);font-weight:700;font-size:17px;padding:20px 36px;border-radius:100px;text-decoration:none;border:none;cursor:pointer;letter-spacing:-.01em;margin-top:8px;transition:transform .25s,box-shadow .25s,opacity .25s;box-shadow:0 8px 28px rgba(108,71,255,0.35)}
-.form-submit:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 14px 40px rgba(108,71,255,0.5)}
+.form-checkbox-row .cb-body em{color:#A9BCFF;font-style:normal;font-weight:500}
+.form-submit{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;background:linear-gradient(135deg,#4D6FEF 0%,#A9BCFF 100%);color:#fff;font-family:var(--ff);font-weight:700;font-size:17px;padding:20px 36px;border-radius:100px;text-decoration:none;border:none;cursor:pointer;letter-spacing:-.01em;margin-top:8px;transition:transform .25s,box-shadow .25s,opacity .25s;box-shadow:0 8px 28px rgba(77,111,239,0.35)}
+.form-submit:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 14px 40px rgba(77,111,239,0.5)}
 .form-submit:disabled{opacity:0.6;cursor:not-allowed}
 .form-fineprint{font-size:13px;color:rgba(255,255,255,0.45);margin-top:18px;text-align:center;line-height:1.6}
 .form-error{display:none;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);color:#fecaca;font-size:14px;padding:14px 18px;border-radius:12px;margin-bottom:24px;line-height:1.5}
 .form-error.show{display:block}
-.form-tier-banner{display:none;background:linear-gradient(135deg,rgba(108,71,255,0.18) 0%,rgba(167,139,250,0.12) 100%);border:1px solid rgba(167,139,250,0.4);border-radius:14px;padding:18px 22px;margin-bottom:28px;box-shadow:0 0 28px rgba(108,71,255,0.18)}
+.form-tier-banner{display:none;background:linear-gradient(135deg,rgba(77,111,239,0.18) 0%,rgba(169,188,255,0.12) 100%);border:1px solid rgba(169,188,255,0.4);border-radius:14px;padding:18px 22px;margin-bottom:28px;box-shadow:0 0 28px rgba(77,111,239,0.18)}
 .form-tier-banner.show{display:block}
 .form-tier-banner .tier-banner-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
 .form-tier-banner strong{color:#fff;font-weight:700;display:block;margin-bottom:4px;font-size:15px}
 .form-tier-banner span{color:rgba(255,255,255,0.7);font-size:14px;line-height:1.5}
-.form-tier-banner span strong{display:inline;color:#a78bfa;font-weight:700;margin-bottom:0}
+.form-tier-banner span strong{display:inline;color:#A9BCFF;font-weight:700;margin-bottom:0}
 .tier-banner-switch{background:transparent;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.8);font-family:var(--ff);font-size:13px;font-weight:500;padding:8px 16px;border-radius:100px;cursor:pointer;transition:all .25s;flex-shrink:0}
-.tier-banner-switch:hover{border-color:rgba(167,139,250,0.55);color:#fff;background:rgba(167,139,250,0.08)}
+.tier-banner-switch:hover{border-color:rgba(169,188,255,0.55);color:#fff;background:rgba(169,188,255,0.08)}
 .form-success{display:none;text-align:center;padding:32px 24px}
 .form-success.show{display:block}
-.form-success-icon{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#6C47FF 0%,#A78BFA 100%);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;box-shadow:0 0 32px rgba(167,139,250,0.4)}
+.form-success-icon{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#4D6FEF 0%,#A9BCFF 100%);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;box-shadow:0 0 32px rgba(169,188,255,0.4)}
 .form-success h3{font-family:var(--ff);font-size:clamp(26px,3.4vw,36px);font-weight:900;letter-spacing:-.02em;color:#fff;margin-bottom:14px}
 .form-success p{font-size:16px;line-height:1.7;color:rgba(255,255,255,0.7);max-width:440px;margin:0 auto 24px}
-.form-success .btn-success-vip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.05);border:1px solid rgba(167,139,250,0.4);color:#a78bfa;font-weight:600;font-size:14px;padding:12px 24px;border-radius:100px;text-decoration:none;transition:all .25s}
-.form-success .btn-success-vip:hover{background:rgba(167,139,250,0.1);border-color:rgba(167,139,250,0.7)}
+.form-success .btn-success-vip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.05);border:1px solid rgba(169,188,255,0.4);color:#A9BCFF;font-weight:600;font-size:14px;padding:12px 24px;border-radius:100px;text-decoration:none;transition:all .25s}
+.form-success .btn-success-vip:hover{background:rgba(169,188,255,0.1);border-color:rgba(169,188,255,0.7)}
 @media(min-width:560px){.form-row.two-col{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.form-modal-overlay{padding:0}.form-modal-box{border-radius:0;min-height:100vh;max-width:none;margin:0}.form-modal-inner{padding:60px 22px 36px}}
 </style>
 </head>
 <body>
-<div class="cursor-glow"></div>
 
-<!-- NAV -->
-<nav id="nav">
-  <div class="ni">
-    <a href="#" class="logo">
-      <img src="/logo/nekter-knot.png" alt="Nekter AI" onerror="this.style.display='none'">
-      <span class="logo-text">nekter<span>.ai</span></span>
-    </a>
-    <div class="nav-right">
-      <span class="nav-tag"><strong>Free webinar series</strong></span>
-      <a href="#register" class="btn-nav">Register now &rarr;</a>
-    </div>
-  </div>
-</nav>
+<!-- STICKY COUNTDOWN BANNER -->
+<div class="topbar" id="topbar">
+ <div class="topbar-inner">
+  <span class="topbar-date" id="topbarDate">
+   <svg class="topbar-cal" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+   Live Webinar &middot; Thursday, June 25
+  </span>
+  <span class="topbar-sep">|</span>
+  <span class="topbar-count" id="topbarCount"><span class="cd-pill cd-pill-tba">Time TBA</span></span>
+  <a href="#register" class="topbar-cta" id="topbarCta">Register Now &rarr;</a>
+ </div>
+</div>
 
-<!-- HERO -->
+<!-- MINIMAL HEADER -->
+<header class="mhead">
+ <a href="#" class="mhead-logo">
+  <img src="/logo/nekter-knot.png" alt="Nekter AI" onerror="this.style.display='none'">
+  <span class="mhead-name">nekter<span>.ai</span></span>
+ </a>
+</header>
+
+<!-- HERO (VSL-led) -->
 <section class="hero">
-  <div class="aurora"><div class="au1"></div><div class="au2"></div><div class="au3"></div></div>
-  <div class="shape-ring ring1"></div>
-  <div class="shape-ring ring2"></div>
-  <div class="shape-ring ring3"></div>
-  <div class="shape-dot dot1"></div>
-  <div class="shape-dot dot2"></div>
-  <div class="shape-dot dot3"></div>
-  <div class="orb orb1"></div>
-  <div class="orb orb2"></div>
-  <div class="orb orb3"></div>
-  <div class="hero-grid"></div>
-  <div class="wrap">
-    <div class="hero-left">
-    <div class="badge" id="heroBadge"><span class="bdot"></span>Monthly Webinar &middot; Live on Google Meet</div>
-    <h1><span class="h-line1">Stop Watching AI Tutorials.</span><span class="h-line2 gt">Start Using AI</span><span class="h-line3">Like a Pro.</span></h1>
-    <p class="hero-sub">A free monthly live session where we show business owners how to actually use the 5 AI tools that move the needle. <em>Claude, ChatGPT, Higgsfield, Gemini, and NotebookLM</em>. Real prompts. Live homework. Real results.</p>
-    <div class="pills">
-      <div class="pill"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>Live on Google Meet</div>
-      <div class="pill"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>Monthly sessions</div>
-      <div class="pill"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"/></svg>100% Free</div>
-      <div class="pill"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>Live homework</div>
+ <div class="hero-glow"></div>
+ <div class="wrap hero-wrap">
+  <div class="hero-eyebrow" id="heroBadge"><span class="bdot"></span>A 60-MINUTE LIVE WORKSHOP FOR BUSINESS OWNERS</div>
+  <h1 class="hero-h1">
+   Stop watching AI tutorials.<br>
+   Start using <span class="hl">AI like a pro.</span>
+  </h1>
+  <p class="hero-sub">Watch the 90-second walkthrough below. Then save your seat for June 25, the 5 tools we actually run our business on, taught live.</p>
+
+  <!-- VSL: swap the src via NEXT_SESSION.vslUrl. Until set, shows a placeholder. -->
+  <div class="vsl" id="vsl">
+   <div class="vsl-frame" id="vslFrame">
+    <!-- Placeholder state (no video URL yet) -->
+    <div class="vsl-placeholder" id="vslPlaceholder">
+     <button class="vsl-play" type="button" aria-label="Walkthrough coming soon">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+     </button>
+     <p class="vsl-caption">Walkthrough drops this week</p>
     </div>
-    <div class="cta-row">
-      <a href="#register" class="btn-p">Register for free <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-      <a href="#tools" class="btn-g">See what we teach</a>
-    </div>
-    <p class="anote"><strong>New webinars added regularly.</strong> Register once, get access to all upcoming sessions.</p>
-    </div><!-- /hero-left -->
-    <aside class="hero-dash" aria-label="Today's curriculum">
-      <div class="hero-dash-head">
-        <span class="hero-dash-title">Today's session</span>
-        <span class="hero-dash-live">Live</span>
-      </div>
-      <div class="curr-progress">
-        <div class="curr-progress-bar"><div class="curr-progress-fill" id="currProgressFill"></div></div>
-        <div class="curr-progress-meta"><span>5 tools &middot; 60 min</span><span id="currProgressPct">0%</span></div>
-      </div>
-      <div class="curr-row" data-step="1"><span class="curr-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div><strong>Claude</strong><em>Projects &amp; your brand voice</em></div></div>
-      <div class="curr-row" data-step="2"><span class="curr-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div><strong>ChatGPT</strong><em>Canvas &amp; custom GPTs</em></div></div>
-      <div class="curr-row" data-step="3"><span class="curr-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div><strong>Higgsfield</strong><em>Build your ad live</em></div></div>
-      <div class="curr-row" data-step="4"><span class="curr-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div><strong>Gemini Deep Research</strong><em>Cited research in 10 min</em></div></div>
-      <div class="curr-row" data-step="5"><span class="curr-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div><strong>NotebookLM</strong><em>Private docs &rarr; audio overviews</em></div></div>
-    </aside>
+   </div>
   </div>
+
+  <div class="hero-cta-row">
+   <a href="#register" class="btn-p">Register for free <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+  </div>
+  <p class="anote"><strong>Free to attend.</strong> $25 VIP gets a private room after the session where Spencer reviews what you built.</p>
+ </div>
 </section>
 
 <!-- SOCIAL PROOF -->
 <div class="proof-bar">
-  <div class="wrap">
-    <div class="proof-inner">
-      <div class="proof-stat"><div class="proof-num">$0</div><div class="proof-label">Cost to attend</div></div>
-      <div class="proof-stat"><div class="proof-num">60m</div><div class="proof-label">Per session</div></div>
-      <div class="proof-stat"><div class="proof-num">5</div><div class="proof-label">AI tools taught</div></div>
-      <div class="proof-stat"><div class="proof-num">Live</div><div class="proof-label">Homework reviewed</div></div>
-    </div>
+ <div class="wrap">
+  <div class="proof-inner">
+   <div class="proof-stat"><div class="proof-num">$0</div><div class="proof-label">Cost to attend</div></div>
+   <div class="proof-stat"><div class="proof-num">60m</div><div class="proof-label">Per session</div></div>
+   <div class="proof-stat"><div class="proof-num">5</div><div class="proof-label">AI tools taught</div></div>
+   <div class="proof-stat"><div class="proof-num">Live</div><div class="proof-label">Homework reviewed</div></div>
   </div>
+ </div>
 </div>
 
 <!-- COUNTDOWN -->
 <section class="countdown-section">
-  <div class="wrap">
-    <div class="countdown-head">
-      <div class="countdown-rule"><span>Next session in</span></div>
-      <div class="countdown-live-badge"><span class="ldot"></span><span id="countdownBadgeText">Date TBA</span></div>
-      <h2>Webinar starts in</h2>
-      <p class="countdown-meta" id="countdownMeta">Date TBA &middot; 60 min + Q&amp;A &middot; Live on Google Meet</p>
-    </div>
-    <div class="countdown-grid" id="countdown">
-      <div class="cd-card"><div class="cd-num" id="cd-days">--</div><div class="cd-label">Days</div></div>
-      <div class="cd-card"><div class="cd-num" id="cd-hours">--</div><div class="cd-label">Hours</div></div>
-      <div class="cd-card"><div class="cd-num" id="cd-mins">--</div><div class="cd-label">Minutes</div></div>
-      <div class="cd-card"><div class="cd-num" id="cd-secs">--</div><div class="cd-label">Seconds</div></div>
-    </div>
+ <div class="wrap">
+  <div class="countdown-head">
+   <div class="countdown-rule"><span>Next session in</span></div>
+   <div class="countdown-live-badge"><span class="ldot"></span><span id="countdownBadgeText">Date TBA</span></div>
+   <h2>Webinar starts in</h2>
+   <p class="countdown-meta" id="countdownMeta">Date TBA &middot; 60 min + Q&amp;A &middot; Live on Google Meet</p>
   </div>
+  <div class="countdown-grid" id="countdown">
+   <div class="cd-card"><div class="cd-num" id="cd-days">--</div><div class="cd-label">Days</div></div>
+   <div class="cd-card"><div class="cd-num" id="cd-hours">--</div><div class="cd-label">Hours</div></div>
+   <div class="cd-card"><div class="cd-num" id="cd-mins">--</div><div class="cd-label">Minutes</div></div>
+   <div class="cd-card"><div class="cd-num" id="cd-secs">--</div><div class="cd-label">Seconds</div></div>
+  </div>
+ </div>
 </section>
 <!-- TICKER -->
 <div class="ticker">
-  <div class="ttrack">
-    <span class="ti"><span class="d">&middot;</span>Claude projects</span><span class="ti"><span class="d">&middot;</span>ChatGPT custom GPTs</span><span class="ti"><span class="d">&middot;</span>Higgsfield workflows</span><span class="ti"><span class="d">&middot;</span>Gemini research</span><span class="ti"><span class="d">&middot;</span>NotebookLM audio overviews</span><span class="ti"><span class="d">&middot;</span>Voice AI agents</span><span class="ti"><span class="d">&middot;</span>AI chatbots</span><span class="ti"><span class="d">&middot;</span>CRM automation</span><span class="ti"><span class="d">&middot;</span>Lead scoring</span><span class="ti"><span class="d">&middot;</span>Appointment booking</span><span class="ti"><span class="d">&middot;</span>Email &amp; SMS follow-up</span><span class="ti"><span class="d">&middot;</span>Hidden revenue recovery</span><span class="ti"><span class="d">&middot;</span>Claude projects</span><span class="ti"><span class="d">&middot;</span>ChatGPT custom GPTs</span><span class="ti"><span class="d">&middot;</span>Higgsfield workflows</span><span class="ti"><span class="d">&middot;</span>Gemini research</span><span class="ti"><span class="d">&middot;</span>NotebookLM audio overviews</span><span class="ti"><span class="d">&middot;</span>Voice AI agents</span><span class="ti"><span class="d">&middot;</span>AI chatbots</span><span class="ti"><span class="d">&middot;</span>CRM automation</span><span class="ti"><span class="d">&middot;</span>Lead scoring</span><span class="ti"><span class="d">&middot;</span>Appointment booking</span><span class="ti"><span class="d">&middot;</span>Email &amp; SMS follow-up</span><span class="ti"><span class="d">&middot;</span>Hidden revenue recovery</span>
+ <div class="ttrack">
+  <span class="ti"><span class="d">&middot;</span>Claude projects</span><span class="ti"><span class="d">&middot;</span>ChatGPT custom GPTs</span><span class="ti"><span class="d">&middot;</span>Higgsfield workflows</span><span class="ti"><span class="d">&middot;</span>Gemini research</span><span class="ti"><span class="d">&middot;</span>NotebookLM audio overviews</span><span class="ti"><span class="d">&middot;</span>Voice AI agents</span><span class="ti"><span class="d">&middot;</span>AI chatbots</span><span class="ti"><span class="d">&middot;</span>CRM automation</span><span class="ti"><span class="d">&middot;</span>Lead scoring</span><span class="ti"><span class="d">&middot;</span>Appointment booking</span><span class="ti"><span class="d">&middot;</span>Email &amp; SMS follow-up</span><span class="ti"><span class="d">&middot;</span>Hidden revenue recovery</span><span class="ti"><span class="d">&middot;</span>Claude projects</span><span class="ti"><span class="d">&middot;</span>ChatGPT custom GPTs</span><span class="ti"><span class="d">&middot;</span>Higgsfield workflows</span><span class="ti"><span class="d">&middot;</span>Gemini research</span><span class="ti"><span class="d">&middot;</span>NotebookLM audio overviews</span><span class="ti"><span class="d">&middot;</span>Voice AI agents</span><span class="ti"><span class="d">&middot;</span>AI chatbots</span><span class="ti"><span class="d">&middot;</span>CRM automation</span><span class="ti"><span class="d">&middot;</span>Lead scoring</span><span class="ti"><span class="d">&middot;</span>Appointment booking</span><span class="ti"><span class="d">&middot;</span>Email &amp; SMS follow-up</span><span class="ti"><span class="d">&middot;</span>Hidden revenue recovery</span>
+ </div>
+</div>
+
+<!-- CHAPTERS, long-form manifesto. DRAFT COPY: red-line freely. -->
+<div class="chapters" id="story">
+
+ <section class="chapter reveal">
+  <p class="chapter-eyebrow">Part I &middot; The problem</p>
+  <h2 class="chapter-title">You don't need another <em>47-minute tutorial.</em></h2>
+  <div class="chapter-body">
+   <p>There's an AI tool that could do half the work you do every week. But every time you sit down to figure it out, the YouTube video is forty-seven minutes long, the prompts they hand you don't work for your business, and you close the tab more confused than when you started.</p>
+   <p>You're not behind. You're drowning in the wrong information. Most of the people teaching AI right now are AI influencers. They make their money <strong>teaching</strong> the tools, not <strong>using</strong> them to run a real business with real clients and real payroll.</p>
+   <p>That's the gap this workshop closes.</p>
   </div>
+ </section>
+
+ <section class="chapter reveal">
+  <p class="chapter-eyebrow">Part II &middot; The stakes</p>
+  <h2 class="chapter-title">The owners who move first won't just win. They become the standard.</h2>
+  <div class="chapter-body">
+   <p>Right now, two businesses in your exact industry are doing the same work. One spends six hours a week on proposals, follow-ups, and admin. The other spends forty minutes, because they put five tools to work and never looked back.</p>
+   <p>In twelve months, those two businesses don't compete anymore. One sets the pace. The other is explaining to clients why they're slower and more expensive.</p>
+   <div class="pullquote">
+    <p class="pullquote-text">"The next wave of category leaders won't be the biggest teams. They'll be the smallest teams running the most leverage."</p>
+    <p class="pullquote-cite">The thesis behind everything we build</p>
+   </div>
+   <p>The window to be early is narrow. It's still open. That's the whole reason we run this live, every month.</p>
+  </div>
+ </section>
+
+ <div class="chapter-cta reveal">
+  <a href="#register" class="btn-p">Save my seat for June 25 <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+ </div>
+
+ <section class="chapter reveal">
+  <p class="chapter-eyebrow">Part III &middot; The shift</p>
+  <h2 class="chapter-title">Sixty minutes. Five tools. You build something real.</h2>
+  <div class="chapter-body">
+   <p>This isn't a lecture. Spencer shares his screen and runs the exact prompts he uses every day to run Nekter AI. <strong>Claude. ChatGPT. Higgsfield. Gemini. NotebookLM.</strong> No theory, no edited demos, no slides full of stock photos.</p>
+   <p>The first forty minutes, you watch the workflows live. The next ten, you build. Not a sample. Yours. A real ad for your real business, using the prompts we just handed you. The last ten minutes, we pull submissions from the chat and review them on stream.</p>
+   <p>You leave having actually used the tools. Most people have never done that in a single sitting.</p>
+  </div>
+ </section>
+
+ <section class="chapter reveal">
+  <p class="chapter-eyebrow">Part IV &middot; Fit check</p>
+  <h2 class="chapter-title">Read this before you register.</h2>
+  <div class="chapter-body">
+   <div class="fitcheck">
+    <div class="fitcheck-col yes">
+     <h4>This is for you if</h4>
+     <ul>
+      <li>You run a real business and you're tired of "AI" being all talk</li>
+      <li>You'd rather build one thing live than watch ten demos</li>
+      <li>You're doing $500k to a few million a year and drowning in admin</li>
+      <li>You want the prompts, not the philosophy</li>
+     </ul>
+    </div>
+    <div class="fitcheck-col no">
+     <h4>This is not for you if</h4>
+     <ul>
+      <li>You want a passive webinar to half-watch on mute</li>
+      <li>You're looking for a get-rich-quick AI side hustle</li>
+      <li>You won't open a single tool during the session</li>
+      <li>You think AI is a fad that'll blow over</li>
+     </ul>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <section class="chapter reveal">
+  <p class="chapter-eyebrow">Part V &middot; What you leave with</p>
+  <h2 class="chapter-title">Four things, in sixty minutes.</h2>
+  <div class="chapter-body">
+   <div class="shifts">
+    <div class="shift"><div class="shift-num">01</div><div class="shift-body"><h4>Working prompts</h4><p>Every prompt we run is yours to keep and adapt. Copy-paste ready, built for a business like yours.</p></div></div>
+    <div class="shift"><div class="shift-num">02</div><div class="shift-body"><h4>A real ad for your business</h4><p>You'll open the tools and walk out with an actual ad you made. Not a tutorial file. Yours.</p></div></div>
+    <div class="shift"><div class="shift-num">03</div><div class="shift-body"><h4>The five-tool stack</h4><p>Exactly which tool to use for which job, and how they chain together to replace work that used to take weeks.</p></div></div>
+    <div class="shift"><div class="shift-num">04</div><div class="shift-body"><h4>A free audit invitation</h4><p>Mention the webinar and we'll prioritize you. We find $10k to $50k of hidden revenue in 45 minutes for most businesses we score.</p></div></div>
+   </div>
+  </div>
+ </section>
+
+ <div class="chapter-cta reveal">
+  <a href="#register" class="btn-p">Register for June 25, it's free <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+ </div>
+
 </div>
 
 <!-- THE 5 TOOLS -->
 <section id="tools">
-  <div class="wrap">
-    <div class="reveal"><p class="sl">The curriculum</p><div class="sr"></div></div>
-    <h2 class="st reveal">The 5 tools we teach<br>you to use.</h2>
-    <p class="sb reveal">Every session covers the same five tools &mdash; the ones Spencer uses every day to run Nekter AI. You'll see exact prompts, real workflows, and leave with live homework you actually completed.</p>
+ <div class="wrap">
+  <div class="reveal"><p class="sl">The curriculum</p><div class="sr"></div></div>
+  <h2 class="st reveal">The 5 tools we teach<br>you to use.</h2>
+  <p class="sb reveal">Every session covers the same five tools, the ones Spencer uses every day to run Nekter AI. You'll see exact prompts, real workflows, and leave with live homework you actually completed.</p>
 
-    <div class="tools-grid">
-      <div class="tool-card reveal reveal-d1">
-        <div class="tool-icon" style="background:var(--blue-dim)">
-          <svg width="28" height="28" fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
-        </div>
-        <span class="tool-label" style="background:var(--blue-dim);color:var(--blue)">Tool 01</span>
-        <h3>Claude</h3>
-        <p>Your second brain. Upload your emails, website copy, and SOPs to a Claude Project and generate proposals, follow-ups, and content in your exact voice.</p>
-      </div>
-
-      <div class="tool-card reveal reveal-d2">
-        <div class="tool-icon" style="background:var(--purple-dim)">
-          <svg width="28" height="28" fill="none" stroke="var(--purple)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-        </div>
-        <span class="tool-label" style="background:var(--purple-dim);color:var(--purple)">Tool 02</span>
-        <h3>ChatGPT</h3>
-        <p>Your creative department. Images, voice mode, custom GPTs, and canvas for everything from social ads to client proposals.</p>
-      </div>
-
-      <div class="tool-card reveal reveal-d3">
-        <div class="tool-icon" style="background:var(--blue-dim)">
-          <svg width="28" height="28" fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-        </div>
-        <span class="tool-label" style="background:var(--blue-dim);color:var(--blue)">Tool 03</span>
-        <h3>Higgsfield</h3>
-        <p>15+ AI video and image models in one place. Nano Banana Pro, Sora 2, Kling, Veo &mdash; generate cinematic ads without hiring an agency.</p>
-      </div>
-
-      <div class="tool-card reveal reveal-d4">
-        <div class="tool-icon" style="background:var(--purple-dim)">
-          <svg width="28" height="28" fill="none" stroke="var(--purple)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-        </div>
-        <span class="tool-label" style="background:var(--purple-dim);color:var(--purple)">Tool 04</span>
-        <h3>Gemini Deep Research</h3>
-        <p>A junior analyst for $20/month. Full cited research reports on competitors, markets, or trends in under 10 minutes.</p>
-      </div>
-
-      <div class="tool-card reveal reveal-d5">
-        <div class="tool-icon" style="background:var(--blue-dim)">
-          <svg width="28" height="28" fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
-        </div>
-        <span class="tool-label" style="background:var(--blue-dim);color:var(--blue)">Tool 05</span>
-        <h3>NotebookLM</h3>
-        <p>Your IP stays yours. Turn any document into a podcast, mind map, or study guide &mdash; without your business data training a public model.</p>
-      </div>
+  <div class="tools-grid">
+   <div class="tool-card reveal reveal-d1">
+    <div class="tool-icon" style="background:var(--blue-dim)">
+     <svg width="28" height="28" fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
     </div>
-    <div class="inline-cta reveal"><a href="#register" class="btn-p">Reserve your free spot <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div>
+    <span class="tool-label" style="background:var(--blue-dim);color:var(--blue)">Tool 01</span>
+    <h3>Claude</h3>
+    <p>Your second brain. Upload your emails, website copy, and SOPs to a Claude Project and generate proposals, follow-ups, and content in your exact voice.</p>
+   </div>
+
+   <div class="tool-card reveal reveal-d2">
+    <div class="tool-icon" style="background:var(--purple-dim)">
+     <svg width="28" height="28" fill="none" stroke="var(--purple)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+    </div>
+    <span class="tool-label" style="background:var(--purple-dim);color:var(--purple)">Tool 02</span>
+    <h3>ChatGPT</h3>
+    <p>Your creative department. Images, voice mode, custom GPTs, and canvas for everything from social ads to client proposals.</p>
+   </div>
+
+   <div class="tool-card reveal reveal-d3">
+    <div class="tool-icon" style="background:var(--blue-dim)">
+     <svg width="28" height="28" fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+    </div>
+    <span class="tool-label" style="background:var(--blue-dim);color:var(--blue)">Tool 03</span>
+    <h3>Higgsfield</h3>
+    <p>15+ AI video and image models in one place. Nano Banana Pro, Sora 2, Kling, Veo, generate cinematic ads without hiring an agency.</p>
+   </div>
+
+   <div class="tool-card reveal reveal-d4">
+    <div class="tool-icon" style="background:var(--purple-dim)">
+     <svg width="28" height="28" fill="none" stroke="var(--purple)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+    </div>
+    <span class="tool-label" style="background:var(--purple-dim);color:var(--purple)">Tool 04</span>
+    <h3>Gemini Deep Research</h3>
+    <p>A junior analyst for $20/month. Full cited research reports on competitors, markets, or trends in under 10 minutes.</p>
+   </div>
+
+   <div class="tool-card reveal reveal-d5">
+    <div class="tool-icon" style="background:var(--blue-dim)">
+     <svg width="28" height="28" fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
+    </div>
+    <span class="tool-label" style="background:var(--blue-dim);color:var(--blue)">Tool 05</span>
+    <h3>NotebookLM</h3>
+    <p>Your IP stays yours. Turn any document into a podcast, mind map, or study guide, without your business data training a public model.</p>
+   </div>
   </div>
+  <div class="inline-cta reveal"><a href="#register" class="btn-p">Reserve your free spot <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div>
+ </div>
 </section>
 
 <!-- UPCOMING SCHEDULE -->
 <section style="padding-top:0" id="schedule">
-  <div class="wrap">
-    <div class="reveal"><p class="sl">Upcoming session</p><div class="sr"></div></div>
-    <h2 class="st reveal">Mark your calendar.</h2>
-    <p class="sb reveal">Same evergreen curriculum every month. Register once and you'll get a link for every upcoming session.</p>
+ <div class="wrap">
+  <div class="reveal"><p class="sl">Upcoming session</p><div class="sr"></div></div>
+  <h2 class="st reveal">Mark your calendar.</h2>
+  <p class="sb reveal">Same evergreen curriculum every month. Register once and you'll get a link for every upcoming session.</p>
 
-    <div class="sched-grid">
-      <div class="sched-card featured reveal reveal-d1">
-        <div class="sched-date">
-          <div class="sched-day" id="schedDay">TBA</div>
-          <div class="sched-month" id="schedMonth">Date coming</div>
-        </div>
-        <div class="sched-divider"></div>
-        <div class="sched-info">
-          <div class="sched-title">The 5 AI Tools Every Business Owner Should Actually Use</div>
-          <div class="sched-meta" id="schedMeta">Date TBA &middot; 60 min + Q&amp;A &middot; Live on Google Meet</div>
-        </div>
-        <span class="sched-badge next">Next Session</span>
-      </div>
+  <div class="sched-grid">
+   <div class="sched-card featured reveal reveal-d1">
+    <div class="sched-date">
+     <div class="sched-day" id="schedDay">TBA</div>
+     <div class="sched-month" id="schedMonth">Date coming</div>
     </div>
+    <div class="sched-divider"></div>
+    <div class="sched-info">
+     <div class="sched-title">The 5 AI Tools Every Business Owner Should Actually Use</div>
+     <div class="sched-meta" id="schedMeta">Date TBA &middot; 60 min + Q&amp;A &middot; Live on Google Meet</div>
+    </div>
+    <span class="sched-badge next">Next Session</span>
+   </div>
   </div>
+ </div>
 </section>
 
-<!-- WHAT'S COVERED (each webinar) -->
-<section id="learn">
-  <div class="wrap">
-    <div class="reveal"><p class="sl">What every webinar covers</p><div class="sr"></div></div>
-    <h2 class="st reveal">Not a pitch.<br>A playbook you can use today.</h2>
-    <p class="sb reveal">Every session follows the same proven structure. You'll leave with working prompts, a real ad, and the tools to keep building after the webinar ends.</p>
-    <div class="lgrid">
-      <div class="lc reveal reveal-d1" data-wm="01"><p class="lnum">01</p><h3>Claude: the projects tab that makes it sound like YOU wrote it</h3><p>Upload your SOPs, emails, and brand voice once. Every proposal, follow-up, and piece of content after that sounds exactly like you &mdash; not like ChatGPT.</p></div>
-      <div class="lc reveal reveal-d2" data-wm="02"><p class="lnum">02</p><h3>ChatGPT: images, voice, custom GPTs, and canvas &mdash; stacked</h3><p>The four features most business owners never use. We stack them together to build a custom AI agent for your business &mdash; live, in the webinar.</p></div>
-      <div class="lc reveal reveal-d3" data-wm="03"><p class="lnum">03</p><h3>Higgsfield: 15 AI models in one window, including Nano Banana Pro</h3><p>One interface. Every frontier video and image model. You'll see exactly which model to use when &mdash; and why paying for one platform beats 15 subscriptions.</p></div>
-      <div class="lc reveal reveal-d4" data-wm="04"><p class="lnum">04</p><h3>Your 10-minute live homework: build an ad for your business</h3><p>You won't just watch. You'll open the tools, run the prompts, and walk out with a real ad for your real business. No homework, no progress.</p></div>
-      <div class="lc reveal reveal-d5" data-wm="05"><p class="lnum">05</p><h3>Gemini Deep Research + NotebookLM: research and synthesis on autopilot</h3><p>A $20 junior analyst that writes cited research reports in 10 minutes, plus a private workspace that turns those reports into audio you can listen to in the car.</p></div>
-      <div class="lc reveal reveal-d6" data-wm="06"><p class="lnum">06</p><h3>Live Q&amp;A + 3 homework submissions reviewed on stream</h3><p>We'll pull three attendee submissions live, break down what's working, and fix what isn't. Your questions, your ad, our feedback &mdash; in real time.</p></div>
-    </div>
-    <div class="inline-cta reveal"><a href="#register" class="btn-p">Reserve your free spot <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div>
+<!-- WHAT'S COVERED, retired in v2: the chapter long-form section now carries
+   this narrative. Kept in source (hidden) so we can restore if needed. -->
+<section id="learn" style="display:none">
+ <div class="wrap">
+  <div class="reveal"><p class="sl">What every webinar covers</p><div class="sr"></div></div>
+  <h2 class="st reveal">Not a pitch.<br>A playbook you can use today.</h2>
+  <p class="sb reveal">Every session follows the same proven structure. You'll leave with working prompts, a real ad, and the tools to keep building after the webinar ends.</p>
+  <div class="lgrid">
+   <div class="lc reveal reveal-d1" data-wm="01"><p class="lnum">01</p><h3>Claude: the projects tab that makes it sound like YOU wrote it</h3><p>Upload your SOPs, emails, and brand voice once. Every proposal, follow-up, and piece of content after that sounds exactly like you, not like ChatGPT.</p></div>
+   <div class="lc reveal reveal-d2" data-wm="02"><p class="lnum">02</p><h3>ChatGPT: images, voice, custom GPTs, and canvas, stacked</h3><p>The four features most business owners never use. We stack them together to build a custom AI agent for your business, live, in the webinar.</p></div>
+   <div class="lc reveal reveal-d3" data-wm="03"><p class="lnum">03</p><h3>Higgsfield: 15 AI models in one window, including Nano Banana Pro</h3><p>One interface. Every frontier video and image model. You'll see exactly which model to use when, and why paying for one platform beats 15 subscriptions.</p></div>
+   <div class="lc reveal reveal-d4" data-wm="04"><p class="lnum">04</p><h3>Your 10-minute live homework: build an ad for your business</h3><p>You won't just watch. You'll open the tools, run the prompts, and walk out with a real ad for your real business. No homework, no progress.</p></div>
+   <div class="lc reveal reveal-d5" data-wm="05"><p class="lnum">05</p><h3>Gemini Deep Research + NotebookLM: research and synthesis on autopilot</h3><p>A $20 junior analyst that writes cited research reports in 10 minutes, plus a private workspace that turns those reports into audio you can listen to in the car.</p></div>
+   <div class="lc reveal reveal-d6" data-wm="06"><p class="lnum">06</p><h3>Live Q&amp;A + 3 homework submissions reviewed on stream</h3><p>We'll pull three attendee submissions live, break down what's working, and fix what isn't. Your questions, your ad, our feedback, in real time.</p></div>
   </div>
+  <div class="inline-cta reveal"><a href="#register" class="btn-p">Reserve your free spot <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div>
+ </div>
 </section>
 
 <!-- SPEAKERS / HOSTS -->
 <section style="padding-top:0">
-  <div class="wrap">
-    <div class="reveal"><p class="sl">Your hosts</p><div class="sr"></div></div>
-    <h2 class="st reveal">Built by operators.<br>Not consultants.</h2>
-    <div class="sgrid">
-      <div class="sc reveal reveal-d1">
-        <div class="sav"><img src="/Spencerheadshot2.jpeg" alt="Spencer Simonson" onerror="this.remove()"><span>SS</span></div>
-        <p class="sname">Spencer Simonson</p>
-        <p class="srole">Co-Founder &amp; CTO, Nekter AI</p>
-        <p class="sbio">Spencer uses these tools every day to run Nekter AI. In every webinar he shows the exact prompts and workflows he uses &mdash; live, on screen, no theory.</p>
-      </div>
-      <div class="sc reveal reveal-d2">
-        <div class="sav"><img src="/founder-portrait-CTiM68gp.png" alt="Jodie Sacco" onerror="this.remove()"><span>JS</span></div>
-        <p class="sname">Jodie Sacco</p>
-        <p class="srole">Founder, AI Revenue Engine</p>
-        <p class="sbio">Jodie doesn't coach, she partners. A former director at American Express Corporate Travel who has built and scaled businesses across multiple industries and revenue stages, she specializes in finding exactly where revenue is leaking, being under-monetized, or waiting to be unlocked. She's worked across five continents, speaks five languages, and brings commercial discipline that most advisors simply don't have.</p>
-      </div>
-      <div class="sc reveal reveal-d3">
-        <div class="sav"><img src="/Noah%20Headshot.jpg" alt="Noah Simonson" onerror="this.remove()"><span>NS</span></div>
-        <p class="sname">Noah Simonson</p>
-        <p class="srole">Co-Founder &amp; CSO, Nekter AI</p>
-        <p class="sbio">Noah owns the client relationship from day one. He leads onboarding, builds the long-term relationships that keep clients growing, and drives the sales process that brings them in. If you've talked to Nekter AI, you've probably talked to Noah.</p>
-      </div>
-      <div class="sc reveal reveal-d4">
-        <div class="sav"><img src="/Sam%20Headshot.jpg" alt="Samuel Maciulewicz" onerror="this.remove()"><span>SM</span></div>
-        <p class="sname">Samuel Maciulewicz</p>
-        <p class="srole">Co-Founder &amp; CEO, Nekter AI</p>
-        <p class="sbio">Sam runs the infrastructure that keeps Nekter AI scaling. From finance and hiring to day-to-day operations, he builds the systems that let the rest of the team focus on what they do best. The business works because Sam makes it work.</p>
-      </div>
-    </div>
-    <div class="inline-cta reveal"><a href="#register" class="btn-p">Reserve your free spot <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div>
+ <div class="wrap">
+  <div class="reveal"><p class="sl">Your hosts</p><div class="sr"></div></div>
+  <h2 class="st reveal">Built by operators.<br>Not consultants.</h2>
+  <div class="sgrid">
+   <div class="sc reveal reveal-d1">
+    <div class="sav"><img src="/Spencerheadshot2.jpeg" alt="Spencer Simonson" onerror="this.remove()"><span>SS</span></div>
+    <p class="sname">Spencer Simonson</p>
+    <p class="srole">Co-Founder, CEO &amp; CTO, Nekter AI</p>
+    <p class="sbio">Spencer uses these tools every day to run Nekter AI. In every webinar he shows the exact prompts and workflows he uses, live, on screen, no theory.</p>
+   </div>
+   <div class="sc reveal reveal-d2">
+    <div class="sav"><img src="/founder-portrait-CTiM68gp.png" alt="Jodie Sacco" onerror="this.remove()"><span>JS</span></div>
+    <p class="sname">Jodie Sacco</p>
+    <p class="srole">Founder, AI Revenue Engine</p>
+    <p class="sbio">Jodie doesn't coach, she partners. A former director at American Express Corporate Travel who has built and scaled businesses across multiple industries and revenue stages, she specializes in finding exactly where revenue is leaking, being under-monetized, or waiting to be unlocked. She's worked across five continents, speaks five languages, and brings commercial discipline that most advisors simply don't have.</p>
+   </div>
+   <div class="sc reveal reveal-d3">
+    <div class="sav"><img src="/Noah%20Headshot.jpg" alt="Noah Simonson" onerror="this.remove()"><span>NS</span></div>
+    <p class="sname">Noah Simonson</p>
+    <p class="srole">Co-Founder, Head of Growth &amp; COO, Nekter AI</p>
+    <p class="sbio">Noah owns the client relationship from day one. He leads onboarding, builds the long-term relationships that keep clients growing, and drives the sales process that brings them in. If you've talked to Nekter AI, you've probably talked to Noah.</p>
+   </div>
+   <div class="sc reveal reveal-d4">
+    <div class="sav"><img src="/Sam%20Headshot.jpg" alt="Samuel Maciulewicz" onerror="this.remove()"><span>SM</span></div>
+    <p class="sname">Samuel Maciulewicz</p>
+    <p class="srole">Co-Founder, CFO &amp; Head of Revenue Growth, Nekter AI</p>
+    <p class="sbio">Sam runs the infrastructure that keeps Nekter AI scaling. From finance and hiring to day-to-day operations, he builds the systems that let the rest of the team focus on what they do best. The business works because Sam makes it work.</p>
+   </div>
   </div>
+  <div class="inline-cta reveal"><a href="#register" class="btn-p">Reserve your free spot <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div>
+ </div>
 </section>
 
 <!-- AUDIT -->
 <section>
-  <div class="wrap">
-    <div class="reveal"><p class="sl">The free audit</p><div class="sr"></div></div>
-    <div class="ablock reveal">
-      <div>
-        <div class="bignum">$10k<br>&ndash;$50k</div>
-        <p class="bigsub">in hidden revenue found in 45 minutes or less for most businesses</p>
-      </div>
-      <div class="audit-right">
-        <h3 class="st" style="font-size:22px;margin-bottom:10px">What we audit</h3>
-        <p style="font-size:14px;color:var(--muted);margin-bottom:10px;font-weight:400">Each audit scores four areas and puts a real dollar figure on every gap.</p>
-        <ul class="alist">
-          <li>Lead follow-up speed: how fast your team responds vs. what's losing deals</li>
-          <li>After-hours coverage: revenue leaving because nobody answered</li>
-          <li>Manual data entry burden: hours per week AI can own completely</li>
-          <li>Current AI usage: most businesses are at zero, and we show the cost of waiting</li>
-        </ul>
-        <p style="font-size:13px;color:var(--muted);margin-top:16px">Mention the webinar when you register for priority scheduling.</p>
-      </div>
-    </div>
+ <div class="wrap">
+  <div class="reveal"><p class="sl">The free audit</p><div class="sr"></div></div>
+  <div class="ablock reveal">
+   <div>
+    <div class="bignum">$10k<br>&ndash;$50k</div>
+    <p class="bigsub">in hidden revenue found in 45 minutes or less for most businesses</p>
+   </div>
+   <div class="audit-right">
+    <h3 class="st" style="font-size:22px;margin-bottom:10px">What we audit</h3>
+    <p style="font-size:14px;color:var(--muted);margin-bottom:10px;font-weight:400">Each audit scores four areas and puts a real dollar figure on every gap.</p>
+    <ul class="alist">
+     <li>Lead follow-up speed: how fast your team responds vs. what's losing deals</li>
+     <li>After-hours coverage: revenue leaving because nobody answered</li>
+     <li>Manual data entry burden: hours per week AI can own completely</li>
+     <li>Current AI usage: most businesses are at zero, and we show the cost of waiting</li>
+    </ul>
+    <p style="font-size:13px;color:var(--muted);margin-top:16px">Mention the webinar when you register for priority scheduling.</p>
+   </div>
   </div>
+ </div>
 </section>
 
 <!-- CHOOSE YOUR EXPERIENCE -->
 <section id="register">
-  <div class="wrap">
-    <div class="reveal" style="text-align:center"><p class="sl">Choose your experience</p>
-    <div class="sr" style="margin:0 auto 28px"></div></div>
-    <h2 class="st reveal" style="text-align:center">Free webinar or VIP access?</h2>
-    <p class="sb reveal" style="text-align:center;margin:12px auto 0;max-width:520px">Every webinar is free. Upgrade to VIP to join a private small-group room after the session where Spencer reviews the ad you built live.</p>
+ <div class="wrap">
+  <div class="reveal" style="text-align:center"><p class="sl">Choose your experience</p>
+  <div class="sr" style="margin:0 auto 28px"></div></div>
+  <h2 class="st reveal" style="text-align:center">Free webinar or VIP access?</h2>
+  <p class="sb reveal" style="text-align:center;margin:12px auto 0;max-width:520px">Every webinar is free. Upgrade to VIP to join a private small-group room after the session where Spencer reviews the ad you built live.</p>
 
-    <div class="pricing-grid">
-      <!-- FREE TIER -->
-      <div class="price-card reveal reveal-d1">
-        <span class="price-tag" style="background:var(--green-dim);color:var(--green)">Free</span>
-        <div class="price-amount">$0</div>
-        <p class="price-per">Free forever &middot; All webinars included</p>
-        <ul class="price-features">
-          <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Full 60-minute live webinar</li>
-          <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Live demos of all 5 tools</li>
-          <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>10-minute live homework</li>
-          <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Templates &amp; prompts from the session (sent after)</li>
-          <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Access to all future webinars</li>
-          <li class="disabled"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6"/></svg>Private small-group room after session</li>
-          <li class="disabled"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6"/></svg>Live homework review by Spencer</li>
-          <li class="disabled"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6"/></svg>Priority audit scheduling</li>
-        </ul>
-        <button class="btn-free" id="freeRegBtn">Register for free</button>
-      </div>
+  <div class="pricing-grid">
+   <!-- FREE TIER -->
+   <div class="price-card reveal reveal-d1">
+    <span class="price-tag" style="background:var(--green-dim);color:var(--green)">Free</span>
+    <div class="price-amount">$0</div>
+    <p class="price-per">Free forever &middot; All webinars included</p>
+    <ul class="price-features">
+     <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Full 60-minute live webinar</li>
+     <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Live demos of all 5 tools</li>
+     <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>10-minute live homework</li>
+     <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Templates &amp; prompts from the session (sent after)</li>
+     <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Access to all future webinars</li>
+     <li class="disabled"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6"/></svg>Private small-group room after session</li>
+     <li class="disabled"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6"/></svg>Live homework review by Spencer</li>
+     <li class="disabled"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6"/></svg>Priority audit scheduling</li>
+    </ul>
+    <button class="btn-free" id="freeRegBtn">Register for free</button>
+   </div>
 
-      <!-- VIP TIER -->
-      <div class="price-card featured reveal reveal-d2">
-        <span class="price-tag" style="background:var(--blue-dim);color:var(--blue)">VIP Access</span>
-        <div class="price-amount grad">$25</div>
-        <p class="price-per">One-time &middot; Includes free webinar + VIP room</p>
-        <ul class="price-features">
-          <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Everything in Free</li>
-          <li><svg fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><strong>Private small-group room after the main session (20 spots max)</strong></li>
-          <li><svg fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><strong>Bring the ad you made in the homework &mdash; Spencer reviews it live</strong></li>
-          <li><svg fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><strong>See exactly how NekterOS would automate what you did by hand</strong></li>
-          <li><svg fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><strong>Priority scheduling for your free AI revenue audit</strong></li>
-          <li><svg fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Ask anything about AI for your specific business</li>
-        </ul>
-        <button type="button" class="btn-vip" id="vipPricingBtn">Get VIP access &mdash; $25 <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></button>
-      </div>
-    </div>
-
-    <p style="text-align:center;font-size:13px;color:var(--muted-lt);margin-top:28px;line-height:1.6">No spam. No sales pressure. Just the tools to grow your business.</p>
+   <!-- VIP TIER -->
+   <div class="price-card featured reveal reveal-d2">
+    <span class="price-tag" style="background:var(--blue-dim);color:var(--blue)">VIP Access</span>
+    <div class="price-amount grad">$25</div>
+    <p class="price-per">One-time &middot; Includes free webinar + VIP room</p>
+    <ul class="price-features">
+     <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Everything in Free</li>
+     <li><svg fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><strong>Private small-group room after the main session (20 spots max)</strong></li>
+     <li><svg fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><strong>Bring the ad you made in the homework, Spencer reviews it live</strong></li>
+     <li><svg fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><strong>See exactly how NekterOS would automate what you did by hand</strong></li>
+     <li><svg fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><strong>Priority scheduling for your free AI revenue audit</strong></li>
+     <li><svg fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Ask anything about AI for your specific business</li>
+    </ul>
+    <button type="button" class="btn-vip" id="vipPricingBtn">Get VIP access, $25 <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></button>
+   </div>
   </div>
+
+  <p style="text-align:center;font-size:13px;color:var(--muted-lt);margin-top:28px;line-height:1.6">No spam. No sales pressure. Just the tools to grow your business.</p>
+ </div>
 </section>
 
 <!-- REGISTRATION FORM (popup modal) -->
 <div class="form-modal-overlay" id="formModal" role="dialog" aria-modal="true" aria-labelledby="formModalTitle">
-  <div class="form-modal-box">
-    <button type="button" class="form-modal-close" id="formModalClose" aria-label="Close registration form">
-      <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-    </button>
-    <div class="form-modal-inner form-section" id="form">
-    <p class="form-modal-eyebrow" id="formModalEyebrow">Reserve your seat</p>
-    <h2 id="formModalTitle">Reserve Your Free Seat</h2>
-    <p class="form-intro" id="formModalIntro">Takes 60 seconds. You'll get an instant confirmation email with everything you need before we go live.</p>
+ <div class="form-modal-box">
+  <button type="button" class="form-modal-close" id="formModalClose" aria-label="Close registration form">
+   <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+  </button>
+  <div class="form-modal-inner form-section" id="form">
+  <p class="form-modal-eyebrow" id="formModalEyebrow">Reserve your seat</p>
+  <h2 id="formModalTitle">Reserve Your Free Seat</h2>
+  <p class="form-intro" id="formModalIntro">Takes 60 seconds. You'll get an instant confirmation email with everything you need before we go live.</p>
 
-    <!-- Tier banner — appears when user picks VIP from a CTA -->
-    <div class="form-tier-banner" id="tierBanner">
-      <div class="tier-banner-inner">
-        <div>
-          <strong>VIP access selected</strong>
-          <span>You'll be charged <strong>$25</strong> by Stripe right after registration.</span>
-        </div>
-        <button type="button" class="tier-banner-switch" id="tierSwitch">Switch to free &rarr;</button>
-      </div>
+  <!-- Tier banner, appears when user picks VIP from a CTA -->
+  <div class="form-tier-banner" id="tierBanner">
+   <div class="tier-banner-inner">
+    <div>
+     <strong>VIP access selected</strong>
+     <span>You'll be charged <strong>$25</strong> by Stripe right after registration.</span>
     </div>
-
-    <div class="form-error" id="formError"></div>
-
-    <form id="regForm" novalidate>
-      <input type="hidden" name="tier" id="formTier" value="free">
-      <!-- Personal details -->
-      <div class="form-group">
-        <p class="form-group-title">Let's start with your personal details <span class="req">*</span></p>
-        <div class="form-row two-col">
-          <div class="form-field"><input class="form-input" type="text" name="firstName" placeholder="First Name" autocomplete="given-name" required></div>
-          <div class="form-field"><input class="form-input" type="text" name="lastName" placeholder="Last Name" autocomplete="family-name" required></div>
-        </div>
-        <div class="form-row" style="margin-top:12px">
-          <div class="form-field"><input class="form-input" type="email" name="email" placeholder="Email address" autocomplete="email" required></div>
-        </div>
-        <div class="form-row" style="margin-top:12px">
-          <div class="form-field"><input class="form-input" type="tel" name="phone" placeholder="Phone number" autocomplete="tel" required></div>
-        </div>
-      </div>
-
-      <!-- Business info -->
-      <div class="form-group">
-        <p class="form-group-title">Business Info <span class="req">*</span></p>
-        <div class="form-row">
-          <div class="form-field"><input class="form-input" type="text" name="company" placeholder="Company" autocomplete="organization" required></div>
-        </div>
-        <div class="form-row" style="margin-top:12px">
-          <div class="form-field"><input class="form-input" type="text" name="jobTitle" placeholder="Job Title" autocomplete="organization-title" required></div>
-        </div>
-      </div>
-
-      <!-- Team size -->
-      <div class="form-group">
-        <p class="form-group-title">Team Size <span class="req">*</span></p>
-        <div class="form-field">
-          <select class="form-select" name="teamSize" required>
-            <option value="" disabled selected>Select team size</option>
-            <option value="Solo founder">Solo founder</option>
-            <option value="2-5">2 to 5</option>
-            <option value="6-15">6 to 15</option>
-            <option value="16-50">16 to 50</option>
-            <option value="50+">50+</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- Industry -->
-      <div class="form-group">
-        <p class="form-group-title">Industry <span class="req">*</span></p>
-        <div class="form-field">
-          <select class="form-select" name="industry" required>
-            <option value="" disabled selected>Select industry</option>
-            <option value="HVAC">HVAC</option>
-            <option value="Plumbing">Plumbing</option>
-            <option value="Home services">Home services</option>
-            <option value="Legal">Legal</option>
-            <option value="Medical">Medical</option>
-            <option value="Med spa">Med spa</option>
-            <option value="Health care">Health care</option>
-            <option value="Hospitality">Hospitality</option>
-            <option value="Restaurant">Restaurant</option>
-            <option value="Hotel">Hotel</option>
-            <option value="Real estate">Real estate</option>
-            <option value="Insurance / Financial services">Insurance / Financial services</option>
-            <option value="Retailer">Retailer</option>
-            <option value="E-commerce">E-commerce</option>
-            <option value="Marketing / Agency">Marketing / Agency</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- Operational headache -->
-      <div class="form-group">
-        <p class="form-group-title">What's your biggest operational headache right now? <span class="req">*</span></p>
-        <div class="form-field">
-          <textarea class="form-textarea" name="painPoint" placeholder="A sentence or two is plenty — e.g. 'leads sit in our inbox too long', 'I'm doing all the proposals myself', etc." required></textarea>
-        </div>
-      </div>
-
-      <!-- AI audit checkbox -->
-      <div class="form-group">
-        <p class="form-group-title">I'm interested in a free AI audit <span class="req">*</span></p>
-        <label class="form-checkbox-row">
-          <input type="checkbox" name="requestedAudit" value="true">
-          <span class="cb-body"><strong>Yes, score my business.</strong>We'll show where <em>$10k&ndash;$50k</em> is hiding in your operation. Mention the webinar for priority scheduling.</span>
-        </label>
-      </div>
-
-      <!-- How did you hear -->
-      <div class="form-group">
-        <p class="form-group-title">How did you hear about this event? <span class="req">*</span></p>
-        <div class="form-field">
-          <select class="form-select" name="referralSource" required>
-            <option value="" disabled selected>Select one</option>
-            <option value="Instagram">Instagram</option>
-            <option value="LinkedIn">LinkedIn</option>
-            <option value="Friend or referral">Friend or referral</option>
-            <option value="Google">Google</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-      </div>
-
-      <button type="submit" class="form-submit" id="regSubmit">
-        <span class="submit-label">Reserve my free seat</span>
-        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-      </button>
-      <p class="form-fineprint">No spam. We use your info only to send the webinar link and follow up about the session you registered for.</p>
-    </form>
-
-    <!-- Success state -->
-    <div class="form-success" id="formSuccess">
-      <div class="form-success-icon">
-        <svg width="32" height="32" fill="none" stroke="#fff" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-      </div>
-      <h3>You're in.</h3>
-      <p>Check your inbox &mdash; we just sent your confirmation with everything you need before the session. While you're here, want to upgrade to VIP and have Spencer review your homework live?</p>
-      <a href="https://buy.stripe.com/5kQ7sEb1SgH25of7nC5c400" target="_blank" class="btn-success-vip">Upgrade to VIP &mdash; $25 &rarr;</a>
-    </div>
-    </div>
+    <button type="button" class="tier-banner-switch" id="tierSwitch">Switch to free &rarr;</button>
+   </div>
   </div>
+
+  <div class="form-error" id="formError"></div>
+
+  <form id="regForm" novalidate>
+   <input type="hidden" name="tier" id="formTier" value="free">
+   <!-- Personal details -->
+   <div class="form-group">
+    <p class="form-group-title">Let's start with your personal details <span class="req">*</span></p>
+    <div class="form-row two-col">
+     <div class="form-field"><input class="form-input" type="text" name="firstName" placeholder="First Name" autocomplete="given-name" required></div>
+     <div class="form-field"><input class="form-input" type="text" name="lastName" placeholder="Last Name" autocomplete="family-name" required></div>
+    </div>
+    <div class="form-row" style="margin-top:12px">
+     <div class="form-field"><input class="form-input" type="email" name="email" placeholder="Email address" autocomplete="email" required></div>
+    </div>
+    <div class="form-row" style="margin-top:12px">
+     <div class="form-field"><input class="form-input" type="tel" name="phone" placeholder="Phone number" autocomplete="tel" required></div>
+    </div>
+   </div>
+
+   <!-- Business info -->
+   <div class="form-group">
+    <p class="form-group-title">Business Info <span class="req">*</span></p>
+    <div class="form-row">
+     <div class="form-field"><input class="form-input" type="text" name="company" placeholder="Company" autocomplete="organization" required></div>
+    </div>
+    <div class="form-row" style="margin-top:12px">
+     <div class="form-field"><input class="form-input" type="text" name="jobTitle" placeholder="Job Title" autocomplete="organization-title" required></div>
+    </div>
+   </div>
+
+   <!-- Team size -->
+   <div class="form-group">
+    <p class="form-group-title">Team Size <span class="req">*</span></p>
+    <div class="form-field">
+     <select class="form-select" name="teamSize" required>
+      <option value="" disabled selected>Select team size</option>
+      <option value="Solo founder">Solo founder</option>
+      <option value="2-5">2 to 5</option>
+      <option value="6-15">6 to 15</option>
+      <option value="16-50">16 to 50</option>
+      <option value="50+">50+</option>
+     </select>
+    </div>
+   </div>
+
+   <!-- Industry -->
+   <div class="form-group">
+    <p class="form-group-title">Industry <span class="req">*</span></p>
+    <div class="form-field">
+     <select class="form-select" name="industry" required>
+      <option value="" disabled selected>Select industry</option>
+      <option value="HVAC">HVAC</option>
+      <option value="Plumbing">Plumbing</option>
+      <option value="Home services">Home services</option>
+      <option value="Legal">Legal</option>
+      <option value="Medical">Medical</option>
+      <option value="Med spa">Med spa</option>
+      <option value="Health care">Health care</option>
+      <option value="Hospitality">Hospitality</option>
+      <option value="Restaurant">Restaurant</option>
+      <option value="Hotel">Hotel</option>
+      <option value="Real estate">Real estate</option>
+      <option value="Insurance / Financial services">Insurance / Financial services</option>
+      <option value="Retailer">Retailer</option>
+      <option value="E-commerce">E-commerce</option>
+      <option value="Marketing / Agency">Marketing / Agency</option>
+      <option value="Other">Other</option>
+     </select>
+    </div>
+   </div>
+
+   <!-- Operational headache -->
+   <div class="form-group">
+    <p class="form-group-title">What's your biggest operational headache right now? <span class="req">*</span></p>
+    <div class="form-field">
+     <textarea class="form-textarea" name="painPoint" placeholder="A sentence or two is plenty, e.g. 'leads sit in our inbox too long', 'I'm doing all the proposals myself', etc." required></textarea>
+    </div>
+   </div>
+
+   <!-- AI audit checkbox -->
+   <div class="form-group">
+    <p class="form-group-title">I'm interested in a free AI audit <span class="req">*</span></p>
+    <label class="form-checkbox-row">
+     <input type="checkbox" name="requestedAudit" value="true">
+     <span class="cb-body"><strong>Yes, score my business.</strong>We'll show where <em>$10k&ndash;$50k</em> is hiding in your operation. Mention the webinar for priority scheduling.</span>
+    </label>
+   </div>
+
+   <!-- How did you hear -->
+   <div class="form-group">
+    <p class="form-group-title">How did you hear about this event? <span class="req">*</span></p>
+    <div class="form-field">
+     <select class="form-select" name="referralSource" required>
+      <option value="" disabled selected>Select one</option>
+      <option value="Instagram">Instagram</option>
+      <option value="LinkedIn">LinkedIn</option>
+      <option value="Friend or referral">Friend or referral</option>
+      <option value="Google">Google</option>
+      <option value="Other">Other</option>
+     </select>
+    </div>
+   </div>
+
+   <button type="submit" class="form-submit" id="regSubmit">
+    <span class="submit-label">Reserve my free seat</span>
+    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+   </button>
+   <p class="form-fineprint">No spam. We use your info only to send the webinar link and follow up about the session you registered for.</p>
+  </form>
+
+  <!-- Success state -->
+  <div class="form-success" id="formSuccess">
+   <div class="form-success-icon">
+    <svg width="32" height="32" fill="none" stroke="#fff" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+   </div>
+   <h3>You're in.</h3>
+   <p>Check your inbox, we just sent your confirmation with everything you need before the session. While you're here, want to upgrade to VIP and have Spencer review your homework live?</p>
+   <a href="https://buy.stripe.com/5kQ7sEb1SgH25of7nC5c400" target="_blank" class="btn-success-vip">Upgrade to VIP, $25 &rarr;</a>
+  </div>
+  </div>
+ </div>
 </div>
 
 <!-- UPSELL MODAL -->
 <div class="modal-overlay" id="upsellModal">
-  <div class="modal-box">
-    <button class="modal-close" id="modalClose"><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
-    <div class="modal-badge"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>Before you go</div>
-    <h3>Upgrade to VIP for just $25?</h3>
-    <p>Join a <strong>private small-group room</strong> right after the webinar. Bring the ad you built in the homework &mdash; Spencer reviews it live. <strong>That's worth more than $25.</strong></p>
-    <ul class="modal-perks">
-      <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Private small-group room (20 spots max)</li>
-      <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Spencer reviews your homework live</li>
-      <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Priority scheduling for your free AI audit</li>
-    </ul>
-    <div class="modal-btns">
-      <button type="button" class="btn-vip" id="modalVip">Get VIP access &mdash; $25 <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></button>
-      <button class="btn-skip" id="modalSkip">No thanks, continue with free registration &rarr;</button>
-    </div>
+ <div class="modal-box">
+  <button class="modal-close" id="modalClose"><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
+  <div class="modal-badge"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>Before you go</div>
+  <h3>Upgrade to VIP for just $25?</h3>
+  <p>Join a <strong>private small-group room</strong> right after the webinar. Bring the ad you built in the homework, Spencer reviews it live. <strong>That's worth more than $25.</strong></p>
+  <ul class="modal-perks">
+   <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Private small-group room (20 spots max)</li>
+   <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Spencer reviews your homework live</li>
+   <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Priority scheduling for your free AI audit</li>
+  </ul>
+  <div class="modal-btns">
+   <button type="button" class="btn-vip" id="modalVip">Get VIP access, $25 <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></button>
+   <button class="btn-skip" id="modalSkip">No thanks, continue with free registration &rarr;</button>
   </div>
+ </div>
 </div>
 
 <!-- PAST SESSION REPLAYS -->
 <section class="replays-section" id="replays">
-  <div class="wrap">
-    <div class="reveal"><p class="sl">Past session replays</p><div class="sr"></div></div>
-    <h2 class="st reveal">Missed a session?<br>Catch the replay.</h2>
-    <p class="sb reveal">Every webinar is recorded. Replays drop here after each session so you can rewatch, share, or catch what you missed.</p>
+ <div class="wrap">
+  <div class="reveal"><p class="sl">Past session replays</p><div class="sr"></div></div>
+  <h2 class="st reveal">Missed a session?<br>Catch the replay.</h2>
+  <p class="sb reveal">Every webinar is recorded. Replays drop here after each session so you can rewatch, share, or catch what you missed.</p>
 
-    <!-- EMPTY STATE (remove once first replay is posted) -->
-    <div class="replays-empty reveal reveal-d1" id="replaysEmpty">
-      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-      <h3>First replay drops after our <span id="replaysFirstDate">next session</span>.</h3>
-      <p>Register once and you'll get an email the moment the replay goes live.</p>
-    </div>
-
-    <!-- REPLAY GRID (uncomment + populate when replays exist)
-    <div class="replays-grid">
-      <div class="replay-card">
-        <div class="replay-thumb"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Replay title" allowfullscreen></iframe></div>
-        <div class="replay-meta">
-          <div class="replay-date">May 2026</div>
-          <div class="replay-title">The 5 AI Tools Every Business Owner Should Actually Use</div>
-        </div>
-      </div>
-    </div>
-    -->
+  <!-- EMPTY STATE (remove once first replay is posted) -->
+  <div class="replays-empty reveal reveal-d1" id="replaysEmpty">
+   <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+   <h3>First replay drops after our <span id="replaysFirstDate">next session</span>.</h3>
+   <p>Register once and you'll get an email the moment the replay goes live.</p>
   </div>
+
+  <!-- REPLAY GRID (uncomment + populate when replays exist)
+  <div class="replays-grid">
+   <div class="replay-card">
+    <div class="replay-thumb"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Replay title" allowfullscreen></iframe></div>
+    <div class="replay-meta">
+     <div class="replay-date">May 2026</div>
+     <div class="replay-title">The 5 AI Tools Every Business Owner Should Actually Use</div>
+    </div>
+   </div>
+  </div>
+  -->
+ </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="fi">
-    <a href="#" class="logo">
-      <img src="/logo/nekter-knot.png" alt="Nekter AI" onerror="this.style.display='none'" style="height:28px">
-      <span class="logo-text" style="font-size:17px">nekter<span>.ai</span></span>
-    </a>
-    <p>Questions? <a href="mailto:hello@nekter.ai">hello@nekter.ai</a></p>
-    <p>&copy; 2026 Nekter AI &middot; Las Vegas, NV</p>
-  </div>
+ <div class="fi">
+  <a href="#" class="logo">
+   <img src="/logo/nekter-knot.png" alt="Nekter AI" onerror="this.style.display='none'" style="height:28px">
+   <span class="logo-text" style="font-size:17px">nekter<span>.ai</span></span>
+  </a>
+  <p>Questions? <a href="mailto:hello@nekter.ai">hello@nekter.ai</a></p>
+  <p>&copy; 2026 Nekter AI &middot; Las Vegas, NV</p>
+ </div>
 </footer>
 
 <!-- STICKY CTA (desktop + mobile) -->
 <div class="sticky-cta" id="stickyCta">
-  <a href="#register" class="btn-p">Register for free <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+ <a href="#register" class="btn-p">Register for free <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
 </div>
 
 <!-- FLOATING MOBILE CTA -->
 <div class="float-cta" id="floatCta">
-  <a href="#register">Register for free &rarr;</a>
+ <a href="#register">Register for free &rarr;</a>
 </div>
 
 <script>
 // ═══════════════════════════════════════════════════════════
-// NEXT SESSION CONFIG — update this monthly, everything else
+// NEXT SESSION CONFIG, update this monthly, everything else
 // on the page (hero badge, schedule card, countdown, replays
 // empty state) reads from here.
 // ═══════════════════════════════════════════════════════════
 const NEXT_SESSION = {
-  // ISO string with timezone offset. Set ONLY when both date AND time are
-  // confirmed — it drives the countdown timer. Leave null while time is TBA
-  // (the date can still be shown via the fields below).
-  // Example: '2026-06-25T15:00:00-07:00'
-  iso: null,
-  // Human-readable strings. Set dayNum === 'TBA' when no date is confirmed.
-  dayNum: '25',                          // "25"
-  monthShort: 'June 2026',               // "June 2026"
-  dayOfWeek: 'Thursday',                 // "Thursday"
-  longDate: 'Thursday, June 25, 2026',   // full display date
-  time: 'Time TBA',                      // display-only time string
+ // ISO string with timezone offset. Set ONLY when both date AND time are
+ // confirmed, it drives the countdown timer. Leave null while time is TBA
+ // (the date can still be shown via the fields below).
+ // Example: '2026-06-25T15:00:00-07:00'
+ iso: null,
+ // Human-readable strings. Set dayNum === 'TBA' when no date is confirmed.
+ dayNum: '25',             // "25"
+ monthShort: 'June 2026',        // "June 2026"
+ dayOfWeek: 'Thursday',         // "Thursday"
+ longDate: 'Thursday, June 25, 2026',  // full display date
+ time: 'Time TBA',           // display-only time string
+ // VSL embed. Set to a Vimeo/YouTube/Loom EMBED url to replace the hero
+ // placeholder with the actual video. Leave null until the VSL is filmed.
+ // Example (Vimeo): 'https://player.vimeo.com/video/VIDEO_ID?h=HASH&autoplay=1&muted=1&playsinline=1'
+ vslUrl: null,
 };
 
 (function injectSessionDate(){
-  var badge = document.getElementById('heroBadge');
-  var cbt = document.getElementById('countdownBadgeText');
-  var cm = document.getElementById('countdownMeta');
-  var sday = document.getElementById('schedDay');
-  var smonth = document.getElementById('schedMonth');
-  var smeta = document.getElementById('schedMeta');
-  var rd = document.getElementById('replaysFirstDate');
+ // v2: hero eyebrow stays STATIC ("A 60-MINUTE LIVE WORKSHOP..."). The date
+ // lives in the sticky topbar, so we no longer rewrite heroBadge here.
+ var badge = null;
+ var cbt = document.getElementById('countdownBadgeText');
+ var cm = document.getElementById('countdownMeta');
+ var sday = document.getElementById('schedDay');
+ var smonth = document.getElementById('schedMonth');
+ var smeta = document.getElementById('schedMeta');
+ var rd = document.getElementById('replaysFirstDate');
 
-  // hasIso = date AND time both confirmed (drives countdown timer)
-  // hasDate = date string is confirmed (drives display copy across the page)
-  // The two are independent so we can announce a date before locking a time.
-  var hasIso = !!NEXT_SESSION.iso;
-  var hasDate = !!(NEXT_SESSION.dayNum && NEXT_SESSION.dayNum !== 'TBA');
+ // hasIso = date AND time both confirmed (drives countdown timer)
+ // hasDate = date string is confirmed (drives display copy across the page)
+ // The two are independent so we can announce a date before locking a time.
+ var hasIso = !!NEXT_SESSION.iso;
+ var hasDate = !!(NEXT_SESSION.dayNum && NEXT_SESSION.dayNum !== 'TBA');
 
-  var badgeText;
-  if(hasDate && hasIso){
-    badgeText = 'Monthly Webinar \u00B7 ' + NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' \u00B7 ' + NEXT_SESSION.time + ' \u00B7 Live';
-  } else if(hasDate){
-    badgeText = 'Monthly Webinar \u00B7 ' + NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' \u00B7 Time TBA \u00B7 Live';
-  } else {
-    badgeText = 'Monthly Webinar \u00B7 Live on Google Meet';
+ var badgeText;
+ if(hasDate && hasIso){
+  badgeText = 'Monthly Webinar \u00B7 ' + NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' \u00B7 ' + NEXT_SESSION.time + ' \u00B7 Live';
+ } else if(hasDate){
+  badgeText = 'Monthly Webinar \u00B7 ' + NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' \u00B7 Time TBA \u00B7 Live';
+ } else {
+  badgeText = 'Monthly Webinar \u00B7 Live on Google Meet';
+ }
+ if(badge){ badge.innerHTML = '<span class="bdot"></span>' + badgeText; }
+
+ var countdownBadge;
+ if(hasDate && hasIso){
+  countdownBadge = '5 AI Tools \u00B7 ' + NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' \u00B7 ' + NEXT_SESSION.time;
+ } else if(hasDate){
+  countdownBadge = '5 AI Tools \u00B7 ' + NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' \u00B7 Time TBA';
+ } else {
+  countdownBadge = 'Next date coming soon';
+ }
+ if(cbt){ cbt.textContent = countdownBadge; }
+
+ var meta;
+ if(hasDate && hasIso){
+  meta = NEXT_SESSION.longDate + ' \u00B7 ' + NEXT_SESSION.time + ' \u00B7 60 min + Q&A \u00B7 Live on Google Meet';
+ } else if(hasDate){
+  meta = NEXT_SESSION.longDate + ' \u00B7 Time TBA \u00B7 60 min + Q&A \u00B7 Live on Google Meet';
+ } else {
+  meta = 'Date TBA \u00B7 60 min + Q&A \u00B7 Live on Google Meet';
+ }
+ if(cm){ cm.textContent = meta; }
+ if(smeta){ smeta.textContent = meta; }
+
+ if(sday){ sday.textContent = NEXT_SESSION.dayNum; }
+ if(smonth){ smonth.textContent = NEXT_SESSION.monthShort; }
+
+ if(rd){
+  rd.textContent = hasDate
+   ? (NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' session')
+   : 'next session';
+ }
+
+ // Hero eyebrow stays static copy ("A 60-MINUTE LIVE WORKSHOP..."); only
+ // restore the bdot if injection overwrote it.
+ if(badge && !badge.querySelector('.bdot')){
+  badge.innerHTML = '<span class="bdot"></span>' + badge.textContent;
+ }
+
+ // STICKY TOPBAR
+ var tbDate = document.getElementById('topbarDate');
+ var tbCount = document.getElementById('topbarCount');
+ var topbar = document.getElementById('topbar');
+ if(tbDate){
+  tbDate.textContent = hasDate
+   ? ('Live Webinar · ' + (NEXT_SESSION.dayOfWeek ? NEXT_SESSION.dayOfWeek + ', ' : '') + NEXT_SESSION.monthShort.replace(/\s?\d{4}/, '') + ' ' + NEXT_SESSION.dayNum).trim()
+   : 'Live Webinar · Date coming soon';
+ }
+ if(tbCount && !hasIso){
+  tbCount.innerHTML = hasDate ? '<span class="cd-pill cd-pill-tba">Time TBA</span>' : '';
+ }
+ // If no date at all, hide the topbar entirely
+ if(topbar && !hasDate){ topbar.style.display = 'none'; }
+
+ // VSL: swap placeholder for the real embed when a URL is set
+ if(NEXT_SESSION.vslUrl){
+  var frame = document.getElementById('vslFrame');
+  if(frame){
+   frame.innerHTML =
+    '<iframe src="' + NEXT_SESSION.vslUrl + '" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Workshop walkthrough"></iframe>' +
+    '<button class="vsl-unmute" id="vslUnmute" type="button">🔈 Unmute</button>';
+   var unmute = document.getElementById('vslUnmute');
+   if(unmute){
+    unmute.addEventListener('click', function(){
+     var src = NEXT_SESSION.vslUrl.replace(/([?&])muted=1/, '$1muted=0');
+     if(src.indexOf('muted=') === -1){ src += (src.indexOf('?')>-1?'&':'?') + 'muted=0'; }
+     frame.querySelector('iframe').src = src;
+     unmute.remove();
+    });
+   }
   }
-  if(badge){ badge.innerHTML = '<span class="bdot"></span>' + badgeText; }
-
-  var countdownBadge;
-  if(hasDate && hasIso){
-    countdownBadge = '5 AI Tools \u00B7 ' + NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' \u00B7 ' + NEXT_SESSION.time;
-  } else if(hasDate){
-    countdownBadge = '5 AI Tools \u00B7 ' + NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' \u00B7 Time TBA';
-  } else {
-    countdownBadge = 'Next date coming soon';
-  }
-  if(cbt){ cbt.textContent = countdownBadge; }
-
-  var meta;
-  if(hasDate && hasIso){
-    meta = NEXT_SESSION.longDate + ' \u00B7 ' + NEXT_SESSION.time + ' \u00B7 60 min + Q&A \u00B7 Live on Google Meet';
-  } else if(hasDate){
-    meta = NEXT_SESSION.longDate + ' \u00B7 Time TBA \u00B7 60 min + Q&A \u00B7 Live on Google Meet';
-  } else {
-    meta = 'Date TBA \u00B7 60 min + Q&A \u00B7 Live on Google Meet';
-  }
-  if(cm){ cm.textContent = meta; }
-  if(smeta){ smeta.textContent = meta; }
-
-  if(sday){ sday.textContent = NEXT_SESSION.dayNum; }
-  if(smonth){ smonth.textContent = NEXT_SESSION.monthShort; }
-
-  if(rd){
-    rd.textContent = hasDate
-      ? (NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' session')
-      : 'next session';
-  }
+ }
 })();
 
 // CURRICULUM PROGRESS ANIMATION (hero card)
 (function currAnim(){
-  var rows = document.querySelectorAll('.curr-row');
-  var fill = document.getElementById('currProgressFill');
-  var pct = document.getElementById('currProgressPct');
-  if(!rows.length || !fill || !pct) return;
-  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var stepMs = 1200;
-  var holdMs = 3800;
+ var rows = document.querySelectorAll('.curr-row');
+ var fill = document.getElementById('currProgressFill');
+ var pct = document.getElementById('currProgressPct');
+ if(!rows.length || !fill || !pct) return;
+ var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ var stepMs = 1200;
+ var holdMs = 3800;
 
-  function setProgress(p){
-    fill.style.width = p + '%';
-    pct.textContent = p + '%';
+ function setProgress(p){
+  fill.style.width = p + '%';
+  pct.textContent = p + '%';
+ }
+ function clearAll(){
+  rows.forEach(function(r){ r.classList.remove('done','active'); });
+  setProgress(0);
+ }
+ function runCycle(){
+  clearAll();
+  if(prefersReduced){
+   rows.forEach(function(r){ r.classList.add('done'); });
+   setProgress(100);
+   return;
   }
-  function clearAll(){
-    rows.forEach(function(r){ r.classList.remove('done','active'); });
-    setProgress(0);
-  }
-  function runCycle(){
-    clearAll();
-    if(prefersReduced){
-      rows.forEach(function(r){ r.classList.add('done'); });
-      setProgress(100);
-      return;
-    }
-    rows.forEach(function(row, i){
-      setTimeout(function(){
-        rows.forEach(function(r){ r.classList.remove('active'); });
-        if(i > 0) rows[i-1].classList.remove('active');
-        row.classList.add('done');
-        setProgress(Math.round(((i+1)/rows.length)*100));
-        if(rows[i+1]) rows[i+1].classList.add('active');
-      }, (i+1)*stepMs);
-    });
-    setTimeout(runCycle, rows.length*stepMs + holdMs);
-  }
-  // Start a beat after load so the hero entrance animation finishes first.
-  setTimeout(runCycle, 500);
+  rows.forEach(function(row, i){
+   setTimeout(function(){
+    rows.forEach(function(r){ r.classList.remove('active'); });
+    if(i > 0) rows[i-1].classList.remove('active');
+    row.classList.add('done');
+    setProgress(Math.round(((i+1)/rows.length)*100));
+    if(rows[i+1]) rows[i+1].classList.add('active');
+   }, (i+1)*stepMs);
+  });
+  setTimeout(runCycle, rows.length*stepMs + holdMs);
+ }
+ // Start a beat after load so the hero entrance animation finishes first.
+ setTimeout(runCycle, 500);
 })();
 
-// NAV SCROLL STATE
+// NAV SCROLL STATE (v2 uses a fixed topbar instead of the old nav; guard null)
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
+if (nav) {
+ window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 60);
-}, { passive: true });
+ }, { passive: true });
+}
 
 // SCROLL REVEAL (IntersectionObserver)
 const revealEls = document.querySelectorAll('.reveal');
 const revealObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('vis');
-      revealObs.unobserve(e.target);
-    }
-  });
+ entries.forEach(e => {
+  if (e.isIntersecting) {
+   e.target.classList.add('vis');
+   revealObs.unobserve(e.target);
+  }
+ });
 }, { threshold: 0.02, rootMargin: '0px 0px 0px 0px' });
 revealEls.forEach(el => revealObs.observe(el));
 
@@ -1305,68 +1627,68 @@ revealEls.forEach(el => revealObs.observe(el));
 const floatCta = document.getElementById('floatCta');
 const registerSection = document.getElementById('register');
 const floatObs = new IntersectionObserver((entries) => {
-  floatCta.classList.toggle('show', !entries[0].isIntersecting && window.scrollY > 500);
+ floatCta.classList.toggle('show', !entries[0].isIntersecting && window.scrollY > 500);
 }, { threshold: 0.1 });
 floatObs.observe(registerSection);
 window.addEventListener('scroll', () => {
-  if (window.scrollY <= 500) floatCta.classList.remove('show');
+ if (window.scrollY <= 500) floatCta.classList.remove('show');
 }, { passive: true });
 
-// SMOOTH ANCHOR SCROLLING — #register and #form are handled by the form-modal
+// SMOOTH ANCHOR SCROLLING, #register and #form are handled by the form-modal
 // opener below; skip them here so we don't double-fire (scroll + modal).
 document.querySelectorAll('a[href^="#"]').forEach(a => {
-  const href = a.getAttribute('href');
-  if (href === '#register' || href === '#form' || href === '#') return;
-  a.addEventListener('click', function(e) {
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
+ const href = a.getAttribute('href');
+ if (href === '#register' || href === '#form' || href === '#') return;
+ a.addEventListener('click', function(e) {
+  const target = document.querySelector(this.getAttribute('href'));
+  if (target) {
+   e.preventDefault();
+   target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+ });
 });
 
 // CURSOR GLOW
 const cg = document.querySelector('.cursor-glow');
 document.addEventListener('mousemove', e => {
-  cg.style.left = e.clientX + 'px';
-  cg.style.top = e.clientY + 'px';
+ cg.style.left = e.clientX + 'px';
+ cg.style.top = e.clientY + 'px';
 });
 
 // 3D CARD TILT
 document.querySelectorAll('.lc, .sc, .ind-card, .tool-card, .price-card').forEach(el => {
-  el.addEventListener('mouseenter', () => { el.style.transition = 'transform 0.1s'; });
-  el.addEventListener('mousemove', e => {
-    const r = el.getBoundingClientRect();
-    const x = (e.clientX - r.left) / r.width - 0.5;
-    const y = (e.clientY - r.top) / r.height - 0.5;
-    el.style.transform = `perspective(800px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateZ(6px)`;
-  });
-  el.addEventListener('mouseleave', () => {
-    el.style.transition = 'transform 0.6s cubic-bezier(0.16,1,0.3,1)';
-    el.style.transform = '';
-  });
+ el.addEventListener('mouseenter', () => { el.style.transition = 'transform 0.1s'; });
+ el.addEventListener('mousemove', e => {
+  const r = el.getBoundingClientRect();
+  const x = (e.clientX - r.left) / r.width - 0.5;
+  const y = (e.clientY - r.top) / r.height - 0.5;
+  el.style.transform = `perspective(800px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateZ(6px)`;
+ });
+ el.addEventListener('mouseleave', () => {
+  el.style.transition = 'transform 0.6s cubic-bezier(0.16,1,0.3,1)';
+  el.style.transform = '';
+ });
 });
 
 const ab = document.querySelector('.ablock');
 if (ab) {
-  ab.addEventListener('mouseenter', () => { ab.style.transition = 'transform 0.15s'; });
-  ab.addEventListener('mousemove', e => {
-    const r = ab.getBoundingClientRect();
-    const x = (e.clientX - r.left) / r.width - 0.5;
-    const y = (e.clientY - r.top) / r.height - 0.5;
-    ab.style.transform = `perspective(1200px) rotateY(${x * 5}deg) rotateX(${-y * 5}deg) translateZ(4px)`;
-  });
-  ab.addEventListener('mouseleave', () => {
-    ab.style.transition = 'transform 0.6s cubic-bezier(0.16,1,0.3,1)';
-    ab.style.transform = '';
-  });
+ ab.addEventListener('mouseenter', () => { ab.style.transition = 'transform 0.15s'; });
+ ab.addEventListener('mousemove', e => {
+  const r = ab.getBoundingClientRect();
+  const x = (e.clientX - r.left) / r.width - 0.5;
+  const y = (e.clientY - r.top) / r.height - 0.5;
+  ab.style.transform = `perspective(1200px) rotateY(${x * 5}deg) rotateX(${-y * 5}deg) translateZ(4px)`;
+ });
+ ab.addEventListener('mouseleave', () => {
+  ab.style.transition = 'transform 0.6s cubic-bezier(0.16,1,0.3,1)';
+  ab.style.transform = '';
+ });
 }
 
-// STRIPE VIP CHECKOUT URL — keep in one place
+// STRIPE VIP CHECKOUT URL, keep in one place
 const VIP_STRIPE_URL = 'https://buy.stripe.com/5kQ7sEb1SgH25of7nC5c400';
 
-// TIER STATE (free vs vip) — controls form behavior
+// TIER STATE (free vs vip), controls form behavior
 const tierInput = document.getElementById('formTier');
 const tierBanner = document.getElementById('tierBanner');
 const tierSwitch = document.getElementById('tierSwitch');
@@ -1376,21 +1698,21 @@ const formModalEyebrow = document.getElementById('formModalEyebrow');
 const formModalIntro = document.getElementById('formModalIntro');
 
 function setTier(tier) {
-  if (!tierInput) return;
-  tierInput.value = tier;
-  if (tier === 'vip') {
-    tierBanner.classList.add('show');
-    if (submitLabelEl) submitLabelEl.textContent = 'Reserve seat & continue to payment';
-    if (formModalEyebrow) formModalEyebrow.textContent = 'VIP access — $25';
-    if (formModalTitle) formModalTitle.textContent = 'Reserve Your VIP Seat';
-    if (formModalIntro) formModalIntro.textContent = "Takes 60 seconds. After registration you'll be redirected to Stripe to complete your $25 VIP upgrade.";
-  } else {
-    tierBanner.classList.remove('show');
-    if (submitLabelEl) submitLabelEl.textContent = 'Reserve my free seat';
-    if (formModalEyebrow) formModalEyebrow.textContent = 'Reserve your seat';
-    if (formModalTitle) formModalTitle.textContent = 'Reserve Your Free Seat';
-    if (formModalIntro) formModalIntro.textContent = "Takes 60 seconds. You'll get an instant confirmation email with everything you need before we go live.";
-  }
+ if (!tierInput) return;
+ tierInput.value = tier;
+ if (tier === 'vip') {
+  tierBanner.classList.add('show');
+  if (submitLabelEl) submitLabelEl.textContent = 'Reserve seat & continue to payment';
+  if (formModalEyebrow) formModalEyebrow.textContent = 'VIP access, $25';
+  if (formModalTitle) formModalTitle.textContent = 'Reserve Your VIP Seat';
+  if (formModalIntro) formModalIntro.textContent = "Takes 60 seconds. After registration you'll be redirected to Stripe to complete your $25 VIP upgrade.";
+ } else {
+  tierBanner.classList.remove('show');
+  if (submitLabelEl) submitLabelEl.textContent = 'Reserve my free seat';
+  if (formModalEyebrow) formModalEyebrow.textContent = 'Reserve your seat';
+  if (formModalTitle) formModalTitle.textContent = 'Reserve Your Free Seat';
+  if (formModalIntro) formModalIntro.textContent = "Takes 60 seconds. You'll get an instant confirmation email with everything you need before we go live.";
+ }
 }
 if (tierSwitch) tierSwitch.addEventListener('click', function() { setTier('free'); });
 
@@ -1399,31 +1721,31 @@ const formModal = document.getElementById('formModal');
 const formModalClose = document.getElementById('formModalClose');
 
 function openFormModal(tier) {
-  setTier(tier === 'vip' ? 'vip' : 'free');
-  formModal.classList.add('active');
-  document.body.style.overflow = 'hidden';
-  // Focus the first input for keyboard users
-  setTimeout(function() {
-    const firstInput = formModal.querySelector('input[name="firstName"]');
-    if (firstInput) firstInput.focus();
-  }, 320);
+ setTier(tier === 'vip' ? 'vip' : 'free');
+ formModal.classList.add('active');
+ document.body.style.overflow = 'hidden';
+ // Focus the first input for keyboard users
+ setTimeout(function() {
+  const firstInput = formModal.querySelector('input[name="firstName"]');
+  if (firstInput) firstInput.focus();
+ }, 320);
 }
 function closeFormModal() {
-  formModal.classList.remove('active');
-  document.body.style.overflow = '';
+ formModal.classList.remove('active');
+ document.body.style.overflow = '';
 }
 if (formModalClose) formModalClose.addEventListener('click', closeFormModal);
 if (formModal) {
-  formModal.addEventListener('click', function(e) { if (e.target === formModal) closeFormModal(); });
+ formModal.addEventListener('click', function(e) { if (e.target === formModal) closeFormModal(); });
 }
 
-// VIP CTA on the pricing card — opens the form modal directly in VIP mode
+// VIP CTA on the pricing card, opens the form modal directly in VIP mode
 const vipPricingBtn = document.getElementById('vipPricingBtn');
 if (vipPricingBtn) {
-  vipPricingBtn.addEventListener('click', function() { openFormModal('vip'); });
+ vipPricingBtn.addEventListener('click', function() { openFormModal('vip'); });
 }
 
-// UPSELL MODAL — the gatekeeper between "Register for free" and the form
+// UPSELL MODAL, the gatekeeper between "Register for free" and the form
 const modal = document.getElementById('upsellModal');
 const freeBtn = document.getElementById('freeRegBtn');
 const modalClose = document.getElementById('modalClose');
@@ -1436,172 +1758,188 @@ function closeModal() { modal.classList.remove('active'); document.body.style.ov
 freeBtn.addEventListener('click', openModal);
 modalClose.addEventListener('click', closeModal);
 modalSkip.addEventListener('click', function() {
-  closeModal();
-  setTimeout(function() { openFormModal('free'); }, 220);
+ closeModal();
+ setTimeout(function() { openFormModal('free'); }, 220);
 });
 modalVip.addEventListener('click', function() {
-  closeModal();
-  setTimeout(function() { openFormModal('vip'); }, 220);
+ closeModal();
+ setTimeout(function() { openFormModal('vip'); }, 220);
 });
 modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
 document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    if (formModal && formModal.classList.contains('active')) closeFormModal();
-    else closeModal();
-  }
+ if (e.key === 'Escape') {
+  if (formModal && formModal.classList.contains('active')) closeFormModal();
+  else closeModal();
+ }
 });
 
 // Any <a href="#form"> or "#register" CTAs become free-flow triggers: nav,
 // sticky, float, inline buttons. We intercept these to open the upsell modal
 // instead of doing a smooth scroll to a section that no longer exists in flow.
 document.querySelectorAll('a[href="#register"], a[href="#form"]').forEach(function(a) {
-  a.addEventListener('click', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    openModal();
-  });
+ a.addEventListener('click', function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  openModal();
+ });
 });
 
 // REGISTRATION FORM SUBMIT
 (function(){
-  const form = document.getElementById('regForm');
-  const errorBox = document.getElementById('formError');
-  const successBox = document.getElementById('formSuccess');
-  const submitBtn = document.getElementById('regSubmit');
-  if (!form || !submitBtn) return;
-  const labelEl = submitBtn.querySelector('.submit-label');
+ const form = document.getElementById('regForm');
+ const errorBox = document.getElementById('formError');
+ const successBox = document.getElementById('formSuccess');
+ const submitBtn = document.getElementById('regSubmit');
+ if (!form || !submitBtn) return;
+ const labelEl = submitBtn.querySelector('.submit-label');
 
-  function showError(msg) {
-    errorBox.textContent = msg;
-    errorBox.classList.add('show');
-    errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+ function showError(msg) {
+  errorBox.textContent = msg;
+  errorBox.classList.add('show');
+  errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+ }
+ function clearError() {
+  errorBox.classList.remove('show');
+  errorBox.textContent = '';
+ }
+
+ form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  clearError();
+
+  // Native validation first
+  if (!form.checkValidity()) {
+   const firstInvalid = form.querySelector(':invalid');
+   if (firstInvalid) firstInvalid.focus();
+   showError('Please fill in all required fields before submitting.');
+   return;
   }
-  function clearError() {
-    errorBox.classList.remove('show');
-    errorBox.textContent = '';
+
+  const fd = new FormData(form);
+  const tier = fd.get('tier') === 'vip' ? 'vip' : 'free';
+  const payload = {
+   firstName: fd.get('firstName'),
+   lastName: fd.get('lastName'),
+   email: fd.get('email'),
+   phone: fd.get('phone'),
+   company: fd.get('company'),
+   jobTitle: fd.get('jobTitle'),
+   teamSize: fd.get('teamSize'),
+   industry: fd.get('industry'),
+   painPoint: fd.get('painPoint'),
+   referralSource: fd.get('referralSource'),
+   requestedAudit: fd.get('requestedAudit') === 'true',
+   tier: tier,
+   sessionIso: (typeof NEXT_SESSION === 'object' && NEXT_SESSION) ? NEXT_SESSION.iso : null,
+   sessionLabel: (typeof NEXT_SESSION === 'object' && NEXT_SESSION && NEXT_SESSION.longDate) ? NEXT_SESSION.longDate : 'the next live session',
+   sessionTime: (typeof NEXT_SESSION === 'object' && NEXT_SESSION) ? NEXT_SESSION.time : null,
+  };
+
+  submitBtn.disabled = true;
+  const originalLabel = labelEl ? labelEl.textContent : 'Reserve my free seat';
+  if (labelEl) labelEl.textContent = tier === 'vip' ? 'Saving your details…' : 'Reserving your seat…';
+
+  try {
+   const res = await fetch('/api/register', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+   });
+   const data = await res.json().catch(() => ({}));
+   if (!res.ok || !data.ok) {
+    const msg = (data && data.error) || 'Something went wrong. Please try again or email hello@nekter.ai.';
+    showError(msg);
+    submitBtn.disabled = false;
+    if (labelEl) labelEl.textContent = originalLabel;
+    return;
+   }
+   // VIP path: redirect to Stripe with prefilled email so they pay $25 immediately
+   if (tier === 'vip') {
+    if (labelEl) labelEl.textContent = 'Redirecting to payment…';
+    const stripeUrl = `${VIP_STRIPE_URL}?prefilled_email=${encodeURIComponent(payload.email)}`;
+    window.location.href = stripeUrl;
+    return;
+   }
+   // Free path, swap form for success state
+   form.style.display = 'none';
+   tierBanner.classList.remove('show');
+   successBox.classList.add('show');
+   successBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } catch (err) {
+   console.error(err);
+   showError('Network error. Please try again or email hello@nekter.ai.');
+   submitBtn.disabled = false;
+   if (labelEl) labelEl.textContent = originalLabel;
   }
-
-  form.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    clearError();
-
-    // Native validation first
-    if (!form.checkValidity()) {
-      const firstInvalid = form.querySelector(':invalid');
-      if (firstInvalid) firstInvalid.focus();
-      showError('Please fill in all required fields before submitting.');
-      return;
-    }
-
-    const fd = new FormData(form);
-    const tier = fd.get('tier') === 'vip' ? 'vip' : 'free';
-    const payload = {
-      firstName: fd.get('firstName'),
-      lastName: fd.get('lastName'),
-      email: fd.get('email'),
-      phone: fd.get('phone'),
-      company: fd.get('company'),
-      jobTitle: fd.get('jobTitle'),
-      teamSize: fd.get('teamSize'),
-      industry: fd.get('industry'),
-      painPoint: fd.get('painPoint'),
-      referralSource: fd.get('referralSource'),
-      requestedAudit: fd.get('requestedAudit') === 'true',
-      tier: tier,
-      sessionIso: (typeof NEXT_SESSION === 'object' && NEXT_SESSION) ? NEXT_SESSION.iso : null,
-      sessionLabel: (typeof NEXT_SESSION === 'object' && NEXT_SESSION && NEXT_SESSION.longDate) ? NEXT_SESSION.longDate : 'the next live session',
-      sessionTime: (typeof NEXT_SESSION === 'object' && NEXT_SESSION) ? NEXT_SESSION.time : null,
-    };
-
-    submitBtn.disabled = true;
-    const originalLabel = labelEl ? labelEl.textContent : 'Reserve my free seat';
-    if (labelEl) labelEl.textContent = tier === 'vip' ? 'Saving your details…' : 'Reserving your seat…';
-
-    try {
-      const res = await fetch('/api/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok || !data.ok) {
-        const msg = (data && data.error) || 'Something went wrong. Please try again or email hello@nekter.ai.';
-        showError(msg);
-        submitBtn.disabled = false;
-        if (labelEl) labelEl.textContent = originalLabel;
-        return;
-      }
-      // VIP path: redirect to Stripe with prefilled email so they pay $25 immediately
-      if (tier === 'vip') {
-        if (labelEl) labelEl.textContent = 'Redirecting to payment…';
-        const stripeUrl = `${VIP_STRIPE_URL}?prefilled_email=${encodeURIComponent(payload.email)}`;
-        window.location.href = stripeUrl;
-        return;
-      }
-      // Free path — swap form for success state
-      form.style.display = 'none';
-      tierBanner.classList.remove('show');
-      successBox.classList.add('show');
-      successBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } catch (err) {
-      console.error(err);
-      showError('Network error. Please try again or email hello@nekter.ai.');
-      submitBtn.disabled = false;
-      if (labelEl) labelEl.textContent = originalLabel;
-    }
-  });
+ });
 })();
 
 // COUNTDOWN TIMER (reads NEXT_SESSION.iso above)
 document.addEventListener('DOMContentLoaded', function(){
-  var section = document.querySelector('.countdown-section');
-  if(!NEXT_SESSION.iso){
-    // No date set yet — hide the countdown entirely so we don't show broken zeros.
-    if(section) section.style.display = 'none';
-    return;
+ var section = document.querySelector('.countdown-section');
+ if(!NEXT_SESSION.iso){
+  // No date set yet, hide the countdown entirely so we don't show broken zeros.
+  if(section) section.style.display = 'none';
+  return;
+ }
+ var target = new Date(NEXT_SESSION.iso).getTime();
+ var grid = document.getElementById('countdown');
+ var d = document.getElementById('cd-days'),
+   h = document.getElementById('cd-hours'),
+   m = document.getElementById('cd-mins'),
+   s = document.getElementById('cd-secs');
+ if(!grid || !d || !h || !m || !s) return;
+ var tbCount = document.getElementById('topbarCount');
+ function pad(n){return n<10?'0'+n:''+n}
+ var iv;
+ function tick(){
+  var diff = target - Date.now();
+  if(diff <= 0){
+   grid.innerHTML = '<div class="cd-live">\uD83C\uDF89 The webinar is live right now!</div>';
+   if(tbCount){ tbCount.textContent = 'Live now'; }
+   if(iv) clearInterval(iv);
+   return;
   }
-  var target = new Date(NEXT_SESSION.iso).getTime();
-  var grid = document.getElementById('countdown');
-  var d = document.getElementById('cd-days'),
-      h = document.getElementById('cd-hours'),
-      m = document.getElementById('cd-mins'),
-      s = document.getElementById('cd-secs');
-  if(!grid || !d || !h || !m || !s) return;
-  function pad(n){return n<10?'0'+n:''+n}
-  var iv;
-  function tick(){
-    var diff = target - Date.now();
-    if(diff <= 0){
-      grid.innerHTML = '<div class="cd-live">\uD83C\uDF89 The webinar is live right now!</div>';
-      if(iv) clearInterval(iv);
-      return;
-    }
-    d.textContent = pad(Math.floor(diff/86400000));
-    h.textContent = pad(Math.floor(diff%86400000/3600000));
-    m.textContent = pad(Math.floor(diff%3600000/60000));
-    s.textContent = pad(Math.floor(diff%60000/1000));
+  var dd = Math.floor(diff/86400000),
+    hh = Math.floor(diff%86400000/3600000),
+    mm = Math.floor(diff%3600000/60000),
+    ss = Math.floor(diff%60000/1000);
+  d.textContent = pad(dd);
+  h.textContent = pad(hh);
+  m.textContent = pad(mm);
+  s.textContent = pad(ss);
+  if(tbCount){
+   tbCount.innerHTML =
+    '<span class="topbar-label">Starts in</span>' +
+    '<span class="cd-pills">' +
+     '<span class="cd-pill"><b>' + pad(dd) + '</b><i>d</i></span>' +
+     '<span class="cd-pill"><b>' + pad(hh) + '</b><i>h</i></span>' +
+     '<span class="cd-pill"><b>' + pad(mm) + '</b><i>m</i></span>' +
+     '<span class="cd-pill"><b>' + pad(ss) + '</b><i>s</i></span>' +
+    '</span>';
   }
-  tick();
-  iv = setInterval(tick, 1000);
+ }
+ tick();
+ iv = setInterval(tick, 1000);
 });
 
 // STICKY CTA
 (function(){
-  var stickyCta = document.getElementById('stickyCta');
-  if(!stickyCta) return;
-  var registerSec = document.getElementById('register');
-  function update(){
-    var past = window.scrollY > 600;
-    var nearRegister = false;
-    if(registerSec){
-      var r = registerSec.getBoundingClientRect();
-      nearRegister = r.top < window.innerHeight && r.bottom > 0;
-    }
-    stickyCta.classList.toggle('show', past && !nearRegister);
+ var stickyCta = document.getElementById('stickyCta');
+ if(!stickyCta) return;
+ var registerSec = document.getElementById('register');
+ function update(){
+  var past = window.scrollY > 600;
+  var nearRegister = false;
+  if(registerSec){
+   var r = registerSec.getBoundingClientRect();
+   nearRegister = r.top < window.innerHeight && r.bottom > 0;
   }
-  window.addEventListener('scroll', update, { passive: true });
-  window.addEventListener('resize', update);
-  update();
+  stickyCta.classList.toggle('show', past && !nearRegister);
+ }
+ window.addEventListener('scroll', update, { passive: true });
+ window.addEventListener('resize', update);
+ update();
 })();
 </script>
 </body>
