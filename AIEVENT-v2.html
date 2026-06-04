@@ -11,25 +11,25 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  /* v2 warm-dark + amber palette (anti-AI-slop). See DESIGN.md. */
-  --bg:#1A1714;--bg-alt:#211D18;--bg-dark:#141110;
-  --card:#252118;--card-hover:#2E2920;
-  --border:rgba(245,240,232,0.10);--border-str:rgba(245,240,232,0.16);
-  --blue:#4D6FEF;--blue-bright:#6E89FF;--blue-dim:rgba(77,111,239,0.10);
-  --purple:#3A57D6;--purple-dim:rgba(58,87,214,0.08);
-  --grad:linear-gradient(135deg,#4D6FEF 0%,#3A57D6 100%);
-  --grad-text:linear-gradient(135deg,#6E89FF 0%,#4D6FEF 100%);
-  --grad-subtle:linear-gradient(135deg,rgba(77,111,239,0.08) 0%,rgba(58,87,214,0.05) 100%);
-  --text:#FAF6F0;--text-sub:#C9C0B5;--muted:#B4ABA0;--muted-lt:#8A8278;
-  --highlight:#6E89FF;
-  --ff:'Inter',sans-serif;
-  --serif:'Fraunces','Georgia',serif;
-  --ease-out-expo:cubic-bezier(0.16,1,0.3,1);
-  --ease-out-quart:cubic-bezier(0.25,1,0.5,1);
-  --shadow-sm:0 1px 2px rgba(0,0,0,0.20),0 4px 12px rgba(0,0,0,0.18);
-  --shadow-md:0 2px 4px rgba(0,0,0,0.22),0 8px 24px rgba(0,0,0,0.30);
-  --shadow-lg:0 4px 8px rgba(0,0,0,0.25),0 16px 48px rgba(0,0,0,0.40);
-  --green:#7FB069;--green-dim:rgba(127,176,105,0.12);
+ /* v2 warm-dark + amber palette (anti-AI-slop). See DESIGN.md. */
+ --bg:#1A1714;--bg-alt:#211D18;--bg-dark:#141110;
+ --card:#252118;--card-hover:#2E2920;
+ --border:rgba(245,240,232,0.10);--border-str:rgba(245,240,232,0.16);
+ --blue:#4D6FEF;--blue-bright:#6E89FF;--blue-dim:rgba(77,111,239,0.10);
+ --purple:#3A57D6;--purple-dim:rgba(58,87,214,0.08);
+ --grad:linear-gradient(135deg,#4D6FEF 0%,#3A57D6 100%);
+ --grad-text:linear-gradient(135deg,#6E89FF 0%,#4D6FEF 100%);
+ --grad-subtle:linear-gradient(135deg,rgba(77,111,239,0.08) 0%,rgba(58,87,214,0.05) 100%);
+ --text:#FAF6F0;--text-sub:#C9C0B5;--muted:#B4ABA0;--muted-lt:#8A8278;
+ --highlight:#6E89FF;
+ --ff:'Inter',sans-serif;
+ --serif:'Fraunces','Georgia',serif;
+ --ease-out-expo:cubic-bezier(0.16,1,0.3,1);
+ --ease-out-quart:cubic-bezier(0.25,1,0.5,1);
+ --shadow-sm:0 1px 2px rgba(0,0,0,0.20),0 4px 12px rgba(0,0,0,0.18);
+ --shadow-md:0 2px 4px rgba(0,0,0,0.22),0 8px 24px rgba(0,0,0,0.30);
+ --shadow-lg:0 4px 8px rgba(0,0,0,0.25),0 16px 48px rgba(0,0,0,0.40);
+ --green:#7FB069;--green-dim:rgba(127,176,105,0.12);
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--ff);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
@@ -258,33 +258,33 @@ footer a:hover{color:var(--blue)}
 
 /* RESPONSIVE */
 @media(max-width:900px){
-  .lgrid{grid-template-columns:repeat(2,1fr)}
-  .aos-grid{grid-template-columns:1fr 1fr !important}
-  .ind-grid{grid-template-columns:1fr}
+ .lgrid{grid-template-columns:repeat(2,1fr)}
+ .aos-grid{grid-template-columns:1fr 1fr !important}
+ .ind-grid{grid-template-columns:1fr}
 }
 @media(max-width:600px){
-  .aos-grid{grid-template-columns:1fr !important}
+ .aos-grid{grid-template-columns:1fr !important}
 }
 @media(max-width:720px){
-  .ablock{grid-template-columns:1fr;padding:36px 28px;gap:32px}
-  .lgrid{grid-template-columns:1fr}
-  .sgrid{grid-template-columns:1fr}
-  .btn-nav{display:none}
-  .nav-tag{display:none}
-  .hero h1{font-size:36px}
-  .hero{padding:120px 0 70px}
-  .hero-grid{display:none}
-  .proof-inner{gap:28px}
-  .proof-stat{min-width:auto}
-  .float-cta{display:block}
-  .sched-card{flex-direction:column;align-items:flex-start;gap:16px}
-  .sched-divider{width:100%;height:1px}
+ .ablock{grid-template-columns:1fr;padding:36px 28px;gap:32px}
+ .lgrid{grid-template-columns:1fr}
+ .sgrid{grid-template-columns:1fr}
+ .btn-nav{display:none}
+ .nav-tag{display:none}
+ .hero h1{font-size:36px}
+ .hero{padding:120px 0 70px}
+ .hero-grid{display:none}
+ .proof-inner{gap:28px}
+ .proof-stat{min-width:auto}
+ .float-cta{display:block}
+ .sched-card{flex-direction:column;align-items:flex-start;gap:16px}
+ .sched-divider{width:100%;height:1px}
 }
 @media(max-width:400px){
-  .wrap{padding:0 18px}
-  .hero h1{font-size:32px}
-  .pills{gap:8px}
-  .pill{font-size:13px;padding:8px 14px}
+ .wrap{padding:0 18px}
+ .hero h1{font-size:32px}
+ .pills{gap:8px}
+ .pill{font-size:13px;padding:8px 14px}
 }
 
 /* AURORA */
@@ -364,8 +364,8 @@ footer a:hover{color:var(--blue)}
 .lc,.sc,.ablock,.ind-card,.sched-card,.price-card{transform-style:preserve-3d;will-change:transform}
 
 /* =========================
-   EDITORIAL REDESIGN
-   ========================= */
+  EDITORIAL REDESIGN
+  ========================= */
 
 /* Remove floating template decorations */
 .orb,.shape-ring,.shape-dot,.aurora,.hero-grid,.cursor-glow{display:none !important}
@@ -449,8 +449,8 @@ body::after{background-image:radial-gradient(rgba(15,23,42,0.07) 1px,transparent
 .ind-card:first-child:hover{border-color:rgba(169,188,255,0.45);transform:translateY(-3px);box-shadow:0 20px 60px rgba(77,111,239,0.28)}
 
 /* =========================
-   HERO/NAV REFINEMENTS
-   ========================= */
+  HERO/NAV REFINEMENTS
+  ========================= */
 
 /* NAV: transparent at top, dark on scroll */
 nav{background:transparent !important;border-bottom:1px solid transparent !important;backdrop-filter:none;-webkit-backdrop-filter:none;transition:background .3s ease,border-color .3s ease,box-shadow .3s ease,backdrop-filter .3s ease}
@@ -460,20 +460,20 @@ nav .nav-tag{color:rgba(255,255,255,0.65)}
 nav .nav-tag strong{color:#A9BCFF}
 nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border-bottom-color:rgba(255,255,255,0.08) !important;box-shadow:0 4px 24px rgba(0,0,0,0.25)}
 
-/* HERO typography tuned — ratio ≤ 2:1, more breath */
+/* HERO typography tuned, ratio ≤ 2:1, more breath */
 .hero{padding:160px 0 120px}
 .hero h1{font-size:clamp(52px,7vw,100px);line-height:1.05;letter-spacing:-.035em;max-width:900px}
 .hero h1 .h-line1{display:block;font-size:clamp(34px,3.8vw,52px);font-weight:700;color:rgba(255,255,255,0.82);letter-spacing:-.01em;line-height:1.15;padding-left:0;margin-top:0;margin-bottom:6px}
 .hero h1 .h-line2{display:block;font-size:clamp(60px,8vw,100px);font-weight:900;background:linear-gradient(135deg,#CDD8FF 0%,#A9BCFF 48%,#3A57D6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-top:0;letter-spacing:-.035em;line-height:1.02;padding-left:0}
 .hero h1 .h-line3{display:block;font-size:clamp(34px,3.8vw,52px);font-weight:700;color:rgba(255,255,255,0.86);letter-spacing:-.01em;margin-top:8px;padding-left:0;line-height:1.15}
 
-/* HERO vertical spacing — +16px breathing room */
+/* HERO vertical spacing, +16px breathing room */
 .hero .badge{margin-bottom:48px}
 .hero-sub{margin:44px 0 56px;max-width:560px;font-size:clamp(17px,1.5vw,19px);line-height:1.75}
 .pills{margin-bottom:56px;gap:12px}
 .anote{margin-top:36px}
 
-/* HERO pills — readable on dark */
+/* HERO pills, readable on dark */
 .hero .pill{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.2);color:#fff;font-weight:500;box-shadow:none}
 .hero .pill svg{color:#A9BCFF}
 .hero .pill:hover{background:rgba(255,255,255,0.09);border-color:rgba(169,188,255,0.55);color:#fff;box-shadow:none}
@@ -511,7 +511,7 @@ nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px
 .curr-row.active strong{color:#A9BCFF}
 .curr-row.active .curr-check{border-color:rgba(169,188,255,0.6);box-shadow:0 0 0 3px rgba(169,188,255,0.12)}
 @keyframes dashFloat{0%,100%{transform:translateY(-50%)}50%{transform:translateY(calc(-50% - 8px))}}
-/* grid layout handles hero-dash visibility — see fixes block */
+/* grid layout handles hero-dash visibility, see fixes block */
 
 /* COUNTDOWN */
 .countdown-section{background:#fff;padding:64px 0;border-bottom:1px solid var(--border);position:relative;z-index:1}
@@ -530,21 +530,21 @@ nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px
 @media(max-width:640px){.countdown-grid{grid-template-columns:repeat(4,1fr);gap:8px}.cd-card{padding:18px 6px;border-radius:14px}.cd-label{font-size:10px;letter-spacing:.08em}}
 
 /* =========================
-   LAYOUT + CTA FIXES (final overrides)
-   ========================= */
+  LAYOUT + CTA FIXES (final overrides)
+  ========================= */
 
 /* HERO 2-col grid */
 .hero .wrap{position:relative}
 .hero-left{min-width:0}
 @media(min-width:1025px){
-  .hero .wrap{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:80px;align-items:center}
-  .hero-left{grid-column:1;max-width:none}
-  .hero .wrap > :not(.hero-dash):not(.hero-left){grid-column:1;max-width:none}
-  .hero-dash{position:static !important;grid-column:2;grid-row:1;transform:none !important;animation:dashFloatGrid 6s ease-in-out infinite;width:100%;max-width:340px;margin-left:auto;align-self:center}
+ .hero .wrap{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:80px;align-items:center}
+ .hero-left{grid-column:1;max-width:none}
+ .hero .wrap > :not(.hero-dash):not(.hero-left){grid-column:1;max-width:none}
+ .hero-dash{position:static !important;grid-column:2;grid-row:1;transform:none !important;animation:dashFloatGrid 6s ease-in-out infinite;width:100%;max-width:340px;margin-left:auto;align-self:center}
 }
 @keyframes dashFloatGrid{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 @media(max-width:1024px){
-  .hero-dash{position:static !important;transform:none !important;animation:none;width:100%;max-width:420px;margin:40px auto 0;display:block}
+ .hero-dash{position:static !important;transform:none !important;animation:none;width:100%;max-width:420px;margin:40px auto 0;display:block}
 }
 
 /* HERO PILLS one row on desktop */
@@ -552,7 +552,7 @@ nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px
 .hero .pill{padding:9px 16px;font-size:13.5px}
 @media(min-width:1025px){.hero .pills{flex-wrap:nowrap}.hero .pill{white-space:nowrap;padding:8px 14px;font-size:13px}}
 
-/* COUNTDOWN — fully dark, overrides any earlier rules */
+/* COUNTDOWN, fully dark, overrides any earlier rules */
 .countdown-section{background:#1A1714 !important;border-bottom:none !important;position:relative;overflow:hidden;padding:96px 0}
 .countdown-section::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");opacity:0.12;pointer-events:none;z-index:0;mix-blend-mode:overlay}
 .countdown-section > .wrap{position:relative;z-index:1}
@@ -578,9 +578,9 @@ nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px
 .sticky-cta.show{opacity:1;pointer-events:auto;transform:translateY(0)}
 .sticky-cta .btn-p{font-size:15px;padding:16px 30px;box-shadow:0 10px 40px rgba(77,111,239,0.45),0 0 0 1px rgba(169,188,255,0.3)}
 @media(max-width:720px){
-  .sticky-cta{left:16px;right:16px;bottom:16px}
-  .sticky-cta .btn-p{width:100%;justify-content:center;padding:18px 24px}
-  .float-cta{display:none !important}
+ .sticky-cta{left:16px;right:16px;bottom:16px}
+ .sticky-cta .btn-p{width:100%;justify-content:center;padding:18px 24px}
+ .float-cta{display:none !important}
 }
 
 /* SCHEDULE NEXT-SESSION ACCENT */
@@ -589,9 +589,9 @@ nav.scrolled{background:rgba(10,10,26,0.82) !important;backdrop-filter:blur(18px
 .sched-card.featured .sched-day,.sched-card.featured .sched-month{color:#4D6FEF}
 
 /* =====================================================================
-   V2 — warm-dark editorial redesign (cook.ai-inspired). Highest priority
-   via source order. Overrides the v1 hero/nav where it conflicts.
-   ===================================================================== */
+  V2, warm-dark editorial redesign (cook.ai-inspired). Highest priority
+  via source order. Overrides the v1 hero/nav where it conflicts.
+  ===================================================================== */
 
 /* Kill v1 decorative noise that survived the remap */
 .cursor-glow,.aurora,.orb,.shape-ring,.shape-dot,.hero-grid{display:none !important}
@@ -608,8 +608,8 @@ body::after{opacity:0.4}
 .topbar-cta{margin-left:8px;color:#4D6FEF;text-decoration:none;font-weight:700;border-bottom:1px solid rgba(77,111,239,0.4);padding-bottom:1px;transition:color .2s,border-color .2s}
 .topbar-cta:hover{color:#6E89FF;border-color:#6E89FF}
 @media(max-width:560px){
-  .topbar-inner{gap:8px;font-size:12px;padding:9px 16px}
-  .topbar-sep{display:none}
+ .topbar-inner{gap:8px;font-size:12px;padding:9px 16px}
+ .topbar-sep{display:none}
 }
 
 /* MINIMAL HEADER */
@@ -619,7 +619,7 @@ body::after{opacity:0.4}
 .mhead-name{font-family:var(--ff);font-weight:800;font-size:18px;letter-spacing:-.02em;color:#FAF6F0}
 .mhead-name span{color:#4D6FEF}
 
-/* HERO — VSL led, single column, centered */
+/* HERO, VSL led, single column, centered */
 .hero{min-height:auto;display:block;padding:36px 0 60px;background:#1A1714;text-align:center;position:relative;overflow:hidden}
 .hero::before,.hero::after{display:none !important}
 .hero-glow{position:absolute;top:-160px;left:50%;transform:translateX(-50%);width:900px;height:560px;background:radial-gradient(ellipse,rgba(77,111,239,0.14) 0%,transparent 65%);pointer-events:none;z-index:0}
@@ -645,7 +645,7 @@ body::after{opacity:0.4}
 .hero .anote{color:var(--muted);font-size:13.5px;max-width:none;text-align:center}
 .hero .anote strong{color:#A9BCFF}
 
-/* CHAPTERS — long-form manifesto copy */
+/* CHAPTERS, long-form manifesto copy */
 .chapters{background:#1A1714;position:relative;z-index:1}
 .chapter{max-width:720px;margin:0 auto;padding:78px 28px;border-top:1px solid rgba(245,240,232,0.08)}
 .chapter:first-child{border-top:none}
@@ -689,26 +689,26 @@ body::after{opacity:0.4}
 .chapter-cta .btn-p{animation:none}
 
 /* =====================================================================
-   V2 LIGHT — warm bone editorial + deep cobalt. Appended last = wins.
-   Toggle this whole block off to fall back to the warm-dark version.
-   ===================================================================== */
+  V2 LIGHT, warm bone editorial + deep cobalt. Appended last = wins.
+  Toggle this whole block off to fall back to the warm-dark version.
+  ===================================================================== */
 :root{
-  --bg:#F2ECE1;--bg-alt:#FBF7EF;--bg-dark:#E8E0D2;
-  --card:#FCF8F1;--card-hover:#F5EEE1;
-  --border:rgba(26,21,16,0.10);--border-str:rgba(26,21,16,0.16);
-  --blue:#2C4BD4;--blue-bright:#3A5BE8;--blue-dim:rgba(44,75,212,0.07);
-  --purple:#2C4BD4;--purple-dim:rgba(44,75,212,0.06);
-  --grad:linear-gradient(135deg,#2C4BD4 0%,#3A5BE8 100%);
-  --grad-text:linear-gradient(135deg,#2C4BD4 0%,#3A5BE8 100%);
-  --grad-subtle:linear-gradient(135deg,rgba(44,75,212,0.06) 0%,rgba(58,91,232,0.04) 100%);
-  --text:#1A1510;--text-sub:#52483C;--muted:#7A7064;--muted-lt:#9C9286;
-  --highlight:#2C4BD4;
-  --green:#3E7A4A;--green-dim:rgba(62,122,74,0.10);
+ --bg:#F2ECE1;--bg-alt:#FBF7EF;--bg-dark:#E8E0D2;
+ --card:#FCF8F1;--card-hover:#F5EEE1;
+ --border:rgba(26,21,16,0.10);--border-str:rgba(26,21,16,0.16);
+ --blue:#2C4BD4;--blue-bright:#3A5BE8;--blue-dim:rgba(44,75,212,0.07);
+ --purple:#2C4BD4;--purple-dim:rgba(44,75,212,0.06);
+ --grad:linear-gradient(135deg,#2C4BD4 0%,#3A5BE8 100%);
+ --grad-text:linear-gradient(135deg,#2C4BD4 0%,#3A5BE8 100%);
+ --grad-subtle:linear-gradient(135deg,rgba(44,75,212,0.06) 0%,rgba(58,91,232,0.04) 100%);
+ --text:#1A1510;--text-sub:#52483C;--muted:#7A7064;--muted-lt:#9C9286;
+ --highlight:#2C4BD4;
+ --green:#3E7A4A;--green-dim:rgba(62,122,74,0.10);
 }
 body{background:#F2ECE1;color:#1A1510}
 body::after{background-image:radial-gradient(rgba(26,21,16,0.05) 1px,transparent 1px);opacity:0.5}
 
-/* topbar — cobalt-tinted bar (cook.ai-style) */
+/* topbar, cobalt-tinted bar (cook.ai-style) */
 .topbar{background:rgba(231,235,252,0.92);border-bottom:1px solid rgba(44,75,212,0.28);box-shadow:inset 0 1px 0 rgba(44,75,212,0.10)}
 .topbar-inner{align-items:center}
 .topbar-date{display:inline-flex;align-items:center;gap:7px;color:#2C4BD4;font-weight:700}
@@ -726,9 +726,9 @@ body::after{background-image:radial-gradient(rgba(26,21,16,0.05) 1px,transparent
 .cd-pill-tba{font-size:12px;font-weight:700;letter-spacing:.04em}
 .topbar-label{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(44,75,212,0.75)}
 @media(max-width:560px){
-  .topbar-label{display:none}
-  .cd-pill{padding:2px 6px}
-  .cd-pill b{font-size:12px}
+ .topbar-label{display:none}
+ .cd-pill{padding:2px 6px}
+ .cd-pill b{font-size:12px}
 }
 
 /* header */
@@ -782,8 +782,8 @@ body::after{background-image:radial-gradient(rgba(26,21,16,0.05) 1px,transparent
 .proof-label{color:#7A7064}
 
 /* =========================
-   REGISTRATION FORM MODAL (dark)
-   ========================= */
+  REGISTRATION FORM MODAL (dark)
+  ========================= */
 .form-modal-overlay{position:fixed;inset:0;background:rgba(5,5,15,0.78);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);z-index:200;display:flex;align-items:flex-start;justify-content:center;padding:40px 16px;opacity:0;pointer-events:none;transition:opacity .3s var(--ease-out-quart);overflow-y:auto}
 .form-modal-overlay.active{opacity:1;pointer-events:all}
 .form-modal-box{background:#1A1714;color:#fff;border:1px solid rgba(169,188,255,0.18);border-radius:22px;width:100%;max-width:680px;position:relative;box-shadow:0 32px 80px rgba(0,0,0,0.6),0 0 60px rgba(77,111,239,0.18);transform:translateY(24px) scale(0.97);transition:transform .35s var(--ease-out-expo);overflow:hidden;margin:auto 0}
@@ -847,779 +847,779 @@ body::after{background-image:radial-gradient(rgba(26,21,16,0.05) 1px,transparent
 
 <!-- STICKY COUNTDOWN BANNER -->
 <div class="topbar" id="topbar">
-  <div class="topbar-inner">
-    <span class="topbar-date" id="topbarDate">
-      <svg class="topbar-cal" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-      Live Webinar &middot; Thursday, June 25
-    </span>
-    <span class="topbar-sep">|</span>
-    <span class="topbar-count" id="topbarCount"><span class="cd-pill cd-pill-tba">Time TBA</span></span>
-    <a href="#register" class="topbar-cta" id="topbarCta">Register Now &rarr;</a>
-  </div>
+ <div class="topbar-inner">
+  <span class="topbar-date" id="topbarDate">
+   <svg class="topbar-cal" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+   Live Webinar &middot; Thursday, June 25
+  </span>
+  <span class="topbar-sep">|</span>
+  <span class="topbar-count" id="topbarCount"><span class="cd-pill cd-pill-tba">Time TBA</span></span>
+  <a href="#register" class="topbar-cta" id="topbarCta">Register Now &rarr;</a>
+ </div>
 </div>
 
 <!-- MINIMAL HEADER -->
 <header class="mhead">
-  <a href="#" class="mhead-logo">
-    <img src="/logo/nekter-knot.png" alt="Nekter AI" onerror="this.style.display='none'">
-    <span class="mhead-name">nekter<span>.ai</span></span>
-  </a>
+ <a href="#" class="mhead-logo">
+  <img src="/logo/nekter-knot.png" alt="Nekter AI" onerror="this.style.display='none'">
+  <span class="mhead-name">nekter<span>.ai</span></span>
+ </a>
 </header>
 
 <!-- HERO (VSL-led) -->
 <section class="hero">
-  <div class="hero-glow"></div>
-  <div class="wrap hero-wrap">
-    <div class="hero-eyebrow" id="heroBadge"><span class="bdot"></span>A 60-MINUTE LIVE WORKSHOP FOR BUSINESS OWNERS</div>
-    <h1 class="hero-h1">
-      Stop watching AI tutorials.<br>
-      Start using <span class="hl">AI like a pro.</span>
-    </h1>
-    <p class="hero-sub">Watch the 90-second walkthrough below. Then save your seat for June 25 &mdash; the 5 tools we actually run our business on, taught live.</p>
+ <div class="hero-glow"></div>
+ <div class="wrap hero-wrap">
+  <div class="hero-eyebrow" id="heroBadge"><span class="bdot"></span>A 60-MINUTE LIVE WORKSHOP FOR BUSINESS OWNERS</div>
+  <h1 class="hero-h1">
+   Stop watching AI tutorials.<br>
+   Start using <span class="hl">AI like a pro.</span>
+  </h1>
+  <p class="hero-sub">Watch the 90-second walkthrough below. Then save your seat for June 25, the 5 tools we actually run our business on, taught live.</p>
 
-    <!-- VSL: swap the src via NEXT_SESSION.vslUrl. Until set, shows a placeholder. -->
-    <div class="vsl" id="vsl">
-      <div class="vsl-frame" id="vslFrame">
-        <!-- Placeholder state (no video URL yet) -->
-        <div class="vsl-placeholder" id="vslPlaceholder">
-          <button class="vsl-play" type="button" aria-label="Walkthrough coming soon">
-            <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-          </button>
-          <p class="vsl-caption">Walkthrough drops this week</p>
-        </div>
-      </div>
+  <!-- VSL: swap the src via NEXT_SESSION.vslUrl. Until set, shows a placeholder. -->
+  <div class="vsl" id="vsl">
+   <div class="vsl-frame" id="vslFrame">
+    <!-- Placeholder state (no video URL yet) -->
+    <div class="vsl-placeholder" id="vslPlaceholder">
+     <button class="vsl-play" type="button" aria-label="Walkthrough coming soon">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+     </button>
+     <p class="vsl-caption">Walkthrough drops this week</p>
     </div>
-
-    <div class="hero-cta-row">
-      <a href="#register" class="btn-p">Register for free <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-    </div>
-    <p class="anote"><strong>Free to attend.</strong> $25 VIP gets a private room after the session where Spencer reviews what you built.</p>
+   </div>
   </div>
+
+  <div class="hero-cta-row">
+   <a href="#register" class="btn-p">Register for free <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+  </div>
+  <p class="anote"><strong>Free to attend.</strong> $25 VIP gets a private room after the session where Spencer reviews what you built.</p>
+ </div>
 </section>
 
 <!-- SOCIAL PROOF -->
 <div class="proof-bar">
-  <div class="wrap">
-    <div class="proof-inner">
-      <div class="proof-stat"><div class="proof-num">$0</div><div class="proof-label">Cost to attend</div></div>
-      <div class="proof-stat"><div class="proof-num">60m</div><div class="proof-label">Per session</div></div>
-      <div class="proof-stat"><div class="proof-num">5</div><div class="proof-label">AI tools taught</div></div>
-      <div class="proof-stat"><div class="proof-num">Live</div><div class="proof-label">Homework reviewed</div></div>
-    </div>
+ <div class="wrap">
+  <div class="proof-inner">
+   <div class="proof-stat"><div class="proof-num">$0</div><div class="proof-label">Cost to attend</div></div>
+   <div class="proof-stat"><div class="proof-num">60m</div><div class="proof-label">Per session</div></div>
+   <div class="proof-stat"><div class="proof-num">5</div><div class="proof-label">AI tools taught</div></div>
+   <div class="proof-stat"><div class="proof-num">Live</div><div class="proof-label">Homework reviewed</div></div>
   </div>
+ </div>
 </div>
 
 <!-- COUNTDOWN -->
 <section class="countdown-section">
-  <div class="wrap">
-    <div class="countdown-head">
-      <div class="countdown-rule"><span>Next session in</span></div>
-      <div class="countdown-live-badge"><span class="ldot"></span><span id="countdownBadgeText">Date TBA</span></div>
-      <h2>Webinar starts in</h2>
-      <p class="countdown-meta" id="countdownMeta">Date TBA &middot; 60 min + Q&amp;A &middot; Live on Google Meet</p>
-    </div>
-    <div class="countdown-grid" id="countdown">
-      <div class="cd-card"><div class="cd-num" id="cd-days">--</div><div class="cd-label">Days</div></div>
-      <div class="cd-card"><div class="cd-num" id="cd-hours">--</div><div class="cd-label">Hours</div></div>
-      <div class="cd-card"><div class="cd-num" id="cd-mins">--</div><div class="cd-label">Minutes</div></div>
-      <div class="cd-card"><div class="cd-num" id="cd-secs">--</div><div class="cd-label">Seconds</div></div>
-    </div>
+ <div class="wrap">
+  <div class="countdown-head">
+   <div class="countdown-rule"><span>Next session in</span></div>
+   <div class="countdown-live-badge"><span class="ldot"></span><span id="countdownBadgeText">Date TBA</span></div>
+   <h2>Webinar starts in</h2>
+   <p class="countdown-meta" id="countdownMeta">Date TBA &middot; 60 min + Q&amp;A &middot; Live on Google Meet</p>
   </div>
+  <div class="countdown-grid" id="countdown">
+   <div class="cd-card"><div class="cd-num" id="cd-days">--</div><div class="cd-label">Days</div></div>
+   <div class="cd-card"><div class="cd-num" id="cd-hours">--</div><div class="cd-label">Hours</div></div>
+   <div class="cd-card"><div class="cd-num" id="cd-mins">--</div><div class="cd-label">Minutes</div></div>
+   <div class="cd-card"><div class="cd-num" id="cd-secs">--</div><div class="cd-label">Seconds</div></div>
+  </div>
+ </div>
 </section>
 <!-- TICKER -->
 <div class="ticker">
-  <div class="ttrack">
-    <span class="ti"><span class="d">&middot;</span>Claude projects</span><span class="ti"><span class="d">&middot;</span>ChatGPT custom GPTs</span><span class="ti"><span class="d">&middot;</span>Higgsfield workflows</span><span class="ti"><span class="d">&middot;</span>Gemini research</span><span class="ti"><span class="d">&middot;</span>NotebookLM audio overviews</span><span class="ti"><span class="d">&middot;</span>Voice AI agents</span><span class="ti"><span class="d">&middot;</span>AI chatbots</span><span class="ti"><span class="d">&middot;</span>CRM automation</span><span class="ti"><span class="d">&middot;</span>Lead scoring</span><span class="ti"><span class="d">&middot;</span>Appointment booking</span><span class="ti"><span class="d">&middot;</span>Email &amp; SMS follow-up</span><span class="ti"><span class="d">&middot;</span>Hidden revenue recovery</span><span class="ti"><span class="d">&middot;</span>Claude projects</span><span class="ti"><span class="d">&middot;</span>ChatGPT custom GPTs</span><span class="ti"><span class="d">&middot;</span>Higgsfield workflows</span><span class="ti"><span class="d">&middot;</span>Gemini research</span><span class="ti"><span class="d">&middot;</span>NotebookLM audio overviews</span><span class="ti"><span class="d">&middot;</span>Voice AI agents</span><span class="ti"><span class="d">&middot;</span>AI chatbots</span><span class="ti"><span class="d">&middot;</span>CRM automation</span><span class="ti"><span class="d">&middot;</span>Lead scoring</span><span class="ti"><span class="d">&middot;</span>Appointment booking</span><span class="ti"><span class="d">&middot;</span>Email &amp; SMS follow-up</span><span class="ti"><span class="d">&middot;</span>Hidden revenue recovery</span>
-  </div>
+ <div class="ttrack">
+  <span class="ti"><span class="d">&middot;</span>Claude projects</span><span class="ti"><span class="d">&middot;</span>ChatGPT custom GPTs</span><span class="ti"><span class="d">&middot;</span>Higgsfield workflows</span><span class="ti"><span class="d">&middot;</span>Gemini research</span><span class="ti"><span class="d">&middot;</span>NotebookLM audio overviews</span><span class="ti"><span class="d">&middot;</span>Voice AI agents</span><span class="ti"><span class="d">&middot;</span>AI chatbots</span><span class="ti"><span class="d">&middot;</span>CRM automation</span><span class="ti"><span class="d">&middot;</span>Lead scoring</span><span class="ti"><span class="d">&middot;</span>Appointment booking</span><span class="ti"><span class="d">&middot;</span>Email &amp; SMS follow-up</span><span class="ti"><span class="d">&middot;</span>Hidden revenue recovery</span><span class="ti"><span class="d">&middot;</span>Claude projects</span><span class="ti"><span class="d">&middot;</span>ChatGPT custom GPTs</span><span class="ti"><span class="d">&middot;</span>Higgsfield workflows</span><span class="ti"><span class="d">&middot;</span>Gemini research</span><span class="ti"><span class="d">&middot;</span>NotebookLM audio overviews</span><span class="ti"><span class="d">&middot;</span>Voice AI agents</span><span class="ti"><span class="d">&middot;</span>AI chatbots</span><span class="ti"><span class="d">&middot;</span>CRM automation</span><span class="ti"><span class="d">&middot;</span>Lead scoring</span><span class="ti"><span class="d">&middot;</span>Appointment booking</span><span class="ti"><span class="d">&middot;</span>Email &amp; SMS follow-up</span><span class="ti"><span class="d">&middot;</span>Hidden revenue recovery</span>
+ </div>
 </div>
 
-<!-- CHAPTERS — long-form manifesto. DRAFT COPY: red-line freely. -->
+<!-- CHAPTERS, long-form manifesto. DRAFT COPY: red-line freely. -->
 <div class="chapters" id="story">
 
-  <section class="chapter reveal">
-    <p class="chapter-eyebrow">Part I &middot; The problem</p>
-    <h2 class="chapter-title">You don't need another <em>47-minute tutorial.</em></h2>
-    <div class="chapter-body">
-      <p>There's an AI tool that could do half the work you do every week. But every time you sit down to figure it out, the YouTube video is forty-seven minutes long, the prompts they hand you don't work for your business, and you close the tab more confused than when you started.</p>
-      <p>You're not behind. You're drowning in the wrong information. Most of the people teaching AI right now are AI influencers. They make their money <strong>teaching</strong> the tools, not <strong>using</strong> them to run a real business with real clients and real payroll.</p>
-      <p>That's the gap this workshop closes.</p>
-    </div>
-  </section>
-
-  <section class="chapter reveal">
-    <p class="chapter-eyebrow">Part II &middot; The stakes</p>
-    <h2 class="chapter-title">The owners who move first won't just win. They become the standard.</h2>
-    <div class="chapter-body">
-      <p>Right now, two businesses in your exact industry are doing the same work. One spends six hours a week on proposals, follow-ups, and admin. The other spends forty minutes, because they put five tools to work and never looked back.</p>
-      <p>In twelve months, those two businesses don't compete anymore. One sets the pace. The other is explaining to clients why they're slower and more expensive.</p>
-      <div class="pullquote">
-        <p class="pullquote-text">"The next wave of category leaders won't be the biggest teams. They'll be the smallest teams running the most leverage."</p>
-        <p class="pullquote-cite">The thesis behind everything we build</p>
-      </div>
-      <p>The window to be early is narrow. It's still open. That's the whole reason we run this live, every month.</p>
-    </div>
-  </section>
-
-  <div class="chapter-cta reveal">
-    <a href="#register" class="btn-p">Save my seat for June 25 <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+ <section class="chapter reveal">
+  <p class="chapter-eyebrow">Part I &middot; The problem</p>
+  <h2 class="chapter-title">You don't need another <em>47-minute tutorial.</em></h2>
+  <div class="chapter-body">
+   <p>There's an AI tool that could do half the work you do every week. But every time you sit down to figure it out, the YouTube video is forty-seven minutes long, the prompts they hand you don't work for your business, and you close the tab more confused than when you started.</p>
+   <p>You're not behind. You're drowning in the wrong information. Most of the people teaching AI right now are AI influencers. They make their money <strong>teaching</strong> the tools, not <strong>using</strong> them to run a real business with real clients and real payroll.</p>
+   <p>That's the gap this workshop closes.</p>
   </div>
+ </section>
 
-  <section class="chapter reveal">
-    <p class="chapter-eyebrow">Part III &middot; The shift</p>
-    <h2 class="chapter-title">Sixty minutes. Five tools. You build something real.</h2>
-    <div class="chapter-body">
-      <p>This isn't a lecture. Spencer shares his screen and runs the exact prompts he uses every day to run Nekter AI. <strong>Claude. ChatGPT. Higgsfield. Gemini. NotebookLM.</strong> No theory, no edited demos, no slides full of stock photos.</p>
-      <p>The first forty minutes, you watch the workflows live. The next ten, you build. Not a sample. Yours. A real ad for your real business, using the prompts we just handed you. The last ten minutes, we pull submissions from the chat and review them on stream.</p>
-      <p>You leave having actually used the tools. Most people have never done that in a single sitting.</p>
-    </div>
-  </section>
-
-  <section class="chapter reveal">
-    <p class="chapter-eyebrow">Part IV &middot; Fit check</p>
-    <h2 class="chapter-title">Read this before you register.</h2>
-    <div class="chapter-body">
-      <div class="fitcheck">
-        <div class="fitcheck-col yes">
-          <h4>This is for you if</h4>
-          <ul>
-            <li>You run a real business and you're tired of "AI" being all talk</li>
-            <li>You'd rather build one thing live than watch ten demos</li>
-            <li>You're doing $500k to a few million a year and drowning in admin</li>
-            <li>You want the prompts, not the philosophy</li>
-          </ul>
-        </div>
-        <div class="fitcheck-col no">
-          <h4>This is not for you if</h4>
-          <ul>
-            <li>You want a passive webinar to half-watch on mute</li>
-            <li>You're looking for a get-rich-quick AI side hustle</li>
-            <li>You won't open a single tool during the session</li>
-            <li>You think AI is a fad that'll blow over</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="chapter reveal">
-    <p class="chapter-eyebrow">Part V &middot; What you leave with</p>
-    <h2 class="chapter-title">Four things, in sixty minutes.</h2>
-    <div class="chapter-body">
-      <div class="shifts">
-        <div class="shift"><div class="shift-num">01</div><div class="shift-body"><h4>Working prompts</h4><p>Every prompt we run is yours to keep and adapt. Copy-paste ready, built for a business like yours.</p></div></div>
-        <div class="shift"><div class="shift-num">02</div><div class="shift-body"><h4>A real ad for your business</h4><p>You'll open the tools and walk out with an actual ad you made. Not a tutorial file. Yours.</p></div></div>
-        <div class="shift"><div class="shift-num">03</div><div class="shift-body"><h4>The five-tool stack</h4><p>Exactly which tool to use for which job, and how they chain together to replace work that used to take weeks.</p></div></div>
-        <div class="shift"><div class="shift-num">04</div><div class="shift-body"><h4>A free audit invitation</h4><p>Mention the webinar and we'll prioritize you. We find $10k to $50k of hidden revenue in 45 minutes for most businesses we score.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <div class="chapter-cta reveal">
-    <a href="#register" class="btn-p">Register for June 25 &mdash; it's free <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+ <section class="chapter reveal">
+  <p class="chapter-eyebrow">Part II &middot; The stakes</p>
+  <h2 class="chapter-title">The owners who move first won't just win. They become the standard.</h2>
+  <div class="chapter-body">
+   <p>Right now, two businesses in your exact industry are doing the same work. One spends six hours a week on proposals, follow-ups, and admin. The other spends forty minutes, because they put five tools to work and never looked back.</p>
+   <p>In twelve months, those two businesses don't compete anymore. One sets the pace. The other is explaining to clients why they're slower and more expensive.</p>
+   <div class="pullquote">
+    <p class="pullquote-text">"The next wave of category leaders won't be the biggest teams. They'll be the smallest teams running the most leverage."</p>
+    <p class="pullquote-cite">The thesis behind everything we build</p>
+   </div>
+   <p>The window to be early is narrow. It's still open. That's the whole reason we run this live, every month.</p>
   </div>
+ </section>
+
+ <div class="chapter-cta reveal">
+  <a href="#register" class="btn-p">Save my seat for June 25 <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+ </div>
+
+ <section class="chapter reveal">
+  <p class="chapter-eyebrow">Part III &middot; The shift</p>
+  <h2 class="chapter-title">Sixty minutes. Five tools. You build something real.</h2>
+  <div class="chapter-body">
+   <p>This isn't a lecture. Spencer shares his screen and runs the exact prompts he uses every day to run Nekter AI. <strong>Claude. ChatGPT. Higgsfield. Gemini. NotebookLM.</strong> No theory, no edited demos, no slides full of stock photos.</p>
+   <p>The first forty minutes, you watch the workflows live. The next ten, you build. Not a sample. Yours. A real ad for your real business, using the prompts we just handed you. The last ten minutes, we pull submissions from the chat and review them on stream.</p>
+   <p>You leave having actually used the tools. Most people have never done that in a single sitting.</p>
+  </div>
+ </section>
+
+ <section class="chapter reveal">
+  <p class="chapter-eyebrow">Part IV &middot; Fit check</p>
+  <h2 class="chapter-title">Read this before you register.</h2>
+  <div class="chapter-body">
+   <div class="fitcheck">
+    <div class="fitcheck-col yes">
+     <h4>This is for you if</h4>
+     <ul>
+      <li>You run a real business and you're tired of "AI" being all talk</li>
+      <li>You'd rather build one thing live than watch ten demos</li>
+      <li>You're doing $500k to a few million a year and drowning in admin</li>
+      <li>You want the prompts, not the philosophy</li>
+     </ul>
+    </div>
+    <div class="fitcheck-col no">
+     <h4>This is not for you if</h4>
+     <ul>
+      <li>You want a passive webinar to half-watch on mute</li>
+      <li>You're looking for a get-rich-quick AI side hustle</li>
+      <li>You won't open a single tool during the session</li>
+      <li>You think AI is a fad that'll blow over</li>
+     </ul>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <section class="chapter reveal">
+  <p class="chapter-eyebrow">Part V &middot; What you leave with</p>
+  <h2 class="chapter-title">Four things, in sixty minutes.</h2>
+  <div class="chapter-body">
+   <div class="shifts">
+    <div class="shift"><div class="shift-num">01</div><div class="shift-body"><h4>Working prompts</h4><p>Every prompt we run is yours to keep and adapt. Copy-paste ready, built for a business like yours.</p></div></div>
+    <div class="shift"><div class="shift-num">02</div><div class="shift-body"><h4>A real ad for your business</h4><p>You'll open the tools and walk out with an actual ad you made. Not a tutorial file. Yours.</p></div></div>
+    <div class="shift"><div class="shift-num">03</div><div class="shift-body"><h4>The five-tool stack</h4><p>Exactly which tool to use for which job, and how they chain together to replace work that used to take weeks.</p></div></div>
+    <div class="shift"><div class="shift-num">04</div><div class="shift-body"><h4>A free audit invitation</h4><p>Mention the webinar and we'll prioritize you. We find $10k to $50k of hidden revenue in 45 minutes for most businesses we score.</p></div></div>
+   </div>
+  </div>
+ </section>
+
+ <div class="chapter-cta reveal">
+  <a href="#register" class="btn-p">Register for June 25, it's free <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+ </div>
 
 </div>
 
 <!-- THE 5 TOOLS -->
 <section id="tools">
-  <div class="wrap">
-    <div class="reveal"><p class="sl">The curriculum</p><div class="sr"></div></div>
-    <h2 class="st reveal">The 5 tools we teach<br>you to use.</h2>
-    <p class="sb reveal">Every session covers the same five tools &mdash; the ones Spencer uses every day to run Nekter AI. You'll see exact prompts, real workflows, and leave with live homework you actually completed.</p>
+ <div class="wrap">
+  <div class="reveal"><p class="sl">The curriculum</p><div class="sr"></div></div>
+  <h2 class="st reveal">The 5 tools we teach<br>you to use.</h2>
+  <p class="sb reveal">Every session covers the same five tools, the ones Spencer uses every day to run Nekter AI. You'll see exact prompts, real workflows, and leave with live homework you actually completed.</p>
 
-    <div class="tools-grid">
-      <div class="tool-card reveal reveal-d1">
-        <div class="tool-icon" style="background:var(--blue-dim)">
-          <svg width="28" height="28" fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
-        </div>
-        <span class="tool-label" style="background:var(--blue-dim);color:var(--blue)">Tool 01</span>
-        <h3>Claude</h3>
-        <p>Your second brain. Upload your emails, website copy, and SOPs to a Claude Project and generate proposals, follow-ups, and content in your exact voice.</p>
-      </div>
-
-      <div class="tool-card reveal reveal-d2">
-        <div class="tool-icon" style="background:var(--purple-dim)">
-          <svg width="28" height="28" fill="none" stroke="var(--purple)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-        </div>
-        <span class="tool-label" style="background:var(--purple-dim);color:var(--purple)">Tool 02</span>
-        <h3>ChatGPT</h3>
-        <p>Your creative department. Images, voice mode, custom GPTs, and canvas for everything from social ads to client proposals.</p>
-      </div>
-
-      <div class="tool-card reveal reveal-d3">
-        <div class="tool-icon" style="background:var(--blue-dim)">
-          <svg width="28" height="28" fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-        </div>
-        <span class="tool-label" style="background:var(--blue-dim);color:var(--blue)">Tool 03</span>
-        <h3>Higgsfield</h3>
-        <p>15+ AI video and image models in one place. Nano Banana Pro, Sora 2, Kling, Veo &mdash; generate cinematic ads without hiring an agency.</p>
-      </div>
-
-      <div class="tool-card reveal reveal-d4">
-        <div class="tool-icon" style="background:var(--purple-dim)">
-          <svg width="28" height="28" fill="none" stroke="var(--purple)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-        </div>
-        <span class="tool-label" style="background:var(--purple-dim);color:var(--purple)">Tool 04</span>
-        <h3>Gemini Deep Research</h3>
-        <p>A junior analyst for $20/month. Full cited research reports on competitors, markets, or trends in under 10 minutes.</p>
-      </div>
-
-      <div class="tool-card reveal reveal-d5">
-        <div class="tool-icon" style="background:var(--blue-dim)">
-          <svg width="28" height="28" fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
-        </div>
-        <span class="tool-label" style="background:var(--blue-dim);color:var(--blue)">Tool 05</span>
-        <h3>NotebookLM</h3>
-        <p>Your IP stays yours. Turn any document into a podcast, mind map, or study guide &mdash; without your business data training a public model.</p>
-      </div>
+  <div class="tools-grid">
+   <div class="tool-card reveal reveal-d1">
+    <div class="tool-icon" style="background:var(--blue-dim)">
+     <svg width="28" height="28" fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
     </div>
-    <div class="inline-cta reveal"><a href="#register" class="btn-p">Reserve your free spot <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div>
+    <span class="tool-label" style="background:var(--blue-dim);color:var(--blue)">Tool 01</span>
+    <h3>Claude</h3>
+    <p>Your second brain. Upload your emails, website copy, and SOPs to a Claude Project and generate proposals, follow-ups, and content in your exact voice.</p>
+   </div>
+
+   <div class="tool-card reveal reveal-d2">
+    <div class="tool-icon" style="background:var(--purple-dim)">
+     <svg width="28" height="28" fill="none" stroke="var(--purple)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+    </div>
+    <span class="tool-label" style="background:var(--purple-dim);color:var(--purple)">Tool 02</span>
+    <h3>ChatGPT</h3>
+    <p>Your creative department. Images, voice mode, custom GPTs, and canvas for everything from social ads to client proposals.</p>
+   </div>
+
+   <div class="tool-card reveal reveal-d3">
+    <div class="tool-icon" style="background:var(--blue-dim)">
+     <svg width="28" height="28" fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+    </div>
+    <span class="tool-label" style="background:var(--blue-dim);color:var(--blue)">Tool 03</span>
+    <h3>Higgsfield</h3>
+    <p>15+ AI video and image models in one place. Nano Banana Pro, Sora 2, Kling, Veo, generate cinematic ads without hiring an agency.</p>
+   </div>
+
+   <div class="tool-card reveal reveal-d4">
+    <div class="tool-icon" style="background:var(--purple-dim)">
+     <svg width="28" height="28" fill="none" stroke="var(--purple)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+    </div>
+    <span class="tool-label" style="background:var(--purple-dim);color:var(--purple)">Tool 04</span>
+    <h3>Gemini Deep Research</h3>
+    <p>A junior analyst for $20/month. Full cited research reports on competitors, markets, or trends in under 10 minutes.</p>
+   </div>
+
+   <div class="tool-card reveal reveal-d5">
+    <div class="tool-icon" style="background:var(--blue-dim)">
+     <svg width="28" height="28" fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
+    </div>
+    <span class="tool-label" style="background:var(--blue-dim);color:var(--blue)">Tool 05</span>
+    <h3>NotebookLM</h3>
+    <p>Your IP stays yours. Turn any document into a podcast, mind map, or study guide, without your business data training a public model.</p>
+   </div>
   </div>
+  <div class="inline-cta reveal"><a href="#register" class="btn-p">Reserve your free spot <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div>
+ </div>
 </section>
 
 <!-- UPCOMING SCHEDULE -->
 <section style="padding-top:0" id="schedule">
-  <div class="wrap">
-    <div class="reveal"><p class="sl">Upcoming session</p><div class="sr"></div></div>
-    <h2 class="st reveal">Mark your calendar.</h2>
-    <p class="sb reveal">Same evergreen curriculum every month. Register once and you'll get a link for every upcoming session.</p>
+ <div class="wrap">
+  <div class="reveal"><p class="sl">Upcoming session</p><div class="sr"></div></div>
+  <h2 class="st reveal">Mark your calendar.</h2>
+  <p class="sb reveal">Same evergreen curriculum every month. Register once and you'll get a link for every upcoming session.</p>
 
-    <div class="sched-grid">
-      <div class="sched-card featured reveal reveal-d1">
-        <div class="sched-date">
-          <div class="sched-day" id="schedDay">TBA</div>
-          <div class="sched-month" id="schedMonth">Date coming</div>
-        </div>
-        <div class="sched-divider"></div>
-        <div class="sched-info">
-          <div class="sched-title">The 5 AI Tools Every Business Owner Should Actually Use</div>
-          <div class="sched-meta" id="schedMeta">Date TBA &middot; 60 min + Q&amp;A &middot; Live on Google Meet</div>
-        </div>
-        <span class="sched-badge next">Next Session</span>
-      </div>
+  <div class="sched-grid">
+   <div class="sched-card featured reveal reveal-d1">
+    <div class="sched-date">
+     <div class="sched-day" id="schedDay">TBA</div>
+     <div class="sched-month" id="schedMonth">Date coming</div>
     </div>
+    <div class="sched-divider"></div>
+    <div class="sched-info">
+     <div class="sched-title">The 5 AI Tools Every Business Owner Should Actually Use</div>
+     <div class="sched-meta" id="schedMeta">Date TBA &middot; 60 min + Q&amp;A &middot; Live on Google Meet</div>
+    </div>
+    <span class="sched-badge next">Next Session</span>
+   </div>
   </div>
+ </div>
 </section>
 
-<!-- WHAT'S COVERED — retired in v2: the chapter long-form section now carries
-     this narrative. Kept in source (hidden) so we can restore if needed. -->
+<!-- WHAT'S COVERED, retired in v2: the chapter long-form section now carries
+   this narrative. Kept in source (hidden) so we can restore if needed. -->
 <section id="learn" style="display:none">
-  <div class="wrap">
-    <div class="reveal"><p class="sl">What every webinar covers</p><div class="sr"></div></div>
-    <h2 class="st reveal">Not a pitch.<br>A playbook you can use today.</h2>
-    <p class="sb reveal">Every session follows the same proven structure. You'll leave with working prompts, a real ad, and the tools to keep building after the webinar ends.</p>
-    <div class="lgrid">
-      <div class="lc reveal reveal-d1" data-wm="01"><p class="lnum">01</p><h3>Claude: the projects tab that makes it sound like YOU wrote it</h3><p>Upload your SOPs, emails, and brand voice once. Every proposal, follow-up, and piece of content after that sounds exactly like you &mdash; not like ChatGPT.</p></div>
-      <div class="lc reveal reveal-d2" data-wm="02"><p class="lnum">02</p><h3>ChatGPT: images, voice, custom GPTs, and canvas &mdash; stacked</h3><p>The four features most business owners never use. We stack them together to build a custom AI agent for your business &mdash; live, in the webinar.</p></div>
-      <div class="lc reveal reveal-d3" data-wm="03"><p class="lnum">03</p><h3>Higgsfield: 15 AI models in one window, including Nano Banana Pro</h3><p>One interface. Every frontier video and image model. You'll see exactly which model to use when &mdash; and why paying for one platform beats 15 subscriptions.</p></div>
-      <div class="lc reveal reveal-d4" data-wm="04"><p class="lnum">04</p><h3>Your 10-minute live homework: build an ad for your business</h3><p>You won't just watch. You'll open the tools, run the prompts, and walk out with a real ad for your real business. No homework, no progress.</p></div>
-      <div class="lc reveal reveal-d5" data-wm="05"><p class="lnum">05</p><h3>Gemini Deep Research + NotebookLM: research and synthesis on autopilot</h3><p>A $20 junior analyst that writes cited research reports in 10 minutes, plus a private workspace that turns those reports into audio you can listen to in the car.</p></div>
-      <div class="lc reveal reveal-d6" data-wm="06"><p class="lnum">06</p><h3>Live Q&amp;A + 3 homework submissions reviewed on stream</h3><p>We'll pull three attendee submissions live, break down what's working, and fix what isn't. Your questions, your ad, our feedback &mdash; in real time.</p></div>
-    </div>
-    <div class="inline-cta reveal"><a href="#register" class="btn-p">Reserve your free spot <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div>
+ <div class="wrap">
+  <div class="reveal"><p class="sl">What every webinar covers</p><div class="sr"></div></div>
+  <h2 class="st reveal">Not a pitch.<br>A playbook you can use today.</h2>
+  <p class="sb reveal">Every session follows the same proven structure. You'll leave with working prompts, a real ad, and the tools to keep building after the webinar ends.</p>
+  <div class="lgrid">
+   <div class="lc reveal reveal-d1" data-wm="01"><p class="lnum">01</p><h3>Claude: the projects tab that makes it sound like YOU wrote it</h3><p>Upload your SOPs, emails, and brand voice once. Every proposal, follow-up, and piece of content after that sounds exactly like you, not like ChatGPT.</p></div>
+   <div class="lc reveal reveal-d2" data-wm="02"><p class="lnum">02</p><h3>ChatGPT: images, voice, custom GPTs, and canvas, stacked</h3><p>The four features most business owners never use. We stack them together to build a custom AI agent for your business, live, in the webinar.</p></div>
+   <div class="lc reveal reveal-d3" data-wm="03"><p class="lnum">03</p><h3>Higgsfield: 15 AI models in one window, including Nano Banana Pro</h3><p>One interface. Every frontier video and image model. You'll see exactly which model to use when, and why paying for one platform beats 15 subscriptions.</p></div>
+   <div class="lc reveal reveal-d4" data-wm="04"><p class="lnum">04</p><h3>Your 10-minute live homework: build an ad for your business</h3><p>You won't just watch. You'll open the tools, run the prompts, and walk out with a real ad for your real business. No homework, no progress.</p></div>
+   <div class="lc reveal reveal-d5" data-wm="05"><p class="lnum">05</p><h3>Gemini Deep Research + NotebookLM: research and synthesis on autopilot</h3><p>A $20 junior analyst that writes cited research reports in 10 minutes, plus a private workspace that turns those reports into audio you can listen to in the car.</p></div>
+   <div class="lc reveal reveal-d6" data-wm="06"><p class="lnum">06</p><h3>Live Q&amp;A + 3 homework submissions reviewed on stream</h3><p>We'll pull three attendee submissions live, break down what's working, and fix what isn't. Your questions, your ad, our feedback, in real time.</p></div>
   </div>
+  <div class="inline-cta reveal"><a href="#register" class="btn-p">Reserve your free spot <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div>
+ </div>
 </section>
 
 <!-- SPEAKERS / HOSTS -->
 <section style="padding-top:0">
-  <div class="wrap">
-    <div class="reveal"><p class="sl">Your hosts</p><div class="sr"></div></div>
-    <h2 class="st reveal">Built by operators.<br>Not consultants.</h2>
-    <div class="sgrid">
-      <div class="sc reveal reveal-d1">
-        <div class="sav"><img src="/Spencerheadshot2.jpeg" alt="Spencer Simonson" onerror="this.remove()"><span>SS</span></div>
-        <p class="sname">Spencer Simonson</p>
-        <p class="srole">Co-Founder &amp; CTO, Nekter AI</p>
-        <p class="sbio">Spencer uses these tools every day to run Nekter AI. In every webinar he shows the exact prompts and workflows he uses &mdash; live, on screen, no theory.</p>
-      </div>
-      <div class="sc reveal reveal-d2">
-        <div class="sav"><img src="/founder-portrait-CTiM68gp.png" alt="Jodie Sacco" onerror="this.remove()"><span>JS</span></div>
-        <p class="sname">Jodie Sacco</p>
-        <p class="srole">Founder, AI Revenue Engine</p>
-        <p class="sbio">Jodie doesn't coach, she partners. A former director at American Express Corporate Travel who has built and scaled businesses across multiple industries and revenue stages, she specializes in finding exactly where revenue is leaking, being under-monetized, or waiting to be unlocked. She's worked across five continents, speaks five languages, and brings commercial discipline that most advisors simply don't have.</p>
-      </div>
-      <div class="sc reveal reveal-d3">
-        <div class="sav"><img src="/Noah%20Headshot.jpg" alt="Noah Simonson" onerror="this.remove()"><span>NS</span></div>
-        <p class="sname">Noah Simonson</p>
-        <p class="srole">Co-Founder &amp; CSO, Nekter AI</p>
-        <p class="sbio">Noah owns the client relationship from day one. He leads onboarding, builds the long-term relationships that keep clients growing, and drives the sales process that brings them in. If you've talked to Nekter AI, you've probably talked to Noah.</p>
-      </div>
-      <div class="sc reveal reveal-d4">
-        <div class="sav"><img src="/Sam%20Headshot.jpg" alt="Samuel Maciulewicz" onerror="this.remove()"><span>SM</span></div>
-        <p class="sname">Samuel Maciulewicz</p>
-        <p class="srole">Co-Founder &amp; CEO, Nekter AI</p>
-        <p class="sbio">Sam runs the infrastructure that keeps Nekter AI scaling. From finance and hiring to day-to-day operations, he builds the systems that let the rest of the team focus on what they do best. The business works because Sam makes it work.</p>
-      </div>
-    </div>
-    <div class="inline-cta reveal"><a href="#register" class="btn-p">Reserve your free spot <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div>
+ <div class="wrap">
+  <div class="reveal"><p class="sl">Your hosts</p><div class="sr"></div></div>
+  <h2 class="st reveal">Built by operators.<br>Not consultants.</h2>
+  <div class="sgrid">
+   <div class="sc reveal reveal-d1">
+    <div class="sav"><img src="/Spencerheadshot2.jpeg" alt="Spencer Simonson" onerror="this.remove()"><span>SS</span></div>
+    <p class="sname">Spencer Simonson</p>
+    <p class="srole">Co-Founder, CEO &amp; CTO, Nekter AI</p>
+    <p class="sbio">Spencer uses these tools every day to run Nekter AI. In every webinar he shows the exact prompts and workflows he uses, live, on screen, no theory.</p>
+   </div>
+   <div class="sc reveal reveal-d2">
+    <div class="sav"><img src="/founder-portrait-CTiM68gp.png" alt="Jodie Sacco" onerror="this.remove()"><span>JS</span></div>
+    <p class="sname">Jodie Sacco</p>
+    <p class="srole">Founder, AI Revenue Engine</p>
+    <p class="sbio">Jodie doesn't coach, she partners. A former director at American Express Corporate Travel who has built and scaled businesses across multiple industries and revenue stages, she specializes in finding exactly where revenue is leaking, being under-monetized, or waiting to be unlocked. She's worked across five continents, speaks five languages, and brings commercial discipline that most advisors simply don't have.</p>
+   </div>
+   <div class="sc reveal reveal-d3">
+    <div class="sav"><img src="/Noah%20Headshot.jpg" alt="Noah Simonson" onerror="this.remove()"><span>NS</span></div>
+    <p class="sname">Noah Simonson</p>
+    <p class="srole">Co-Founder, Head of Growth &amp; COO, Nekter AI</p>
+    <p class="sbio">Noah owns the client relationship from day one. He leads onboarding, builds the long-term relationships that keep clients growing, and drives the sales process that brings them in. If you've talked to Nekter AI, you've probably talked to Noah.</p>
+   </div>
+   <div class="sc reveal reveal-d4">
+    <div class="sav"><img src="/Sam%20Headshot.jpg" alt="Samuel Maciulewicz" onerror="this.remove()"><span>SM</span></div>
+    <p class="sname">Samuel Maciulewicz</p>
+    <p class="srole">Co-Founder, CFO &amp; Head of Revenue Growth, Nekter AI</p>
+    <p class="sbio">Sam runs the infrastructure that keeps Nekter AI scaling. From finance and hiring to day-to-day operations, he builds the systems that let the rest of the team focus on what they do best. The business works because Sam makes it work.</p>
+   </div>
   </div>
+  <div class="inline-cta reveal"><a href="#register" class="btn-p">Reserve your free spot <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div>
+ </div>
 </section>
 
 <!-- AUDIT -->
 <section>
-  <div class="wrap">
-    <div class="reveal"><p class="sl">The free audit</p><div class="sr"></div></div>
-    <div class="ablock reveal">
-      <div>
-        <div class="bignum">$10k<br>&ndash;$50k</div>
-        <p class="bigsub">in hidden revenue found in 45 minutes or less for most businesses</p>
-      </div>
-      <div class="audit-right">
-        <h3 class="st" style="font-size:22px;margin-bottom:10px">What we audit</h3>
-        <p style="font-size:14px;color:var(--muted);margin-bottom:10px;font-weight:400">Each audit scores four areas and puts a real dollar figure on every gap.</p>
-        <ul class="alist">
-          <li>Lead follow-up speed: how fast your team responds vs. what's losing deals</li>
-          <li>After-hours coverage: revenue leaving because nobody answered</li>
-          <li>Manual data entry burden: hours per week AI can own completely</li>
-          <li>Current AI usage: most businesses are at zero, and we show the cost of waiting</li>
-        </ul>
-        <p style="font-size:13px;color:var(--muted);margin-top:16px">Mention the webinar when you register for priority scheduling.</p>
-      </div>
-    </div>
+ <div class="wrap">
+  <div class="reveal"><p class="sl">The free audit</p><div class="sr"></div></div>
+  <div class="ablock reveal">
+   <div>
+    <div class="bignum">$10k<br>&ndash;$50k</div>
+    <p class="bigsub">in hidden revenue found in 45 minutes or less for most businesses</p>
+   </div>
+   <div class="audit-right">
+    <h3 class="st" style="font-size:22px;margin-bottom:10px">What we audit</h3>
+    <p style="font-size:14px;color:var(--muted);margin-bottom:10px;font-weight:400">Each audit scores four areas and puts a real dollar figure on every gap.</p>
+    <ul class="alist">
+     <li>Lead follow-up speed: how fast your team responds vs. what's losing deals</li>
+     <li>After-hours coverage: revenue leaving because nobody answered</li>
+     <li>Manual data entry burden: hours per week AI can own completely</li>
+     <li>Current AI usage: most businesses are at zero, and we show the cost of waiting</li>
+    </ul>
+    <p style="font-size:13px;color:var(--muted);margin-top:16px">Mention the webinar when you register for priority scheduling.</p>
+   </div>
   </div>
+ </div>
 </section>
 
 <!-- CHOOSE YOUR EXPERIENCE -->
 <section id="register">
-  <div class="wrap">
-    <div class="reveal" style="text-align:center"><p class="sl">Choose your experience</p>
-    <div class="sr" style="margin:0 auto 28px"></div></div>
-    <h2 class="st reveal" style="text-align:center">Free webinar or VIP access?</h2>
-    <p class="sb reveal" style="text-align:center;margin:12px auto 0;max-width:520px">Every webinar is free. Upgrade to VIP to join a private small-group room after the session where Spencer reviews the ad you built live.</p>
+ <div class="wrap">
+  <div class="reveal" style="text-align:center"><p class="sl">Choose your experience</p>
+  <div class="sr" style="margin:0 auto 28px"></div></div>
+  <h2 class="st reveal" style="text-align:center">Free webinar or VIP access?</h2>
+  <p class="sb reveal" style="text-align:center;margin:12px auto 0;max-width:520px">Every webinar is free. Upgrade to VIP to join a private small-group room after the session where Spencer reviews the ad you built live.</p>
 
-    <div class="pricing-grid">
-      <!-- FREE TIER -->
-      <div class="price-card reveal reveal-d1">
-        <span class="price-tag" style="background:var(--green-dim);color:var(--green)">Free</span>
-        <div class="price-amount">$0</div>
-        <p class="price-per">Free forever &middot; All webinars included</p>
-        <ul class="price-features">
-          <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Full 60-minute live webinar</li>
-          <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Live demos of all 5 tools</li>
-          <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>10-minute live homework</li>
-          <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Templates &amp; prompts from the session (sent after)</li>
-          <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Access to all future webinars</li>
-          <li class="disabled"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6"/></svg>Private small-group room after session</li>
-          <li class="disabled"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6"/></svg>Live homework review by Spencer</li>
-          <li class="disabled"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6"/></svg>Priority audit scheduling</li>
-        </ul>
-        <button class="btn-free" id="freeRegBtn">Register for free</button>
-      </div>
+  <div class="pricing-grid">
+   <!-- FREE TIER -->
+   <div class="price-card reveal reveal-d1">
+    <span class="price-tag" style="background:var(--green-dim);color:var(--green)">Free</span>
+    <div class="price-amount">$0</div>
+    <p class="price-per">Free forever &middot; All webinars included</p>
+    <ul class="price-features">
+     <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Full 60-minute live webinar</li>
+     <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Live demos of all 5 tools</li>
+     <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>10-minute live homework</li>
+     <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Templates &amp; prompts from the session (sent after)</li>
+     <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Access to all future webinars</li>
+     <li class="disabled"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6"/></svg>Private small-group room after session</li>
+     <li class="disabled"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6"/></svg>Live homework review by Spencer</li>
+     <li class="disabled"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6"/></svg>Priority audit scheduling</li>
+    </ul>
+    <button class="btn-free" id="freeRegBtn">Register for free</button>
+   </div>
 
-      <!-- VIP TIER -->
-      <div class="price-card featured reveal reveal-d2">
-        <span class="price-tag" style="background:var(--blue-dim);color:var(--blue)">VIP Access</span>
-        <div class="price-amount grad">$25</div>
-        <p class="price-per">One-time &middot; Includes free webinar + VIP room</p>
-        <ul class="price-features">
-          <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Everything in Free</li>
-          <li><svg fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><strong>Private small-group room after the main session (20 spots max)</strong></li>
-          <li><svg fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><strong>Bring the ad you made in the homework &mdash; Spencer reviews it live</strong></li>
-          <li><svg fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><strong>See exactly how NekterOS would automate what you did by hand</strong></li>
-          <li><svg fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><strong>Priority scheduling for your free AI revenue audit</strong></li>
-          <li><svg fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Ask anything about AI for your specific business</li>
-        </ul>
-        <button type="button" class="btn-vip" id="vipPricingBtn">Get VIP access &mdash; $25 <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></button>
-      </div>
-    </div>
-
-    <p style="text-align:center;font-size:13px;color:var(--muted-lt);margin-top:28px;line-height:1.6">No spam. No sales pressure. Just the tools to grow your business.</p>
+   <!-- VIP TIER -->
+   <div class="price-card featured reveal reveal-d2">
+    <span class="price-tag" style="background:var(--blue-dim);color:var(--blue)">VIP Access</span>
+    <div class="price-amount grad">$25</div>
+    <p class="price-per">One-time &middot; Includes free webinar + VIP room</p>
+    <ul class="price-features">
+     <li><svg fill="none" stroke="var(--green)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Everything in Free</li>
+     <li><svg fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><strong>Private small-group room after the main session (20 spots max)</strong></li>
+     <li><svg fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><strong>Bring the ad you made in the homework, Spencer reviews it live</strong></li>
+     <li><svg fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><strong>See exactly how NekterOS would automate what you did by hand</strong></li>
+     <li><svg fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><strong>Priority scheduling for your free AI revenue audit</strong></li>
+     <li><svg fill="none" stroke="var(--blue)" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Ask anything about AI for your specific business</li>
+    </ul>
+    <button type="button" class="btn-vip" id="vipPricingBtn">Get VIP access, $25 <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></button>
+   </div>
   </div>
+
+  <p style="text-align:center;font-size:13px;color:var(--muted-lt);margin-top:28px;line-height:1.6">No spam. No sales pressure. Just the tools to grow your business.</p>
+ </div>
 </section>
 
 <!-- REGISTRATION FORM (popup modal) -->
 <div class="form-modal-overlay" id="formModal" role="dialog" aria-modal="true" aria-labelledby="formModalTitle">
-  <div class="form-modal-box">
-    <button type="button" class="form-modal-close" id="formModalClose" aria-label="Close registration form">
-      <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-    </button>
-    <div class="form-modal-inner form-section" id="form">
-    <p class="form-modal-eyebrow" id="formModalEyebrow">Reserve your seat</p>
-    <h2 id="formModalTitle">Reserve Your Free Seat</h2>
-    <p class="form-intro" id="formModalIntro">Takes 60 seconds. You'll get an instant confirmation email with everything you need before we go live.</p>
+ <div class="form-modal-box">
+  <button type="button" class="form-modal-close" id="formModalClose" aria-label="Close registration form">
+   <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+  </button>
+  <div class="form-modal-inner form-section" id="form">
+  <p class="form-modal-eyebrow" id="formModalEyebrow">Reserve your seat</p>
+  <h2 id="formModalTitle">Reserve Your Free Seat</h2>
+  <p class="form-intro" id="formModalIntro">Takes 60 seconds. You'll get an instant confirmation email with everything you need before we go live.</p>
 
-    <!-- Tier banner — appears when user picks VIP from a CTA -->
-    <div class="form-tier-banner" id="tierBanner">
-      <div class="tier-banner-inner">
-        <div>
-          <strong>VIP access selected</strong>
-          <span>You'll be charged <strong>$25</strong> by Stripe right after registration.</span>
-        </div>
-        <button type="button" class="tier-banner-switch" id="tierSwitch">Switch to free &rarr;</button>
-      </div>
+  <!-- Tier banner, appears when user picks VIP from a CTA -->
+  <div class="form-tier-banner" id="tierBanner">
+   <div class="tier-banner-inner">
+    <div>
+     <strong>VIP access selected</strong>
+     <span>You'll be charged <strong>$25</strong> by Stripe right after registration.</span>
     </div>
-
-    <div class="form-error" id="formError"></div>
-
-    <form id="regForm" novalidate>
-      <input type="hidden" name="tier" id="formTier" value="free">
-      <!-- Personal details -->
-      <div class="form-group">
-        <p class="form-group-title">Let's start with your personal details <span class="req">*</span></p>
-        <div class="form-row two-col">
-          <div class="form-field"><input class="form-input" type="text" name="firstName" placeholder="First Name" autocomplete="given-name" required></div>
-          <div class="form-field"><input class="form-input" type="text" name="lastName" placeholder="Last Name" autocomplete="family-name" required></div>
-        </div>
-        <div class="form-row" style="margin-top:12px">
-          <div class="form-field"><input class="form-input" type="email" name="email" placeholder="Email address" autocomplete="email" required></div>
-        </div>
-        <div class="form-row" style="margin-top:12px">
-          <div class="form-field"><input class="form-input" type="tel" name="phone" placeholder="Phone number" autocomplete="tel" required></div>
-        </div>
-      </div>
-
-      <!-- Business info -->
-      <div class="form-group">
-        <p class="form-group-title">Business Info <span class="req">*</span></p>
-        <div class="form-row">
-          <div class="form-field"><input class="form-input" type="text" name="company" placeholder="Company" autocomplete="organization" required></div>
-        </div>
-        <div class="form-row" style="margin-top:12px">
-          <div class="form-field"><input class="form-input" type="text" name="jobTitle" placeholder="Job Title" autocomplete="organization-title" required></div>
-        </div>
-      </div>
-
-      <!-- Team size -->
-      <div class="form-group">
-        <p class="form-group-title">Team Size <span class="req">*</span></p>
-        <div class="form-field">
-          <select class="form-select" name="teamSize" required>
-            <option value="" disabled selected>Select team size</option>
-            <option value="Solo founder">Solo founder</option>
-            <option value="2-5">2 to 5</option>
-            <option value="6-15">6 to 15</option>
-            <option value="16-50">16 to 50</option>
-            <option value="50+">50+</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- Industry -->
-      <div class="form-group">
-        <p class="form-group-title">Industry <span class="req">*</span></p>
-        <div class="form-field">
-          <select class="form-select" name="industry" required>
-            <option value="" disabled selected>Select industry</option>
-            <option value="HVAC">HVAC</option>
-            <option value="Plumbing">Plumbing</option>
-            <option value="Home services">Home services</option>
-            <option value="Legal">Legal</option>
-            <option value="Medical">Medical</option>
-            <option value="Med spa">Med spa</option>
-            <option value="Health care">Health care</option>
-            <option value="Hospitality">Hospitality</option>
-            <option value="Restaurant">Restaurant</option>
-            <option value="Hotel">Hotel</option>
-            <option value="Real estate">Real estate</option>
-            <option value="Insurance / Financial services">Insurance / Financial services</option>
-            <option value="Retailer">Retailer</option>
-            <option value="E-commerce">E-commerce</option>
-            <option value="Marketing / Agency">Marketing / Agency</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- Operational headache -->
-      <div class="form-group">
-        <p class="form-group-title">What's your biggest operational headache right now? <span class="req">*</span></p>
-        <div class="form-field">
-          <textarea class="form-textarea" name="painPoint" placeholder="A sentence or two is plenty — e.g. 'leads sit in our inbox too long', 'I'm doing all the proposals myself', etc." required></textarea>
-        </div>
-      </div>
-
-      <!-- AI audit checkbox -->
-      <div class="form-group">
-        <p class="form-group-title">I'm interested in a free AI audit <span class="req">*</span></p>
-        <label class="form-checkbox-row">
-          <input type="checkbox" name="requestedAudit" value="true">
-          <span class="cb-body"><strong>Yes, score my business.</strong>We'll show where <em>$10k&ndash;$50k</em> is hiding in your operation. Mention the webinar for priority scheduling.</span>
-        </label>
-      </div>
-
-      <!-- How did you hear -->
-      <div class="form-group">
-        <p class="form-group-title">How did you hear about this event? <span class="req">*</span></p>
-        <div class="form-field">
-          <select class="form-select" name="referralSource" required>
-            <option value="" disabled selected>Select one</option>
-            <option value="Instagram">Instagram</option>
-            <option value="LinkedIn">LinkedIn</option>
-            <option value="Friend or referral">Friend or referral</option>
-            <option value="Google">Google</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-      </div>
-
-      <button type="submit" class="form-submit" id="regSubmit">
-        <span class="submit-label">Reserve my free seat</span>
-        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-      </button>
-      <p class="form-fineprint">No spam. We use your info only to send the webinar link and follow up about the session you registered for.</p>
-    </form>
-
-    <!-- Success state -->
-    <div class="form-success" id="formSuccess">
-      <div class="form-success-icon">
-        <svg width="32" height="32" fill="none" stroke="#fff" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-      </div>
-      <h3>You're in.</h3>
-      <p>Check your inbox &mdash; we just sent your confirmation with everything you need before the session. While you're here, want to upgrade to VIP and have Spencer review your homework live?</p>
-      <a href="https://buy.stripe.com/5kQ7sEb1SgH25of7nC5c400" target="_blank" class="btn-success-vip">Upgrade to VIP &mdash; $25 &rarr;</a>
-    </div>
-    </div>
+    <button type="button" class="tier-banner-switch" id="tierSwitch">Switch to free &rarr;</button>
+   </div>
   </div>
+
+  <div class="form-error" id="formError"></div>
+
+  <form id="regForm" novalidate>
+   <input type="hidden" name="tier" id="formTier" value="free">
+   <!-- Personal details -->
+   <div class="form-group">
+    <p class="form-group-title">Let's start with your personal details <span class="req">*</span></p>
+    <div class="form-row two-col">
+     <div class="form-field"><input class="form-input" type="text" name="firstName" placeholder="First Name" autocomplete="given-name" required></div>
+     <div class="form-field"><input class="form-input" type="text" name="lastName" placeholder="Last Name" autocomplete="family-name" required></div>
+    </div>
+    <div class="form-row" style="margin-top:12px">
+     <div class="form-field"><input class="form-input" type="email" name="email" placeholder="Email address" autocomplete="email" required></div>
+    </div>
+    <div class="form-row" style="margin-top:12px">
+     <div class="form-field"><input class="form-input" type="tel" name="phone" placeholder="Phone number" autocomplete="tel" required></div>
+    </div>
+   </div>
+
+   <!-- Business info -->
+   <div class="form-group">
+    <p class="form-group-title">Business Info <span class="req">*</span></p>
+    <div class="form-row">
+     <div class="form-field"><input class="form-input" type="text" name="company" placeholder="Company" autocomplete="organization" required></div>
+    </div>
+    <div class="form-row" style="margin-top:12px">
+     <div class="form-field"><input class="form-input" type="text" name="jobTitle" placeholder="Job Title" autocomplete="organization-title" required></div>
+    </div>
+   </div>
+
+   <!-- Team size -->
+   <div class="form-group">
+    <p class="form-group-title">Team Size <span class="req">*</span></p>
+    <div class="form-field">
+     <select class="form-select" name="teamSize" required>
+      <option value="" disabled selected>Select team size</option>
+      <option value="Solo founder">Solo founder</option>
+      <option value="2-5">2 to 5</option>
+      <option value="6-15">6 to 15</option>
+      <option value="16-50">16 to 50</option>
+      <option value="50+">50+</option>
+     </select>
+    </div>
+   </div>
+
+   <!-- Industry -->
+   <div class="form-group">
+    <p class="form-group-title">Industry <span class="req">*</span></p>
+    <div class="form-field">
+     <select class="form-select" name="industry" required>
+      <option value="" disabled selected>Select industry</option>
+      <option value="HVAC">HVAC</option>
+      <option value="Plumbing">Plumbing</option>
+      <option value="Home services">Home services</option>
+      <option value="Legal">Legal</option>
+      <option value="Medical">Medical</option>
+      <option value="Med spa">Med spa</option>
+      <option value="Health care">Health care</option>
+      <option value="Hospitality">Hospitality</option>
+      <option value="Restaurant">Restaurant</option>
+      <option value="Hotel">Hotel</option>
+      <option value="Real estate">Real estate</option>
+      <option value="Insurance / Financial services">Insurance / Financial services</option>
+      <option value="Retailer">Retailer</option>
+      <option value="E-commerce">E-commerce</option>
+      <option value="Marketing / Agency">Marketing / Agency</option>
+      <option value="Other">Other</option>
+     </select>
+    </div>
+   </div>
+
+   <!-- Operational headache -->
+   <div class="form-group">
+    <p class="form-group-title">What's your biggest operational headache right now? <span class="req">*</span></p>
+    <div class="form-field">
+     <textarea class="form-textarea" name="painPoint" placeholder="A sentence or two is plenty, e.g. 'leads sit in our inbox too long', 'I'm doing all the proposals myself', etc." required></textarea>
+    </div>
+   </div>
+
+   <!-- AI audit checkbox -->
+   <div class="form-group">
+    <p class="form-group-title">I'm interested in a free AI audit <span class="req">*</span></p>
+    <label class="form-checkbox-row">
+     <input type="checkbox" name="requestedAudit" value="true">
+     <span class="cb-body"><strong>Yes, score my business.</strong>We'll show where <em>$10k&ndash;$50k</em> is hiding in your operation. Mention the webinar for priority scheduling.</span>
+    </label>
+   </div>
+
+   <!-- How did you hear -->
+   <div class="form-group">
+    <p class="form-group-title">How did you hear about this event? <span class="req">*</span></p>
+    <div class="form-field">
+     <select class="form-select" name="referralSource" required>
+      <option value="" disabled selected>Select one</option>
+      <option value="Instagram">Instagram</option>
+      <option value="LinkedIn">LinkedIn</option>
+      <option value="Friend or referral">Friend or referral</option>
+      <option value="Google">Google</option>
+      <option value="Other">Other</option>
+     </select>
+    </div>
+   </div>
+
+   <button type="submit" class="form-submit" id="regSubmit">
+    <span class="submit-label">Reserve my free seat</span>
+    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+   </button>
+   <p class="form-fineprint">No spam. We use your info only to send the webinar link and follow up about the session you registered for.</p>
+  </form>
+
+  <!-- Success state -->
+  <div class="form-success" id="formSuccess">
+   <div class="form-success-icon">
+    <svg width="32" height="32" fill="none" stroke="#fff" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+   </div>
+   <h3>You're in.</h3>
+   <p>Check your inbox, we just sent your confirmation with everything you need before the session. While you're here, want to upgrade to VIP and have Spencer review your homework live?</p>
+   <a href="https://buy.stripe.com/5kQ7sEb1SgH25of7nC5c400" target="_blank" class="btn-success-vip">Upgrade to VIP, $25 &rarr;</a>
+  </div>
+  </div>
+ </div>
 </div>
 
 <!-- UPSELL MODAL -->
 <div class="modal-overlay" id="upsellModal">
-  <div class="modal-box">
-    <button class="modal-close" id="modalClose"><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
-    <div class="modal-badge"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>Before you go</div>
-    <h3>Upgrade to VIP for just $25?</h3>
-    <p>Join a <strong>private small-group room</strong> right after the webinar. Bring the ad you built in the homework &mdash; Spencer reviews it live. <strong>That's worth more than $25.</strong></p>
-    <ul class="modal-perks">
-      <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Private small-group room (20 spots max)</li>
-      <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Spencer reviews your homework live</li>
-      <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Priority scheduling for your free AI audit</li>
-    </ul>
-    <div class="modal-btns">
-      <button type="button" class="btn-vip" id="modalVip">Get VIP access &mdash; $25 <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></button>
-      <button class="btn-skip" id="modalSkip">No thanks, continue with free registration &rarr;</button>
-    </div>
+ <div class="modal-box">
+  <button class="modal-close" id="modalClose"><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
+  <div class="modal-badge"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>Before you go</div>
+  <h3>Upgrade to VIP for just $25?</h3>
+  <p>Join a <strong>private small-group room</strong> right after the webinar. Bring the ad you built in the homework, Spencer reviews it live. <strong>That's worth more than $25.</strong></p>
+  <ul class="modal-perks">
+   <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Private small-group room (20 spots max)</li>
+   <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Spencer reviews your homework live</li>
+   <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Priority scheduling for your free AI audit</li>
+  </ul>
+  <div class="modal-btns">
+   <button type="button" class="btn-vip" id="modalVip">Get VIP access, $25 <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></button>
+   <button class="btn-skip" id="modalSkip">No thanks, continue with free registration &rarr;</button>
   </div>
+ </div>
 </div>
 
 <!-- PAST SESSION REPLAYS -->
 <section class="replays-section" id="replays">
-  <div class="wrap">
-    <div class="reveal"><p class="sl">Past session replays</p><div class="sr"></div></div>
-    <h2 class="st reveal">Missed a session?<br>Catch the replay.</h2>
-    <p class="sb reveal">Every webinar is recorded. Replays drop here after each session so you can rewatch, share, or catch what you missed.</p>
+ <div class="wrap">
+  <div class="reveal"><p class="sl">Past session replays</p><div class="sr"></div></div>
+  <h2 class="st reveal">Missed a session?<br>Catch the replay.</h2>
+  <p class="sb reveal">Every webinar is recorded. Replays drop here after each session so you can rewatch, share, or catch what you missed.</p>
 
-    <!-- EMPTY STATE (remove once first replay is posted) -->
-    <div class="replays-empty reveal reveal-d1" id="replaysEmpty">
-      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-      <h3>First replay drops after our <span id="replaysFirstDate">next session</span>.</h3>
-      <p>Register once and you'll get an email the moment the replay goes live.</p>
-    </div>
-
-    <!-- REPLAY GRID (uncomment + populate when replays exist)
-    <div class="replays-grid">
-      <div class="replay-card">
-        <div class="replay-thumb"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Replay title" allowfullscreen></iframe></div>
-        <div class="replay-meta">
-          <div class="replay-date">May 2026</div>
-          <div class="replay-title">The 5 AI Tools Every Business Owner Should Actually Use</div>
-        </div>
-      </div>
-    </div>
-    -->
+  <!-- EMPTY STATE (remove once first replay is posted) -->
+  <div class="replays-empty reveal reveal-d1" id="replaysEmpty">
+   <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+   <h3>First replay drops after our <span id="replaysFirstDate">next session</span>.</h3>
+   <p>Register once and you'll get an email the moment the replay goes live.</p>
   </div>
+
+  <!-- REPLAY GRID (uncomment + populate when replays exist)
+  <div class="replays-grid">
+   <div class="replay-card">
+    <div class="replay-thumb"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Replay title" allowfullscreen></iframe></div>
+    <div class="replay-meta">
+     <div class="replay-date">May 2026</div>
+     <div class="replay-title">The 5 AI Tools Every Business Owner Should Actually Use</div>
+    </div>
+   </div>
+  </div>
+  -->
+ </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="fi">
-    <a href="#" class="logo">
-      <img src="/logo/nekter-knot.png" alt="Nekter AI" onerror="this.style.display='none'" style="height:28px">
-      <span class="logo-text" style="font-size:17px">nekter<span>.ai</span></span>
-    </a>
-    <p>Questions? <a href="mailto:hello@nekter.ai">hello@nekter.ai</a></p>
-    <p>&copy; 2026 Nekter AI &middot; Las Vegas, NV</p>
-  </div>
+ <div class="fi">
+  <a href="#" class="logo">
+   <img src="/logo/nekter-knot.png" alt="Nekter AI" onerror="this.style.display='none'" style="height:28px">
+   <span class="logo-text" style="font-size:17px">nekter<span>.ai</span></span>
+  </a>
+  <p>Questions? <a href="mailto:hello@nekter.ai">hello@nekter.ai</a></p>
+  <p>&copy; 2026 Nekter AI &middot; Las Vegas, NV</p>
+ </div>
 </footer>
 
 <!-- STICKY CTA (desktop + mobile) -->
 <div class="sticky-cta" id="stickyCta">
-  <a href="#register" class="btn-p">Register for free <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+ <a href="#register" class="btn-p">Register for free <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
 </div>
 
 <!-- FLOATING MOBILE CTA -->
 <div class="float-cta" id="floatCta">
-  <a href="#register">Register for free &rarr;</a>
+ <a href="#register">Register for free &rarr;</a>
 </div>
 
 <script>
 // ═══════════════════════════════════════════════════════════
-// NEXT SESSION CONFIG — update this monthly, everything else
+// NEXT SESSION CONFIG, update this monthly, everything else
 // on the page (hero badge, schedule card, countdown, replays
 // empty state) reads from here.
 // ═══════════════════════════════════════════════════════════
 const NEXT_SESSION = {
-  // ISO string with timezone offset. Set ONLY when both date AND time are
-  // confirmed — it drives the countdown timer. Leave null while time is TBA
-  // (the date can still be shown via the fields below).
-  // Example: '2026-06-25T15:00:00-07:00'
-  iso: null,
-  // Human-readable strings. Set dayNum === 'TBA' when no date is confirmed.
-  dayNum: '25',                          // "25"
-  monthShort: 'June 2026',               // "June 2026"
-  dayOfWeek: 'Thursday',                 // "Thursday"
-  longDate: 'Thursday, June 25, 2026',   // full display date
-  time: 'Time TBA',                      // display-only time string
-  // VSL embed. Set to a Vimeo/YouTube/Loom EMBED url to replace the hero
-  // placeholder with the actual video. Leave null until the VSL is filmed.
-  // Example (Vimeo): 'https://player.vimeo.com/video/VIDEO_ID?h=HASH&autoplay=1&muted=1&playsinline=1'
-  vslUrl: null,
+ // ISO string with timezone offset. Set ONLY when both date AND time are
+ // confirmed, it drives the countdown timer. Leave null while time is TBA
+ // (the date can still be shown via the fields below).
+ // Example: '2026-06-25T15:00:00-07:00'
+ iso: null,
+ // Human-readable strings. Set dayNum === 'TBA' when no date is confirmed.
+ dayNum: '25',             // "25"
+ monthShort: 'June 2026',        // "June 2026"
+ dayOfWeek: 'Thursday',         // "Thursday"
+ longDate: 'Thursday, June 25, 2026',  // full display date
+ time: 'Time TBA',           // display-only time string
+ // VSL embed. Set to a Vimeo/YouTube/Loom EMBED url to replace the hero
+ // placeholder with the actual video. Leave null until the VSL is filmed.
+ // Example (Vimeo): 'https://player.vimeo.com/video/VIDEO_ID?h=HASH&autoplay=1&muted=1&playsinline=1'
+ vslUrl: null,
 };
 
 (function injectSessionDate(){
-  // v2: hero eyebrow stays STATIC ("A 60-MINUTE LIVE WORKSHOP..."). The date
-  // lives in the sticky topbar, so we no longer rewrite heroBadge here.
-  var badge = null;
-  var cbt = document.getElementById('countdownBadgeText');
-  var cm = document.getElementById('countdownMeta');
-  var sday = document.getElementById('schedDay');
-  var smonth = document.getElementById('schedMonth');
-  var smeta = document.getElementById('schedMeta');
-  var rd = document.getElementById('replaysFirstDate');
+ // v2: hero eyebrow stays STATIC ("A 60-MINUTE LIVE WORKSHOP..."). The date
+ // lives in the sticky topbar, so we no longer rewrite heroBadge here.
+ var badge = null;
+ var cbt = document.getElementById('countdownBadgeText');
+ var cm = document.getElementById('countdownMeta');
+ var sday = document.getElementById('schedDay');
+ var smonth = document.getElementById('schedMonth');
+ var smeta = document.getElementById('schedMeta');
+ var rd = document.getElementById('replaysFirstDate');
 
-  // hasIso = date AND time both confirmed (drives countdown timer)
-  // hasDate = date string is confirmed (drives display copy across the page)
-  // The two are independent so we can announce a date before locking a time.
-  var hasIso = !!NEXT_SESSION.iso;
-  var hasDate = !!(NEXT_SESSION.dayNum && NEXT_SESSION.dayNum !== 'TBA');
+ // hasIso = date AND time both confirmed (drives countdown timer)
+ // hasDate = date string is confirmed (drives display copy across the page)
+ // The two are independent so we can announce a date before locking a time.
+ var hasIso = !!NEXT_SESSION.iso;
+ var hasDate = !!(NEXT_SESSION.dayNum && NEXT_SESSION.dayNum !== 'TBA');
 
-  var badgeText;
-  if(hasDate && hasIso){
-    badgeText = 'Monthly Webinar \u00B7 ' + NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' \u00B7 ' + NEXT_SESSION.time + ' \u00B7 Live';
-  } else if(hasDate){
-    badgeText = 'Monthly Webinar \u00B7 ' + NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' \u00B7 Time TBA \u00B7 Live';
-  } else {
-    badgeText = 'Monthly Webinar \u00B7 Live on Google Meet';
+ var badgeText;
+ if(hasDate && hasIso){
+  badgeText = 'Monthly Webinar \u00B7 ' + NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' \u00B7 ' + NEXT_SESSION.time + ' \u00B7 Live';
+ } else if(hasDate){
+  badgeText = 'Monthly Webinar \u00B7 ' + NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' \u00B7 Time TBA \u00B7 Live';
+ } else {
+  badgeText = 'Monthly Webinar \u00B7 Live on Google Meet';
+ }
+ if(badge){ badge.innerHTML = '<span class="bdot"></span>' + badgeText; }
+
+ var countdownBadge;
+ if(hasDate && hasIso){
+  countdownBadge = '5 AI Tools \u00B7 ' + NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' \u00B7 ' + NEXT_SESSION.time;
+ } else if(hasDate){
+  countdownBadge = '5 AI Tools \u00B7 ' + NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' \u00B7 Time TBA';
+ } else {
+  countdownBadge = 'Next date coming soon';
+ }
+ if(cbt){ cbt.textContent = countdownBadge; }
+
+ var meta;
+ if(hasDate && hasIso){
+  meta = NEXT_SESSION.longDate + ' \u00B7 ' + NEXT_SESSION.time + ' \u00B7 60 min + Q&A \u00B7 Live on Google Meet';
+ } else if(hasDate){
+  meta = NEXT_SESSION.longDate + ' \u00B7 Time TBA \u00B7 60 min + Q&A \u00B7 Live on Google Meet';
+ } else {
+  meta = 'Date TBA \u00B7 60 min + Q&A \u00B7 Live on Google Meet';
+ }
+ if(cm){ cm.textContent = meta; }
+ if(smeta){ smeta.textContent = meta; }
+
+ if(sday){ sday.textContent = NEXT_SESSION.dayNum; }
+ if(smonth){ smonth.textContent = NEXT_SESSION.monthShort; }
+
+ if(rd){
+  rd.textContent = hasDate
+   ? (NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' session')
+   : 'next session';
+ }
+
+ // Hero eyebrow stays static copy ("A 60-MINUTE LIVE WORKSHOP..."); only
+ // restore the bdot if injection overwrote it.
+ if(badge && !badge.querySelector('.bdot')){
+  badge.innerHTML = '<span class="bdot"></span>' + badge.textContent;
+ }
+
+ // STICKY TOPBAR
+ var tbDate = document.getElementById('topbarDate');
+ var tbCount = document.getElementById('topbarCount');
+ var topbar = document.getElementById('topbar');
+ if(tbDate){
+  tbDate.textContent = hasDate
+   ? ('Live Webinar · ' + (NEXT_SESSION.dayOfWeek ? NEXT_SESSION.dayOfWeek + ', ' : '') + NEXT_SESSION.monthShort.replace(/\s?\d{4}/, '') + ' ' + NEXT_SESSION.dayNum).trim()
+   : 'Live Webinar · Date coming soon';
+ }
+ if(tbCount && !hasIso){
+  tbCount.innerHTML = hasDate ? '<span class="cd-pill cd-pill-tba">Time TBA</span>' : '';
+ }
+ // If no date at all, hide the topbar entirely
+ if(topbar && !hasDate){ topbar.style.display = 'none'; }
+
+ // VSL: swap placeholder for the real embed when a URL is set
+ if(NEXT_SESSION.vslUrl){
+  var frame = document.getElementById('vslFrame');
+  if(frame){
+   frame.innerHTML =
+    '<iframe src="' + NEXT_SESSION.vslUrl + '" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Workshop walkthrough"></iframe>' +
+    '<button class="vsl-unmute" id="vslUnmute" type="button">🔈 Unmute</button>';
+   var unmute = document.getElementById('vslUnmute');
+   if(unmute){
+    unmute.addEventListener('click', function(){
+     var src = NEXT_SESSION.vslUrl.replace(/([?&])muted=1/, '$1muted=0');
+     if(src.indexOf('muted=') === -1){ src += (src.indexOf('?')>-1?'&':'?') + 'muted=0'; }
+     frame.querySelector('iframe').src = src;
+     unmute.remove();
+    });
+   }
   }
-  if(badge){ badge.innerHTML = '<span class="bdot"></span>' + badgeText; }
-
-  var countdownBadge;
-  if(hasDate && hasIso){
-    countdownBadge = '5 AI Tools \u00B7 ' + NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' \u00B7 ' + NEXT_SESSION.time;
-  } else if(hasDate){
-    countdownBadge = '5 AI Tools \u00B7 ' + NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' \u00B7 Time TBA';
-  } else {
-    countdownBadge = 'Next date coming soon';
-  }
-  if(cbt){ cbt.textContent = countdownBadge; }
-
-  var meta;
-  if(hasDate && hasIso){
-    meta = NEXT_SESSION.longDate + ' \u00B7 ' + NEXT_SESSION.time + ' \u00B7 60 min + Q&A \u00B7 Live on Google Meet';
-  } else if(hasDate){
-    meta = NEXT_SESSION.longDate + ' \u00B7 Time TBA \u00B7 60 min + Q&A \u00B7 Live on Google Meet';
-  } else {
-    meta = 'Date TBA \u00B7 60 min + Q&A \u00B7 Live on Google Meet';
-  }
-  if(cm){ cm.textContent = meta; }
-  if(smeta){ smeta.textContent = meta; }
-
-  if(sday){ sday.textContent = NEXT_SESSION.dayNum; }
-  if(smonth){ smonth.textContent = NEXT_SESSION.monthShort; }
-
-  if(rd){
-    rd.textContent = hasDate
-      ? (NEXT_SESSION.monthShort + ' ' + NEXT_SESSION.dayNum + ' session')
-      : 'next session';
-  }
-
-  // Hero eyebrow stays static copy ("A 60-MINUTE LIVE WORKSHOP..."); only
-  // restore the bdot if injection overwrote it.
-  if(badge && !badge.querySelector('.bdot')){
-    badge.innerHTML = '<span class="bdot"></span>' + badge.textContent;
-  }
-
-  // STICKY TOPBAR
-  var tbDate = document.getElementById('topbarDate');
-  var tbCount = document.getElementById('topbarCount');
-  var topbar = document.getElementById('topbar');
-  if(tbDate){
-    tbDate.textContent = hasDate
-      ? ('Live Webinar · ' + (NEXT_SESSION.dayOfWeek ? NEXT_SESSION.dayOfWeek + ', ' : '') + NEXT_SESSION.monthShort.replace(/\s?\d{4}/, '') + ' ' + NEXT_SESSION.dayNum).trim()
-      : 'Live Webinar · Date coming soon';
-  }
-  if(tbCount && !hasIso){
-    tbCount.innerHTML = hasDate ? '<span class="cd-pill cd-pill-tba">Time TBA</span>' : '';
-  }
-  // If no date at all, hide the topbar entirely
-  if(topbar && !hasDate){ topbar.style.display = 'none'; }
-
-  // VSL: swap placeholder for the real embed when a URL is set
-  if(NEXT_SESSION.vslUrl){
-    var frame = document.getElementById('vslFrame');
-    if(frame){
-      frame.innerHTML =
-        '<iframe src="' + NEXT_SESSION.vslUrl + '" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Workshop walkthrough"></iframe>' +
-        '<button class="vsl-unmute" id="vslUnmute" type="button">🔈 Unmute</button>';
-      var unmute = document.getElementById('vslUnmute');
-      if(unmute){
-        unmute.addEventListener('click', function(){
-          var src = NEXT_SESSION.vslUrl.replace(/([?&])muted=1/, '$1muted=0');
-          if(src.indexOf('muted=') === -1){ src += (src.indexOf('?')>-1?'&':'?') + 'muted=0'; }
-          frame.querySelector('iframe').src = src;
-          unmute.remove();
-        });
-      }
-    }
-  }
+ }
 })();
 
 // CURRICULUM PROGRESS ANIMATION (hero card)
 (function currAnim(){
-  var rows = document.querySelectorAll('.curr-row');
-  var fill = document.getElementById('currProgressFill');
-  var pct = document.getElementById('currProgressPct');
-  if(!rows.length || !fill || !pct) return;
-  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var stepMs = 1200;
-  var holdMs = 3800;
+ var rows = document.querySelectorAll('.curr-row');
+ var fill = document.getElementById('currProgressFill');
+ var pct = document.getElementById('currProgressPct');
+ if(!rows.length || !fill || !pct) return;
+ var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ var stepMs = 1200;
+ var holdMs = 3800;
 
-  function setProgress(p){
-    fill.style.width = p + '%';
-    pct.textContent = p + '%';
+ function setProgress(p){
+  fill.style.width = p + '%';
+  pct.textContent = p + '%';
+ }
+ function clearAll(){
+  rows.forEach(function(r){ r.classList.remove('done','active'); });
+  setProgress(0);
+ }
+ function runCycle(){
+  clearAll();
+  if(prefersReduced){
+   rows.forEach(function(r){ r.classList.add('done'); });
+   setProgress(100);
+   return;
   }
-  function clearAll(){
-    rows.forEach(function(r){ r.classList.remove('done','active'); });
-    setProgress(0);
-  }
-  function runCycle(){
-    clearAll();
-    if(prefersReduced){
-      rows.forEach(function(r){ r.classList.add('done'); });
-      setProgress(100);
-      return;
-    }
-    rows.forEach(function(row, i){
-      setTimeout(function(){
-        rows.forEach(function(r){ r.classList.remove('active'); });
-        if(i > 0) rows[i-1].classList.remove('active');
-        row.classList.add('done');
-        setProgress(Math.round(((i+1)/rows.length)*100));
-        if(rows[i+1]) rows[i+1].classList.add('active');
-      }, (i+1)*stepMs);
-    });
-    setTimeout(runCycle, rows.length*stepMs + holdMs);
-  }
-  // Start a beat after load so the hero entrance animation finishes first.
-  setTimeout(runCycle, 500);
+  rows.forEach(function(row, i){
+   setTimeout(function(){
+    rows.forEach(function(r){ r.classList.remove('active'); });
+    if(i > 0) rows[i-1].classList.remove('active');
+    row.classList.add('done');
+    setProgress(Math.round(((i+1)/rows.length)*100));
+    if(rows[i+1]) rows[i+1].classList.add('active');
+   }, (i+1)*stepMs);
+  });
+  setTimeout(runCycle, rows.length*stepMs + holdMs);
+ }
+ // Start a beat after load so the hero entrance animation finishes first.
+ setTimeout(runCycle, 500);
 })();
 
 // NAV SCROLL STATE (v2 uses a fixed topbar instead of the old nav; guard null)
 const nav = document.getElementById('nav');
 if (nav) {
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 60);
-  }, { passive: true });
+ window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+ }, { passive: true });
 }
 
 // SCROLL REVEAL (IntersectionObserver)
 const revealEls = document.querySelectorAll('.reveal');
 const revealObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('vis');
-      revealObs.unobserve(e.target);
-    }
-  });
+ entries.forEach(e => {
+  if (e.isIntersecting) {
+   e.target.classList.add('vis');
+   revealObs.unobserve(e.target);
+  }
+ });
 }, { threshold: 0.02, rootMargin: '0px 0px 0px 0px' });
 revealEls.forEach(el => revealObs.observe(el));
 
@@ -1627,68 +1627,68 @@ revealEls.forEach(el => revealObs.observe(el));
 const floatCta = document.getElementById('floatCta');
 const registerSection = document.getElementById('register');
 const floatObs = new IntersectionObserver((entries) => {
-  floatCta.classList.toggle('show', !entries[0].isIntersecting && window.scrollY > 500);
+ floatCta.classList.toggle('show', !entries[0].isIntersecting && window.scrollY > 500);
 }, { threshold: 0.1 });
 floatObs.observe(registerSection);
 window.addEventListener('scroll', () => {
-  if (window.scrollY <= 500) floatCta.classList.remove('show');
+ if (window.scrollY <= 500) floatCta.classList.remove('show');
 }, { passive: true });
 
-// SMOOTH ANCHOR SCROLLING — #register and #form are handled by the form-modal
+// SMOOTH ANCHOR SCROLLING, #register and #form are handled by the form-modal
 // opener below; skip them here so we don't double-fire (scroll + modal).
 document.querySelectorAll('a[href^="#"]').forEach(a => {
-  const href = a.getAttribute('href');
-  if (href === '#register' || href === '#form' || href === '#') return;
-  a.addEventListener('click', function(e) {
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
+ const href = a.getAttribute('href');
+ if (href === '#register' || href === '#form' || href === '#') return;
+ a.addEventListener('click', function(e) {
+  const target = document.querySelector(this.getAttribute('href'));
+  if (target) {
+   e.preventDefault();
+   target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+ });
 });
 
 // CURSOR GLOW
 const cg = document.querySelector('.cursor-glow');
 document.addEventListener('mousemove', e => {
-  cg.style.left = e.clientX + 'px';
-  cg.style.top = e.clientY + 'px';
+ cg.style.left = e.clientX + 'px';
+ cg.style.top = e.clientY + 'px';
 });
 
 // 3D CARD TILT
 document.querySelectorAll('.lc, .sc, .ind-card, .tool-card, .price-card').forEach(el => {
-  el.addEventListener('mouseenter', () => { el.style.transition = 'transform 0.1s'; });
-  el.addEventListener('mousemove', e => {
-    const r = el.getBoundingClientRect();
-    const x = (e.clientX - r.left) / r.width - 0.5;
-    const y = (e.clientY - r.top) / r.height - 0.5;
-    el.style.transform = `perspective(800px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateZ(6px)`;
-  });
-  el.addEventListener('mouseleave', () => {
-    el.style.transition = 'transform 0.6s cubic-bezier(0.16,1,0.3,1)';
-    el.style.transform = '';
-  });
+ el.addEventListener('mouseenter', () => { el.style.transition = 'transform 0.1s'; });
+ el.addEventListener('mousemove', e => {
+  const r = el.getBoundingClientRect();
+  const x = (e.clientX - r.left) / r.width - 0.5;
+  const y = (e.clientY - r.top) / r.height - 0.5;
+  el.style.transform = `perspective(800px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateZ(6px)`;
+ });
+ el.addEventListener('mouseleave', () => {
+  el.style.transition = 'transform 0.6s cubic-bezier(0.16,1,0.3,1)';
+  el.style.transform = '';
+ });
 });
 
 const ab = document.querySelector('.ablock');
 if (ab) {
-  ab.addEventListener('mouseenter', () => { ab.style.transition = 'transform 0.15s'; });
-  ab.addEventListener('mousemove', e => {
-    const r = ab.getBoundingClientRect();
-    const x = (e.clientX - r.left) / r.width - 0.5;
-    const y = (e.clientY - r.top) / r.height - 0.5;
-    ab.style.transform = `perspective(1200px) rotateY(${x * 5}deg) rotateX(${-y * 5}deg) translateZ(4px)`;
-  });
-  ab.addEventListener('mouseleave', () => {
-    ab.style.transition = 'transform 0.6s cubic-bezier(0.16,1,0.3,1)';
-    ab.style.transform = '';
-  });
+ ab.addEventListener('mouseenter', () => { ab.style.transition = 'transform 0.15s'; });
+ ab.addEventListener('mousemove', e => {
+  const r = ab.getBoundingClientRect();
+  const x = (e.clientX - r.left) / r.width - 0.5;
+  const y = (e.clientY - r.top) / r.height - 0.5;
+  ab.style.transform = `perspective(1200px) rotateY(${x * 5}deg) rotateX(${-y * 5}deg) translateZ(4px)`;
+ });
+ ab.addEventListener('mouseleave', () => {
+  ab.style.transition = 'transform 0.6s cubic-bezier(0.16,1,0.3,1)';
+  ab.style.transform = '';
+ });
 }
 
-// STRIPE VIP CHECKOUT URL — keep in one place
+// STRIPE VIP CHECKOUT URL, keep in one place
 const VIP_STRIPE_URL = 'https://buy.stripe.com/5kQ7sEb1SgH25of7nC5c400';
 
-// TIER STATE (free vs vip) — controls form behavior
+// TIER STATE (free vs vip), controls form behavior
 const tierInput = document.getElementById('formTier');
 const tierBanner = document.getElementById('tierBanner');
 const tierSwitch = document.getElementById('tierSwitch');
@@ -1698,21 +1698,21 @@ const formModalEyebrow = document.getElementById('formModalEyebrow');
 const formModalIntro = document.getElementById('formModalIntro');
 
 function setTier(tier) {
-  if (!tierInput) return;
-  tierInput.value = tier;
-  if (tier === 'vip') {
-    tierBanner.classList.add('show');
-    if (submitLabelEl) submitLabelEl.textContent = 'Reserve seat & continue to payment';
-    if (formModalEyebrow) formModalEyebrow.textContent = 'VIP access — $25';
-    if (formModalTitle) formModalTitle.textContent = 'Reserve Your VIP Seat';
-    if (formModalIntro) formModalIntro.textContent = "Takes 60 seconds. After registration you'll be redirected to Stripe to complete your $25 VIP upgrade.";
-  } else {
-    tierBanner.classList.remove('show');
-    if (submitLabelEl) submitLabelEl.textContent = 'Reserve my free seat';
-    if (formModalEyebrow) formModalEyebrow.textContent = 'Reserve your seat';
-    if (formModalTitle) formModalTitle.textContent = 'Reserve Your Free Seat';
-    if (formModalIntro) formModalIntro.textContent = "Takes 60 seconds. You'll get an instant confirmation email with everything you need before we go live.";
-  }
+ if (!tierInput) return;
+ tierInput.value = tier;
+ if (tier === 'vip') {
+  tierBanner.classList.add('show');
+  if (submitLabelEl) submitLabelEl.textContent = 'Reserve seat & continue to payment';
+  if (formModalEyebrow) formModalEyebrow.textContent = 'VIP access, $25';
+  if (formModalTitle) formModalTitle.textContent = 'Reserve Your VIP Seat';
+  if (formModalIntro) formModalIntro.textContent = "Takes 60 seconds. After registration you'll be redirected to Stripe to complete your $25 VIP upgrade.";
+ } else {
+  tierBanner.classList.remove('show');
+  if (submitLabelEl) submitLabelEl.textContent = 'Reserve my free seat';
+  if (formModalEyebrow) formModalEyebrow.textContent = 'Reserve your seat';
+  if (formModalTitle) formModalTitle.textContent = 'Reserve Your Free Seat';
+  if (formModalIntro) formModalIntro.textContent = "Takes 60 seconds. You'll get an instant confirmation email with everything you need before we go live.";
+ }
 }
 if (tierSwitch) tierSwitch.addEventListener('click', function() { setTier('free'); });
 
@@ -1721,31 +1721,31 @@ const formModal = document.getElementById('formModal');
 const formModalClose = document.getElementById('formModalClose');
 
 function openFormModal(tier) {
-  setTier(tier === 'vip' ? 'vip' : 'free');
-  formModal.classList.add('active');
-  document.body.style.overflow = 'hidden';
-  // Focus the first input for keyboard users
-  setTimeout(function() {
-    const firstInput = formModal.querySelector('input[name="firstName"]');
-    if (firstInput) firstInput.focus();
-  }, 320);
+ setTier(tier === 'vip' ? 'vip' : 'free');
+ formModal.classList.add('active');
+ document.body.style.overflow = 'hidden';
+ // Focus the first input for keyboard users
+ setTimeout(function() {
+  const firstInput = formModal.querySelector('input[name="firstName"]');
+  if (firstInput) firstInput.focus();
+ }, 320);
 }
 function closeFormModal() {
-  formModal.classList.remove('active');
-  document.body.style.overflow = '';
+ formModal.classList.remove('active');
+ document.body.style.overflow = '';
 }
 if (formModalClose) formModalClose.addEventListener('click', closeFormModal);
 if (formModal) {
-  formModal.addEventListener('click', function(e) { if (e.target === formModal) closeFormModal(); });
+ formModal.addEventListener('click', function(e) { if (e.target === formModal) closeFormModal(); });
 }
 
-// VIP CTA on the pricing card — opens the form modal directly in VIP mode
+// VIP CTA on the pricing card, opens the form modal directly in VIP mode
 const vipPricingBtn = document.getElementById('vipPricingBtn');
 if (vipPricingBtn) {
-  vipPricingBtn.addEventListener('click', function() { openFormModal('vip'); });
+ vipPricingBtn.addEventListener('click', function() { openFormModal('vip'); });
 }
 
-// UPSELL MODAL — the gatekeeper between "Register for free" and the form
+// UPSELL MODAL, the gatekeeper between "Register for free" and the form
 const modal = document.getElementById('upsellModal');
 const freeBtn = document.getElementById('freeRegBtn');
 const modalClose = document.getElementById('modalClose');
@@ -1758,188 +1758,188 @@ function closeModal() { modal.classList.remove('active'); document.body.style.ov
 freeBtn.addEventListener('click', openModal);
 modalClose.addEventListener('click', closeModal);
 modalSkip.addEventListener('click', function() {
-  closeModal();
-  setTimeout(function() { openFormModal('free'); }, 220);
+ closeModal();
+ setTimeout(function() { openFormModal('free'); }, 220);
 });
 modalVip.addEventListener('click', function() {
-  closeModal();
-  setTimeout(function() { openFormModal('vip'); }, 220);
+ closeModal();
+ setTimeout(function() { openFormModal('vip'); }, 220);
 });
 modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
 document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    if (formModal && formModal.classList.contains('active')) closeFormModal();
-    else closeModal();
-  }
+ if (e.key === 'Escape') {
+  if (formModal && formModal.classList.contains('active')) closeFormModal();
+  else closeModal();
+ }
 });
 
 // Any <a href="#form"> or "#register" CTAs become free-flow triggers: nav,
 // sticky, float, inline buttons. We intercept these to open the upsell modal
 // instead of doing a smooth scroll to a section that no longer exists in flow.
 document.querySelectorAll('a[href="#register"], a[href="#form"]').forEach(function(a) {
-  a.addEventListener('click', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    openModal();
-  });
+ a.addEventListener('click', function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  openModal();
+ });
 });
 
 // REGISTRATION FORM SUBMIT
 (function(){
-  const form = document.getElementById('regForm');
-  const errorBox = document.getElementById('formError');
-  const successBox = document.getElementById('formSuccess');
-  const submitBtn = document.getElementById('regSubmit');
-  if (!form || !submitBtn) return;
-  const labelEl = submitBtn.querySelector('.submit-label');
+ const form = document.getElementById('regForm');
+ const errorBox = document.getElementById('formError');
+ const successBox = document.getElementById('formSuccess');
+ const submitBtn = document.getElementById('regSubmit');
+ if (!form || !submitBtn) return;
+ const labelEl = submitBtn.querySelector('.submit-label');
 
-  function showError(msg) {
-    errorBox.textContent = msg;
-    errorBox.classList.add('show');
-    errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+ function showError(msg) {
+  errorBox.textContent = msg;
+  errorBox.classList.add('show');
+  errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+ }
+ function clearError() {
+  errorBox.classList.remove('show');
+  errorBox.textContent = '';
+ }
+
+ form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  clearError();
+
+  // Native validation first
+  if (!form.checkValidity()) {
+   const firstInvalid = form.querySelector(':invalid');
+   if (firstInvalid) firstInvalid.focus();
+   showError('Please fill in all required fields before submitting.');
+   return;
   }
-  function clearError() {
-    errorBox.classList.remove('show');
-    errorBox.textContent = '';
+
+  const fd = new FormData(form);
+  const tier = fd.get('tier') === 'vip' ? 'vip' : 'free';
+  const payload = {
+   firstName: fd.get('firstName'),
+   lastName: fd.get('lastName'),
+   email: fd.get('email'),
+   phone: fd.get('phone'),
+   company: fd.get('company'),
+   jobTitle: fd.get('jobTitle'),
+   teamSize: fd.get('teamSize'),
+   industry: fd.get('industry'),
+   painPoint: fd.get('painPoint'),
+   referralSource: fd.get('referralSource'),
+   requestedAudit: fd.get('requestedAudit') === 'true',
+   tier: tier,
+   sessionIso: (typeof NEXT_SESSION === 'object' && NEXT_SESSION) ? NEXT_SESSION.iso : null,
+   sessionLabel: (typeof NEXT_SESSION === 'object' && NEXT_SESSION && NEXT_SESSION.longDate) ? NEXT_SESSION.longDate : 'the next live session',
+   sessionTime: (typeof NEXT_SESSION === 'object' && NEXT_SESSION) ? NEXT_SESSION.time : null,
+  };
+
+  submitBtn.disabled = true;
+  const originalLabel = labelEl ? labelEl.textContent : 'Reserve my free seat';
+  if (labelEl) labelEl.textContent = tier === 'vip' ? 'Saving your details…' : 'Reserving your seat…';
+
+  try {
+   const res = await fetch('/api/register', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+   });
+   const data = await res.json().catch(() => ({}));
+   if (!res.ok || !data.ok) {
+    const msg = (data && data.error) || 'Something went wrong. Please try again or email hello@nekter.ai.';
+    showError(msg);
+    submitBtn.disabled = false;
+    if (labelEl) labelEl.textContent = originalLabel;
+    return;
+   }
+   // VIP path: redirect to Stripe with prefilled email so they pay $25 immediately
+   if (tier === 'vip') {
+    if (labelEl) labelEl.textContent = 'Redirecting to payment…';
+    const stripeUrl = `${VIP_STRIPE_URL}?prefilled_email=${encodeURIComponent(payload.email)}`;
+    window.location.href = stripeUrl;
+    return;
+   }
+   // Free path, swap form for success state
+   form.style.display = 'none';
+   tierBanner.classList.remove('show');
+   successBox.classList.add('show');
+   successBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } catch (err) {
+   console.error(err);
+   showError('Network error. Please try again or email hello@nekter.ai.');
+   submitBtn.disabled = false;
+   if (labelEl) labelEl.textContent = originalLabel;
   }
-
-  form.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    clearError();
-
-    // Native validation first
-    if (!form.checkValidity()) {
-      const firstInvalid = form.querySelector(':invalid');
-      if (firstInvalid) firstInvalid.focus();
-      showError('Please fill in all required fields before submitting.');
-      return;
-    }
-
-    const fd = new FormData(form);
-    const tier = fd.get('tier') === 'vip' ? 'vip' : 'free';
-    const payload = {
-      firstName: fd.get('firstName'),
-      lastName: fd.get('lastName'),
-      email: fd.get('email'),
-      phone: fd.get('phone'),
-      company: fd.get('company'),
-      jobTitle: fd.get('jobTitle'),
-      teamSize: fd.get('teamSize'),
-      industry: fd.get('industry'),
-      painPoint: fd.get('painPoint'),
-      referralSource: fd.get('referralSource'),
-      requestedAudit: fd.get('requestedAudit') === 'true',
-      tier: tier,
-      sessionIso: (typeof NEXT_SESSION === 'object' && NEXT_SESSION) ? NEXT_SESSION.iso : null,
-      sessionLabel: (typeof NEXT_SESSION === 'object' && NEXT_SESSION && NEXT_SESSION.longDate) ? NEXT_SESSION.longDate : 'the next live session',
-      sessionTime: (typeof NEXT_SESSION === 'object' && NEXT_SESSION) ? NEXT_SESSION.time : null,
-    };
-
-    submitBtn.disabled = true;
-    const originalLabel = labelEl ? labelEl.textContent : 'Reserve my free seat';
-    if (labelEl) labelEl.textContent = tier === 'vip' ? 'Saving your details…' : 'Reserving your seat…';
-
-    try {
-      const res = await fetch('/api/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok || !data.ok) {
-        const msg = (data && data.error) || 'Something went wrong. Please try again or email hello@nekter.ai.';
-        showError(msg);
-        submitBtn.disabled = false;
-        if (labelEl) labelEl.textContent = originalLabel;
-        return;
-      }
-      // VIP path: redirect to Stripe with prefilled email so they pay $25 immediately
-      if (tier === 'vip') {
-        if (labelEl) labelEl.textContent = 'Redirecting to payment…';
-        const stripeUrl = `${VIP_STRIPE_URL}?prefilled_email=${encodeURIComponent(payload.email)}`;
-        window.location.href = stripeUrl;
-        return;
-      }
-      // Free path — swap form for success state
-      form.style.display = 'none';
-      tierBanner.classList.remove('show');
-      successBox.classList.add('show');
-      successBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } catch (err) {
-      console.error(err);
-      showError('Network error. Please try again or email hello@nekter.ai.');
-      submitBtn.disabled = false;
-      if (labelEl) labelEl.textContent = originalLabel;
-    }
-  });
+ });
 })();
 
 // COUNTDOWN TIMER (reads NEXT_SESSION.iso above)
 document.addEventListener('DOMContentLoaded', function(){
-  var section = document.querySelector('.countdown-section');
-  if(!NEXT_SESSION.iso){
-    // No date set yet — hide the countdown entirely so we don't show broken zeros.
-    if(section) section.style.display = 'none';
-    return;
+ var section = document.querySelector('.countdown-section');
+ if(!NEXT_SESSION.iso){
+  // No date set yet, hide the countdown entirely so we don't show broken zeros.
+  if(section) section.style.display = 'none';
+  return;
+ }
+ var target = new Date(NEXT_SESSION.iso).getTime();
+ var grid = document.getElementById('countdown');
+ var d = document.getElementById('cd-days'),
+   h = document.getElementById('cd-hours'),
+   m = document.getElementById('cd-mins'),
+   s = document.getElementById('cd-secs');
+ if(!grid || !d || !h || !m || !s) return;
+ var tbCount = document.getElementById('topbarCount');
+ function pad(n){return n<10?'0'+n:''+n}
+ var iv;
+ function tick(){
+  var diff = target - Date.now();
+  if(diff <= 0){
+   grid.innerHTML = '<div class="cd-live">\uD83C\uDF89 The webinar is live right now!</div>';
+   if(tbCount){ tbCount.textContent = 'Live now'; }
+   if(iv) clearInterval(iv);
+   return;
   }
-  var target = new Date(NEXT_SESSION.iso).getTime();
-  var grid = document.getElementById('countdown');
-  var d = document.getElementById('cd-days'),
-      h = document.getElementById('cd-hours'),
-      m = document.getElementById('cd-mins'),
-      s = document.getElementById('cd-secs');
-  if(!grid || !d || !h || !m || !s) return;
-  var tbCount = document.getElementById('topbarCount');
-  function pad(n){return n<10?'0'+n:''+n}
-  var iv;
-  function tick(){
-    var diff = target - Date.now();
-    if(diff <= 0){
-      grid.innerHTML = '<div class="cd-live">\uD83C\uDF89 The webinar is live right now!</div>';
-      if(tbCount){ tbCount.textContent = 'Live now'; }
-      if(iv) clearInterval(iv);
-      return;
-    }
-    var dd = Math.floor(diff/86400000),
-        hh = Math.floor(diff%86400000/3600000),
-        mm = Math.floor(diff%3600000/60000),
-        ss = Math.floor(diff%60000/1000);
-    d.textContent = pad(dd);
-    h.textContent = pad(hh);
-    m.textContent = pad(mm);
-    s.textContent = pad(ss);
-    if(tbCount){
-      tbCount.innerHTML =
-        '<span class="topbar-label">Starts in</span>' +
-        '<span class="cd-pills">' +
-          '<span class="cd-pill"><b>' + pad(dd) + '</b><i>d</i></span>' +
-          '<span class="cd-pill"><b>' + pad(hh) + '</b><i>h</i></span>' +
-          '<span class="cd-pill"><b>' + pad(mm) + '</b><i>m</i></span>' +
-          '<span class="cd-pill"><b>' + pad(ss) + '</b><i>s</i></span>' +
-        '</span>';
-    }
+  var dd = Math.floor(diff/86400000),
+    hh = Math.floor(diff%86400000/3600000),
+    mm = Math.floor(diff%3600000/60000),
+    ss = Math.floor(diff%60000/1000);
+  d.textContent = pad(dd);
+  h.textContent = pad(hh);
+  m.textContent = pad(mm);
+  s.textContent = pad(ss);
+  if(tbCount){
+   tbCount.innerHTML =
+    '<span class="topbar-label">Starts in</span>' +
+    '<span class="cd-pills">' +
+     '<span class="cd-pill"><b>' + pad(dd) + '</b><i>d</i></span>' +
+     '<span class="cd-pill"><b>' + pad(hh) + '</b><i>h</i></span>' +
+     '<span class="cd-pill"><b>' + pad(mm) + '</b><i>m</i></span>' +
+     '<span class="cd-pill"><b>' + pad(ss) + '</b><i>s</i></span>' +
+    '</span>';
   }
-  tick();
-  iv = setInterval(tick, 1000);
+ }
+ tick();
+ iv = setInterval(tick, 1000);
 });
 
 // STICKY CTA
 (function(){
-  var stickyCta = document.getElementById('stickyCta');
-  if(!stickyCta) return;
-  var registerSec = document.getElementById('register');
-  function update(){
-    var past = window.scrollY > 600;
-    var nearRegister = false;
-    if(registerSec){
-      var r = registerSec.getBoundingClientRect();
-      nearRegister = r.top < window.innerHeight && r.bottom > 0;
-    }
-    stickyCta.classList.toggle('show', past && !nearRegister);
+ var stickyCta = document.getElementById('stickyCta');
+ if(!stickyCta) return;
+ var registerSec = document.getElementById('register');
+ function update(){
+  var past = window.scrollY > 600;
+  var nearRegister = false;
+  if(registerSec){
+   var r = registerSec.getBoundingClientRect();
+   nearRegister = r.top < window.innerHeight && r.bottom > 0;
   }
-  window.addEventListener('scroll', update, { passive: true });
-  window.addEventListener('resize', update);
-  update();
+  stickyCta.classList.toggle('show', past && !nearRegister);
+ }
+ window.addEventListener('scroll', update, { passive: true });
+ window.addEventListener('resize', update);
+ update();
 })();
 </script>
 </body>
