@@ -850,7 +850,7 @@ body::after{background-image:radial-gradient(rgba(26,21,16,0.05) 1px,transparent
  <div class="topbar-inner">
   <span class="topbar-date" id="topbarDate">
    <svg class="topbar-cal" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-   Live Webinar &middot; Thursday, June 25
+   Live Workshop &middot; Thursday, June 25
   </span>
   <span class="topbar-sep">|</span>
   <span class="topbar-count" id="topbarCount"><span class="cd-pill cd-pill-tba">Time TBA</span></span>
@@ -1535,8 +1535,8 @@ const NEXT_SESSION = {
  var topbar = document.getElementById('topbar');
  if(tbDate){
   tbDate.textContent = hasDate
-   ? ('Live Webinar · ' + (NEXT_SESSION.dayOfWeek ? NEXT_SESSION.dayOfWeek + ', ' : '') + NEXT_SESSION.monthShort.replace(/\s?\d{4}/, '') + ' ' + NEXT_SESSION.dayNum).trim()
-   : 'Live Webinar · Date coming soon';
+   ? ('Live Workshop · ' + (NEXT_SESSION.dayOfWeek ? NEXT_SESSION.dayOfWeek + ', ' : '') + NEXT_SESSION.monthShort.replace(/\s?\d{4}/, '') + ' ' + NEXT_SESSION.dayNum).trim()
+   : 'Live Workshop · Date coming soon';
  }
  if(tbCount && !hasIso){
   tbCount.innerHTML = hasDate ? '<span class="cd-pill cd-pill-tba">Time TBA</span>' : '';
