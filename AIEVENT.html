@@ -1466,7 +1466,7 @@ const NEXT_SESSION = {
  // VSL embed. Set to a Vimeo/YouTube/Loom EMBED url to replace the hero
  // placeholder with the actual video. Leave null until the VSL is filmed.
  // Example (Vimeo): 'https://player.vimeo.com/video/VIDEO_ID?h=HASH&autoplay=1&muted=1&playsinline=1'
- vslUrl: 'https://www.youtube.com/embed/Pzz0JMSYz18?autoplay=1&mute=1&enablejsapi=1&playsinline=1&rel=0&controls=1&loop=1&playlist=Pzz0JMSYz18',
+ vslUrl: 'https://pub-08ff81b81d2d4ac0b88e188d48fedbcd.r2.dev/VSL-web.mp4',
 };
 
 (function injectSessionDate(){
@@ -1559,10 +1559,15 @@ const NEXT_SESSION = {
    var poster = document.getElementById('vslPoster');
    if(poster){
     poster.addEventListener('click', function(){
-     // user gesture -> play with sound
-     var u = NEXT_SESSION.vslUrl.replace('mute=1','mute=0');
-     if(u.indexOf('autoplay=') === -1){ u += (u.indexOf('?')>-1?'&':'?') + 'autoplay=1'; }
-     frame.innerHTML = '<iframe src="' + u + '" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Workshop walkthrough"></iframe>';
+     var u = NEXT_SESSION.vslUrl;
+     if(/\.mp4($|\?)/i.test(u)){
+      // native HTML5 player — zero branding, plays with sound (user gesture)
+      frame.innerHTML = '<video src="' + u + '" autoplay controls playsinline></video>';
+     } else {
+      var src = u.replace('mute=1','mute=0');
+      if(src.indexOf('autoplay=') === -1){ src += (src.indexOf('?')>-1?'&':'?') + 'autoplay=1'; }
+      frame.innerHTML = '<iframe src="' + src + '" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Workshop walkthrough"></iframe>';
+     }
     });
    }
   }
