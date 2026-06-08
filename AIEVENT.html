@@ -639,6 +639,9 @@ body::after{opacity:0.4}
 .vsl-play:hover{transform:scale(1.06);box-shadow:0 16px 54px rgba(77,111,239,0.6)}
 .vsl-caption{font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--muted)}
 .vsl-unmute{position:absolute;top:14px;right:14px;z-index:3;background:rgba(15,13,11,0.85);color:#FAF6F0;border:1px solid rgba(245,240,232,0.18);font-size:12px;font-weight:600;padding:8px 14px;border-radius:100px;cursor:pointer;backdrop-filter:blur(8px)}
+.vsl-poster{position:absolute;inset:0;width:100%;height:100%;border:0;padding:0;cursor:pointer;background-size:cover;background-position:center top;display:flex;align-items:center;justify-content:center}
+.vsl-poster::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.10),rgba(0,0,0,0.30))}
+.vsl-poster .vsl-play{position:relative;z-index:2}
 
 .hero-cta-row{display:flex;justify-content:center;margin-bottom:14px}
 .hero .btn-p{animation:none}
@@ -1544,29 +1547,22 @@ const NEXT_SESSION = {
  // If no date at all, hide the topbar entirely
  if(topbar && !hasDate){ topbar.style.display = 'none'; }
 
- // VSL: swap placeholder for the real embed when a URL is set
+ // VSL: clean branded poster on load; load the real player (with sound) only on click.
+ // This hides all the host's chrome until the visitor chooses to watch.
  if(NEXT_SESSION.vslUrl){
   var frame = document.getElementById('vslFrame');
   if(frame){
    frame.innerHTML =
-    '<iframe src="' + NEXT_SESSION.vslUrl + '" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Workshop walkthrough"></iframe>' +
-    '<button class="vsl-unmute" id="vslUnmute" type="button">🔈 Unmute</button>';
-   var unmute = document.getElementById('vslUnmute');
-   if(unmute){
-    unmute.addEventListener('click', function(){
-     var iframe = frame.querySelector('iframe');
-     var u = NEXT_SESSION.vslUrl;
-     if(u.indexOf('youtube.com') > -1 || u.indexOf('youtu.be') > -1){
-      // YouTube: unmute via the IFrame API (no reload, no restart)
-      iframe.contentWindow.postMessage('{"event":"command","func":"unMute","args":""}', '*');
-      iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-     } else {
-      // Vimeo/other: swap the muted param
-      var src = u.replace(/([?&])muted=1/, '$1muted=0');
-      if(src.indexOf('muted=') === -1){ src += (src.indexOf('?')>-1?'&':'?') + 'muted=0'; }
-      iframe.src = src;
-     }
-     unmute.remove();
+    '<button class="vsl-poster" id="vslPoster" type="button" aria-label="Play the walkthrough" style="background-image:url(/vsl-poster.jpg)">' +
+     '<span class="vsl-play"><svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>' +
+    '</button>';
+   var poster = document.getElementById('vslPoster');
+   if(poster){
+    poster.addEventListener('click', function(){
+     // user gesture -> play with sound
+     var u = NEXT_SESSION.vslUrl.replace('mute=1','mute=0');
+     if(u.indexOf('autoplay=') === -1){ u += (u.indexOf('?')>-1?'&':'?') + 'autoplay=1'; }
+     frame.innerHTML = '<iframe src="' + u + '" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Workshop walkthrough"></iframe>';
     });
    }
   }
