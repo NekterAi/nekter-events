@@ -1463,7 +1463,7 @@ const NEXT_SESSION = {
  // VSL embed. Set to a Vimeo/YouTube/Loom EMBED url to replace the hero
  // placeholder with the actual video. Leave null until the VSL is filmed.
  // Example (Vimeo): 'https://player.vimeo.com/video/VIDEO_ID?h=HASH&autoplay=1&muted=1&playsinline=1'
- vslUrl: null,
+ vslUrl: 'https://www.youtube.com/embed/Pzz0JMSYz18?autoplay=1&mute=1&enablejsapi=1&playsinline=1&rel=0&controls=1&loop=1&playlist=Pzz0JMSYz18',
 };
 
 (function injectSessionDate(){
@@ -1554,9 +1554,18 @@ const NEXT_SESSION = {
    var unmute = document.getElementById('vslUnmute');
    if(unmute){
     unmute.addEventListener('click', function(){
-     var src = NEXT_SESSION.vslUrl.replace(/([?&])muted=1/, '$1muted=0');
-     if(src.indexOf('muted=') === -1){ src += (src.indexOf('?')>-1?'&':'?') + 'muted=0'; }
-     frame.querySelector('iframe').src = src;
+     var iframe = frame.querySelector('iframe');
+     var u = NEXT_SESSION.vslUrl;
+     if(u.indexOf('youtube.com') > -1 || u.indexOf('youtu.be') > -1){
+      // YouTube: unmute via the IFrame API (no reload, no restart)
+      iframe.contentWindow.postMessage('{"event":"command","func":"unMute","args":""}', '*');
+      iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+     } else {
+      // Vimeo/other: swap the muted param
+      var src = u.replace(/([?&])muted=1/, '$1muted=0');
+      if(src.indexOf('muted=') === -1){ src += (src.indexOf('?')>-1?'&':'?') + 'muted=0'; }
+      iframe.src = src;
+     }
      unmute.remove();
     });
    }
